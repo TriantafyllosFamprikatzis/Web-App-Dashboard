@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Dashboard</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img class="logo" src="icons/logo.png">
+            <div class="item-1">
+                <img class="bell" src="icons/icon-bell.svg" alt="bell">
+                <img class="profile-pic" src="images/josh.jpg" alt="main user">
+                <h2 class="profile-name">Josh Sullivan</h2>
+            </div>
+        </header>
+        <nav>
+            <div class="item-2">
+                <img class="icons" src="icons/icon-dashboard.svg" alt="dashboard">
+                <img class="icons" src="icons/icon-members.svg" alt="members">
+                <img class="icons" src="icons/icon-visits.svg" alt="visits">
+                <img class="icons" src="icons/icon-settings.svg" alt="settings">
+            </div>
+        </nav>
+        <main class="grid-main">
+
+            <div class="grid-1">
+                <form action="index.html" method="POST">
+                    <input type="search" id="search" placeholder="Search">
+                </form>
+                <button>X</button>
+            </div>
+
+            <div class="grid-2">
+                <h3>TRAFFIC</h3>
+                <ul>
+                    <li id="h">Hourly</li>
+                    <li id="d">Daily</li>
+                    <li id="w">Weekly</li>
+                    <li id="m">Monthly</li>
+                </ul>
+                <div class="traffic">
+                    <canvas id="myChart" width="900" height="300" aria-label="Traffic" role="img"></canvas>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <h3>DAILY TRAFFIC</h3>
+                <div class="traffic">
+                    <canvas id="myBarChart" width="900" height="300" aria-label="Traffic" role="img"></canvas>
+                </div>
+            </div>
+
+            <div class="grid-4">
+                <h3>MOBILE USERS</h3>
+                <div class="traffic">
+                    <canvas id="myDoughnutChart" width="900" height="300" aria-label="Traffic" role="img"></canvas>
+
+                </div>
+            </div>
+
+            <div class="grid-5">
+                <h3>SOCIAL STATS</h3>
+                <div>
+                    <img class="social-icons" src="icons/icon-twitter.svg" alt="twitter">
+                    <img class="social-icons" src="icons/icon-facebook.svg" alt="facebook">
+                    <img class="social-icons" src="icons/icon-google-plus.svg" alt="google-plus">
+                </div>
+            </div>
+
+            <div class="grid-6">
+                <h3>NEW MEMBERS</h3>
+                <div>
+                    <img src="images/member-1.jpg">
+                    <h3>Victoria Chambers</h3>
+                    <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+                    <p>11/01/19</p>
+                </div>
+                <div>
+                    <img src="images/member-2.jpg">
+                    <h3>Dale Byrd</h3>
+                    <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+                    <p>10/01/19</p>
+                </div>
+                <div>
+                    <img src="images/member-3.jpg">
+                    <h3>Dawn Wood</h3>
+                    <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+                    <p>10/01/19</p>
+                </div>
+                <div>
+                    <img src="images/member-4.jpg">
+                    <h3>Dan Oliver</h3>
+                    <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+                    <p>10/01/19</p>
+                </div>
+
+            </div>
+
+            <div class="grid-7">
+                <h3>RECENT ACTIVITY</h3>
+                <div>
+                    <img src="images/member-1.jpg">
+                    <p>Victoria Chambers commended on YourApp's SEO Tips</p>
+                    <p>4 hours ago</p>
+                </div>
+                <div>
+                    <img src="images/member-2.jpg">
+                    <p>Dale Byrd like the post Facebook's Changes for 2019</p>
+                    <p>5 hours ago</p>
+                </div>
+                <div>
+                    <img src="images/member-3.jpg">
+                    <p>Dawn Wood commended on Facebook's Changes for 2019</p>
+                    <p>5 hours ago</p>
+                </div>
+                <div>
+                    <img src="images/member-4.jpg">
+                    <p>Dan Oliver posted YourApp's SEO Tips</p>
+                    <p>1 day ago</p>
+                </div>
+
+            </div>
+
+            <div class="grid-8">
+                <h3>MESSAGE USER</h3>
+                <form action="index.html" method="POST">
+                    <input type="search" id="search" placeholder="Search for User">
+                    <textarea id="message-user" name="message-user" placeholder="Message User"></textarea>
+                    <button type="submit" name="send">SEND</button>
+            </div>
+
+            <div class="grid-9">
+                <h3>SETTINGS</h3>
+                <form action="index.html" method="POST">
+                    <select id="timezone" name="state">
+                        <option value="" disabled selected>Select Timezone</option>
+                    </select>
+                    <button type="submit" name="save">SAVE</button>
+                    <button type="submit" name="cancel">CANCEL</button>
+                </form>
+            </div>
+
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

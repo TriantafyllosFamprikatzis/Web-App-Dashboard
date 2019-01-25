@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cornsilk;
+  padding-top: 2em;
+}
+
+/*===========
+GRID LAYOUT
+============*/
+.container {
+  width: 85%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-bottom: 6px solid #ccc;
+  border-bottom-style: solid;
+  border-radius: 1.5em;
+  margin-bottom: 2em;
+  border-style: inset;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: "header" "nav" "main";
+}
+
+header {
+  grid-area: header;
+  background-color: #7477bf;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #4d4c72;
+  border-radius: 0 0 0 1.5em;
+}
+
+main {
+  grid-area: main;
+}
+
+/*==================
+GRID MAIN LAYOUT*
+====================*/
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "alert alert" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
+}
+
+.grid-1 {
+  grid-area: alert;
+}
+
+.grid-2 {
+  grid-area: traffic;
+}
+
+.grid-3 {
+  grid-area: daily-traffic;
+}
+
+.grid-4 {
+  grid-area: mobile-users;
+}
+
+.grid-5 {
+  grid-area: social-stats;
+}
+
+.grid-6 {
+  grid-area: new-members;
+}
+
+.grid-7 {
+  grid-area: recent-activity;
+}
+
+.grid-8 {
+  grid-area: message-user;
+}
+
+.grid-9 {
+  grid-area: settings;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 65px 2fr;
+    grid-template-rows: 65px;
+    grid-auto-rows: auto;
+    grid-template-areas: "header header" "nav main" "nav main";
+  }
+
+  .item-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .icons {
+    width: 1.8em;
+    margin: 25px 10px 20px;
+  }
+}
+.profile-pic {
+  border-radius: 50%;
+  border-left-width: 2em;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 10px 10px;
+}
+
+h2 {
+  font-size: 1em;
+  color: white;
+}
+
+.item-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.traffic {
+  width: 90%;
+}
+
+.logo {
+  width: 5em;
+  margin-right: auto;
+}
+
+.bell {
+  width: 1.7em;
+  height: 1.7em;
+  margin: 10px 10px;
+}
+
+.profile-name {
+  margin-right: 1em;
+  margin-top: 1.2em;
+}
+
+.social-icons {
+  width: 5em;
+  height: 5em;
+}
+
+/*# sourceMappingURL=styles.css.map */

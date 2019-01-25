@@ -1,0 +1,62 @@
+//Styles
+@mixin styling(
+$mar:null,
+$mar-b:null,
+$mar-t:null,
+$wid-m:null,
+$wid:null,
+$fnt:null,
+$pad:null,
+$txt:null,
+$clr:null,
+$disp:null,
+$brd:null,
+$brd-w:null,
+$brd-r:null){
+margin:$mar;
+margin-bottom:$mar-b;
+margin-top:$mar-t;
+max-width:$wid-m;
+width:$wid;
+font-weight:$fnt;
+padding:$pad;
+text-align:$txt;
+color:$clr;
+display:$disp;
+border:$brd;
+border-width:$brd-w;
+border-radius:$brd-r;
+}
+
+//Flex-box
+@mixin flex(
+$disp:flex,
+$dir:null,
+$wrap:null,
+$just:null,
+$align:null){
+display:$disp;
+flex-direction:$dir;
+flex-wrap:$wrap;
+justify-content:$just;
+align-items:$align;
+}
+
+//Media query
+@mixin mq($break){
+ @if $break == "small"{
+  @media (min-width:$brkpoint-sm) and (max-width:$brkpoint-md){
+  @content;
+  }
+ }
+ @else if $break == "medium"{
+  @media (min-width:$brkpoint-md + 1){
+   @content;
+  }
+ }
+@else if $break == "large"{
+ @media (min-width:$brkpoint-lg){
+  @content;
+ }
+}
+}
