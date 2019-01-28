@@ -1,0 +1,48 @@
+
+.btn-delete-flex {
+display: flex;
+justify-content: space-between;
+background-color: #7377bf;
+color: #fff;
+}
+
+.btn-delete {
+background-color: #7377bf;
+color: #fff;
+border: none;
+}
+
+.btn-chart {
+ display: flex;
+ flex-direction: row;
+ justify-content: end;
+}
+
+li {
+list-style-type: none;
+background-color: #81c98f;
+color: #fff;
+border-radius: 1.75em;
+padding: 0.4em;
+text-align: center;
+margin-right: 5px;
+}
+
+.btn-send, .btn-save {
+padding: 1rem;
+background-color: #7377bf;
+color: #fff;
+margin-top: 1.5em;
+}
+
+.btn-save {
+margin-right: 2em;
+}
+
+.btn-cancel {
+padding: 1rem;
+background-color: #b2b2b2;
+color: #fff;
+margin-top: 1.5em;
+margin-left: 2em;
+}

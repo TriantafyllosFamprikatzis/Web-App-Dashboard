@@ -7,9 +7,154 @@ body {
   padding-top: 2em;
 }
 
-/*===========
-GRID LAYOUT
-============*/
+h2 {
+  font-size: 1em;
+  color: white;
+}
+
+.chart {
+  width: 50%;
+  height: 20%;
+}
+
+.btn-delete-flex {
+  display: flex;
+  justify-content: space-between;
+  background-color: #7377bf;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #7377bf;
+  color: #fff;
+  border: none;
+}
+
+.btn-chart {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+li {
+  list-style-type: none;
+  background-color: #81c98f;
+  color: #fff;
+  border-radius: 1.75em;
+  padding: 0.4em;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.btn-send, .btn-save {
+  padding: 1rem;
+  background-color: #7377bf;
+  color: #fff;
+  margin-top: 1.5em;
+}
+
+.btn-save {
+  margin-right: 2em;
+}
+
+.btn-cancel {
+  padding: 1rem;
+  background-color: #b2b2b2;
+  color: #fff;
+  margin-top: 1.5em;
+  margin-left: 2em;
+}
+
+.search-boarder {
+  padding: 1em 0.6em 1em 10em;
+  background-color: #fbfbfb;
+}
+
+#search-top {
+  padding: 0.3em 3em;
+  border: 1.2px solid #d1d1d1;
+  background-color: #fff;
+  text-align: inherit;
+}
+
+#search-bottom {
+  padding: 0.3em 3em;
+  border: 1.2px solid #d1d1d1;
+  background-color: #fbfbfb;
+  margin-bottom: 1em;
+}
+
+#textarea {
+  margin-top: 0.5em;
+  padding: 3em 2.5em;
+  border: 1.2px solid #d1d1d1;
+  background-color: #fbfbfb;
+}
+
+#timezone {
+  padding: 0.3em 3em;
+  border: 1.2px solid #d1d1d1;
+  background-color: #fbfbfb;
+}
+
+.switch-candy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-ios {
+  width: 25% !important;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text-1  switch-1" "text-2  switch-2" "timezone timezone" "btn-save btn-cancel";
+}
+
+.switch-1-text {
+  grid-area: text-1;
+  margin-top: 0.3em;
+}
+
+.switch-2-text {
+  grid-area: text-2;
+  margin-top: 1em;
+}
+
+.switch-1 {
+  grid-area: switch-1;
+  display: flex;
+  justify-content: end;
+}
+
+.switch-2 {
+  grid-area: switch-2;
+  margin-top: 0.6em;
+  display: flex;
+  justify-content: end;
+}
+
+#timezone {
+  grid-area: timezone;
+}
+
+.btn-save {
+  grid-area: btn-save;
+}
+
+.btn-cancel {
+  grid-area: btn-cancel;
+}
+
+/*===================
+GRID CONTAINER LAYOUT
+====================*/
 .container {
   width: 85%;
   background-color: #fff;
@@ -26,6 +171,8 @@ GRID LAYOUT
 }
 
 header {
+  padding-top: 1em;
+  padding-bottom: 1em;
   grid-area: header;
   background-color: #7477bf;
   display: flex;
@@ -37,7 +184,7 @@ header {
 nav {
   grid-area: nav;
   background-color: #4d4c72;
-  border-radius: 0 0 0 1.5em;
+  border-bottom-left-radius: 1.5em;
 }
 
 main {
@@ -48,6 +195,7 @@ main {
 GRID MAIN LAYOUT*
 ====================*/
 .grid-main {
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "alert alert" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
@@ -63,10 +211,16 @@ GRID MAIN LAYOUT*
 
 .grid-3 {
   grid-area: daily-traffic;
+  border-top: 1.2px solid #d1d1d1;
+  border-right: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
 }
 
 .grid-4 {
   grid-area: mobile-users;
+  border-top: 1.2px solid #d1d1d1;
+  border-right: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
 }
 
 .grid-5 {
@@ -75,20 +229,42 @@ GRID MAIN LAYOUT*
 
 .grid-6 {
   grid-area: new-members;
+  border-top: 1.2px solid #d1d1d1;
+  border-right: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
 }
 
 .grid-7 {
   grid-area: recent-activity;
+  padding-left: 30px;
+  border-top: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
 }
 
 .grid-8 {
   grid-area: message-user;
+  border-right: 1.2px solid #d1d1d1;
+  padding: 1em 2em 1em 0;
 }
 
 .grid-9 {
   grid-area: settings;
+  padding: 1em 1em 0 2em;
 }
 
+/*================
+FLEXBOX
+================*/
+.dashboard-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*================
+MEDIA QUERIES
+=================*/
 @media (min-width: 768px) {
   .container {
     grid-template-columns: 65px 2fr;
@@ -97,38 +273,21 @@ GRID MAIN LAYOUT*
     grid-template-areas: "header header" "nav main" "nav main";
   }
 
-  .item-2 {
+  .side-nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .icons {
+  .nav-icons {
     width: 1.8em;
     margin: 25px 10px 20px;
   }
 }
-.profile-pic {
-  border-radius: 50%;
-  border-left-width: 2em;
-  width: 2.5em;
-  height: 2.5em;
-  margin: 10px 10px;
-}
-
-h2 {
-  font-size: 1em;
-  color: white;
-}
-
-.item-1 {
+.header-nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-}
-
-.traffic {
-  width: 90%;
 }
 
 .logo {
@@ -137,8 +296,16 @@ h2 {
 }
 
 .bell {
-  width: 1.7em;
-  height: 1.7em;
+  width: 5em;
+  height: 1.9em;
+  margin: 15px 10px;
+  border-right: 1.2px solid #d1d1d1;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
   margin: 10px 10px;
 }
 
@@ -150,6 +317,52 @@ h2 {
 .social-icons {
   width: 5em;
   height: 5em;
+}
+
+.members-grid {
+  padding-bottom: 1.2em;
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr;
+  grid-template-rows: 1.4em;
+  grid-template-areas: "image name date" "image mail date";
+}
+
+.activity-grid {
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: 50px 2fr;
+  grid-template-rows: 1.4em;
+  grid-template-areas: "image comment" "image time";
+}
+
+.member-img {
+  grid-area: image;
+  width: 100%;
+  border-radius: 50%;
+  padding-right: 7px;
+}
+
+.member-name {
+  grid-area: name;
+  margin: 0;
+}
+
+.member-mail {
+  grid-area: mail;
+}
+
+.member-date {
+  grid-area: date;
+}
+
+.member-comment {
+  grid-area: comment;
+  margin: 0;
+}
+
+.member-time {
+  grid-area: time;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

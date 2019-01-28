@@ -1,0 +1,47 @@
+
+//NEW MEMBERS 
+.members-grid {
+  padding-bottom: 1.2em;
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr;
+  grid-template-rows: 1.4em;
+  grid-template-areas: 
+  "image name date"
+  "image mail date";
+}
+
+//RECENT ACTIVITY
+.activity-grid {
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: 50px 2fr;
+  grid-template-rows: 1.4em;
+  grid-template-areas: 
+  "image comment"
+  "image time";
+}
+
+.member-img {
+ grid-area: image;
+ width: 100%;
+ border-radius: 50%;
+ padding-right: 7px;
+}
+.member-name {
+ grid-area: name;
+ margin: 0;
+}
+.member-mail {
+ grid-area: mail;
+}
+.member-date {
+ grid-area: date;
+}
+.member-comment {
+ grid-area: comment;
+ margin: 0;
+}
+.member-time {
+ grid-area: time;
+ margin: 0;
+}

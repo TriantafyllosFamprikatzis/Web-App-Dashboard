@@ -1,6 +1,6 @@
-/*===========
-GRID LAYOUT
-============*/
+/*===================
+GRID CONTAINER LAYOUT
+====================*/
 
 .container {
     width: 85%;
@@ -21,6 +21,8 @@ GRID LAYOUT
   }
   
   header {
+  padding-top: 1em;
+  padding-bottom: 1em;
   grid-area: header;
   background-color: #7477bf;
   display: flex;
@@ -32,7 +34,7 @@ GRID LAYOUT
   nav {
    grid-area: nav;
    background-color: #4d4c72; 
-   border-radius: 0 0 0 1.5em;
+   border-bottom-left-radius: 1.5em;
   }
   
   main {
@@ -44,6 +46,7 @@ GRID LAYOUT
   ====================*/
   
   .grid-main {
+    padding: 20px;
     display: grid;
     grid-template-columns: 1fr  1fr;
     grid-template-areas: 
@@ -62,28 +65,55 @@ GRID LAYOUT
     grid-area: traffic;
   }
   .grid-3 {
-    grid-area: daily-traffic;
+  grid-area: daily-traffic;
+  border-top: 1.2px solid #d1d1d1;
+  border-right: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
   }
   .grid-4 {
-    grid-area: mobile-users;
+  grid-area: mobile-users;
+  border-top: 1.2px solid #d1d1d1;
+  border-right: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
   }
   .grid-5 {
     grid-area: social-stats;
   }
   .grid-6 {
     grid-area: new-members; 
-  }.grid-7 {
+    border-top: 1.2px solid #d1d1d1;
+    border-right: 1.2px solid #d1d1d1;
+    border-bottom: 1.2px solid #d1d1d1;
+  }
+  .grid-7 {
     grid-area: recent-activity;
+    padding-left: 30px;
+    border-top: 1.2px solid #d1d1d1;
+    border-bottom: 1.2px solid #d1d1d1;
   }
   .grid-8 {
     grid-area: message-user;
+    border-right: 1.2px solid #d1d1d1;
+    padding: 1em 2em 1em 0;
   }
   .grid-9 {
     grid-area: settings;
+    padding: 1em 1em 0 2em;
   }
+/*================
+FLEXBOX
+================*/
 
-  
+ .dashboard-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ }
 
+ /*================
+ MEDIA QUERIES
+ =================*/
   @media (min-width: 768px) {
     .container {
        grid-template-columns: 65px 2fr;
@@ -95,13 +125,13 @@ GRID LAYOUT
         "nav main";
      }
      
-     .item-2 {
+     .side-nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
     
-    .icons {
+    .nav-icons {
         width: 1.8em;
         margin:  25px 10px 20px;
       }

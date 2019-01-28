@@ -1,0 +1,94 @@
+
+//Forms
+.search-boarder {
+ padding: 1em 0.6em 1em 10em;
+ background-color: #fbfbfb;
+}
+
+#search-top {
+ padding: 0.3em 3em;
+ border: 1.2px solid #d1d1d1;
+ background-color: #fff;
+ text-align: inherit;
+}
+
+#search-bottom {
+ padding: 0.3em 3em;
+ border: 1.2px solid #d1d1d1;
+ background-color: #fbfbfb;
+ margin-bottom: 1em;
+}
+
+#textarea {
+margin-top: 0.5em;
+ padding: 3em 2.5em;
+ border: 1.2px solid #d1d1d1;
+ background-color: #fbfbfb;
+}
+
+#timezone {
+ padding: 0.3em 3em;
+ border: 1.2px solid #d1d1d1;
+ background-color: #fbfbfb;
+}
+
+
+
+.switch-candy {
+display: flex;
+justify-content: space-between;
+}
+
+.btn-ios {
+    width: 25% !important;
+}
+
+.message-form {
+display: flex;
+flex-direction: column;
+}
+
+.settings-form {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"text-1  switch-1"
+"text-2  switch-2"
+"timezone timezone"
+"btn-save btn-cancel";
+}
+
+.switch-1-text {
+grid-area: text-1;
+margin-top: 0.3em;
+}
+
+.switch-2-text {
+grid-area: text-2;
+margin-top: 1em;
+}
+
+.switch-1 {
+grid-area: switch-1;
+display: flex;
+justify-content: end;
+}
+
+.switch-2 {
+grid-area: switch-2;
+margin-top: 0.6em;
+display: flex;
+justify-content: end;
+}
+
+#timezone {
+grid-area: timezone;
+}
+
+.btn-save {
+grid-area: btn-save;
+}
+
+.btn-cancel {
+grid-area: btn-cancel;
+}

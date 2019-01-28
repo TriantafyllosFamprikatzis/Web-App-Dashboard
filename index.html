@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web App Dashboard</title>
+    <title>YourApp Dashboard</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -13,53 +14,60 @@
     <div class="container">
         <header>
             <img class="logo" src="icons/logo.png">
-            <div class="item-1">
+            <div class="header-nav">
                 <img class="bell" src="icons/icon-bell.svg" alt="bell">
                 <img class="profile-pic" src="images/josh.jpg" alt="main user">
                 <h2 class="profile-name">Josh Sullivan</h2>
             </div>
         </header>
         <nav>
-            <div class="item-2">
-                <img class="icons" src="icons/icon-dashboard.svg" alt="dashboard">
-                <img class="icons" src="icons/icon-members.svg" alt="members">
-                <img class="icons" src="icons/icon-visits.svg" alt="visits">
-                <img class="icons" src="icons/icon-settings.svg" alt="settings">
+            <div class="side-nav">
+                <img class="nav-icons" src="icons/icon-dashboard.svg" alt="dashboard">
+                <img class="nav-icons" src="icons/icon-members.svg" alt="members">
+                <img class="nav-icons" src="icons/icon-visits.svg" alt="visits">
+                <img class="nav-icons" src="icons/icon-settings.svg" alt="settings">
             </div>
         </nav>
         <main class="grid-main">
 
             <div class="grid-1">
-                <form action="index.html" method="POST">
-                    <input type="search" id="search" placeholder="Search">
-                </form>
-                <button>X</button>
+                <div class="dashboard-flex">
+                    <h3 class="dashboard">Dashboard</h3>
+                    <form class="search-boarder" action="index.html" method="POST">
+                        <input type="search" id="search-top" placeholder="Search">
+                    </form>
+                </div>
+                <div class="btn-delete-flex">
+                      <p>Alert example, press cancel button to hide</p>
+                      <button class="btn-delete" type="button" name="delete">X</button>
+                </div>
+                
             </div>
 
             <div class="grid-2">
                 <h3>TRAFFIC</h3>
-                <ul>
+                <ul class="btn-chart">
                     <li id="h">Hourly</li>
                     <li id="d">Daily</li>
                     <li id="w">Weekly</li>
                     <li id="m">Monthly</li>
                 </ul>
-                <div class="traffic">
-                    <canvas id="myChart" width="900" height="300" aria-label="Traffic" role="img"></canvas>
+                <div class="chart">
+                    <canvas id="myChart" width="900" height="300" aria-label="lineChart" role="img"></canvas>
                 </div>
             </div>
 
             <div class="grid-3">
                 <h3>DAILY TRAFFIC</h3>
-                <div class="traffic">
-                    <canvas id="myBarChart" width="900" height="300" aria-label="Traffic" role="img"></canvas>
+                <div class="chart">
+                    <canvas id="myBarChart" width="900" height="300" aria-label="barChart" role="img"></canvas>
                 </div>
             </div>
 
             <div class="grid-4">
                 <h3>MOBILE USERS</h3>
-                <div class="traffic">
-                    <canvas id="myDoughnutChart" width="900" height="300" aria-label="Traffic" role="img"></canvas>
+                <div class="chart">
+                    <canvas id="myDoughnutChart" width="900" height="300" aria-label="doughnutChart" role="img"></canvas>
 
                 </div>
             </div>
@@ -75,74 +83,93 @@
 
             <div class="grid-6">
                 <h3>NEW MEMBERS</h3>
-                <div>
-                    <img src="images/member-1.jpg">
-                    <h3>Victoria Chambers</h3>
-                    <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
-                    <p>11/01/19</p>
+                <div class="members-grid">
+                    <img class="member-img" src="images/member-1.jpg">
+                    <h3 class="member-name">Victoria Chambers</h3>
+                    <a class="member-mail" href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+                    <p class="member-date">11/01/19</p>
                 </div>
-                <div>
-                    <img src="images/member-2.jpg">
-                    <h3>Dale Byrd</h3>
-                    <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
-                    <p>10/01/19</p>
+                <div class="members-grid">
+                    <img class="member-img" src="images/member-2.jpg">
+                    <h3 class="member-name">Dale Byrd</h3>
+                    <a class="member-mail" href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+                    <p class="member-date">10/01/19</p>
                 </div>
-                <div>
-                    <img src="images/member-3.jpg">
-                    <h3>Dawn Wood</h3>
-                    <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
-                    <p>10/01/19</p>
+                <div class="members-grid">
+                    <img class="member-img" src="images/member-3.jpg">
+                    <h3 class="member-name">Dawn Wood</h3>
+                    <a class="member-mail" href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+                    <p class="member-date">10/01/19</p>
                 </div>
-                <div>
-                    <img src="images/member-4.jpg">
-                    <h3>Dan Oliver</h3>
-                    <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
-                    <p>10/01/19</p>
+                <div class="members-grid">
+                    <img class="member-img" src="images/member-4.jpg">
+                    <h3 class="member-name">Dan Oliver</h3>
+                    <a class="member-mail" href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+                    <p class="member-date">10/01/19</p>
                 </div>
 
             </div>
 
             <div class="grid-7">
                 <h3>RECENT ACTIVITY</h3>
-                <div>
-                    <img src="images/member-1.jpg">
-                    <p>Victoria Chambers commended on YourApp's SEO Tips</p>
-                    <p>4 hours ago</p>
+                <div class="activity-grid">
+                    <img class="member-img" src="images/member-1.jpg">
+                    <p class="member-comment">Victoria Chambers commended on YourApp's SEO Tips</p>
+                    <p class="member-time">4 hours ago</p>
                 </div>
-                <div>
-                    <img src="images/member-2.jpg">
-                    <p>Dale Byrd like the post Facebook's Changes for 2019</p>
-                    <p>5 hours ago</p>
+                <div class="activity-grid">
+                    <img class="member-img" src="images/member-2.jpg">
+                    <p class="member-comment">Dale Byrd like the post Facebook's Changes for 2019</p>
+                    <p class="member-time">5 hours ago</p>
                 </div>
-                <div>
-                    <img src="images/member-3.jpg">
-                    <p>Dawn Wood commended on Facebook's Changes for 2019</p>
-                    <p>5 hours ago</p>
+                <div class="activity-grid">
+                    <img class="member-img" src="images/member-3.jpg">
+                    <p class="member-comment">Dawn Wood commended on Facebook's Changes for 2019</p>
+                    <p class="member-time">5 hours ago</p>
                 </div>
-                <div>
-                    <img src="images/member-4.jpg">
-                    <p>Dan Oliver posted YourApp's SEO Tips</p>
-                    <p>1 day ago</p>
+                <div class="activity-grid">
+                    <img class="member-img" src="images/member-4.jpg">
+                    <p class="member-comment">Dan Oliver posted YourApp's SEO Tips</p>
+                    <p class="member-time">1 day ago</p>
                 </div>
 
             </div>
 
             <div class="grid-8">
                 <h3>MESSAGE USER</h3>
-                <form action="index.html" method="POST">
-                    <input type="search" id="search" placeholder="Search for User">
-                    <textarea id="message-user" name="message-user" placeholder="Message User"></textarea>
-                    <button type="submit" name="send">SEND</button>
+                <form class="message-form" action="index.html" method="POST">
+                    <input type="search" id="search-bottom" placeholder="Search for User">
+                    <textarea id="textarea" name="message" placeholder="Message User"></textarea>
+                    <button class="btn-send" type="submit" name="send">SEND</button>
+                </form>
             </div>
 
             <div class="grid-9">
                 <h3>SETTINGS</h3>
-                <form action="index.html" method="POST">
+                <form class="settings-form" action="index.html" method="POST">
+                    <p class="switch-1-text"> Send Email Notifications</p>
+                    <label class="switch-ios switch-light switch-candy switch-1" onclick="">
+                        <input type="checkbox">
+                        <span class="btn-ios">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                    <p class="switch-2-text"> Set Profile to Public</p>
+                    <label class="switch-ios switch-light switch-candy switch-2" onclick="">
+                        <input type="checkbox">
+                        <span class="btn-ios">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
                     <select id="timezone" name="state">
                         <option value="" disabled selected>Select Timezone</option>
                     </select>
-                    <button type="submit" name="save">SAVE</button>
-                    <button type="submit" name="cancel">CANCEL</button>
+                    <button class="btn-save" type="submit" name="save">SAVE</button>
+                    <button class="btn-cancel" type="submit" name="cancel">CANCEL</button>
                 </form>
             </div>
 
