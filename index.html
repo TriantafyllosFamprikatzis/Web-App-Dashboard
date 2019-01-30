@@ -37,9 +37,9 @@
                         <input type="search" id="search-top" placeholder="Search">
                     </form>
                 </div>
-                <div class="btn-delete-flex">
+                <div class="btn-delete-flex" id="alert">
                       <p>Alert example, press cancel button to hide</p>
-                      <button class="btn-delete" type="button" name="delete">X</button>
+                      <button class="btn-delete" id="btn" type="button" name="delete">X</button>
                 </div>
                 
             </div>
@@ -52,23 +52,22 @@
                     <li id="w">Weekly</li>
                     <li id="m">Monthly</li>
                 </ul>
-                <div class="chart">
-                    <canvas id="myChart" width="900" height="300" aria-label="lineChart" role="img"></canvas>
+                <div class="chart-1">
+                    <canvas id="myChart"></canvas>
                 </div>
             </div>
 
             <div class="grid-3">
                 <h3>DAILY TRAFFIC</h3>
-                <div class="chart">
-                    <canvas id="myBarChart" width="900" height="300" aria-label="barChart" role="img"></canvas>
+                <div class="chart-2">
+                    <canvas id="myBarChart"></canvas>
                 </div>
             </div>
 
             <div class="grid-4">
                 <h3>MOBILE USERS</h3>
-                <div class="chart">
-                    <canvas id="myDoughnutChart" width="900" height="300" aria-label="doughnutChart" role="img"></canvas>
-
+                <div class="chart-3">
+                    <canvas id="myDoughnutChart"></canvas>
                 </div>
             </div>
 

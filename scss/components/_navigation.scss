@@ -6,7 +6,7 @@
 }
     
 .logo {
-  width: 5em;
+  width: 160px;
   margin-right: auto;
 }
     
@@ -34,3 +34,20 @@
   height: 5em;
 }
     
+.nav-icons {
+  width: 1.8em;
+  margin:  25px 10px 20px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+   .side-nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+   } 

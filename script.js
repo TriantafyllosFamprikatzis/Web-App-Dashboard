@@ -1,13 +1,28 @@
 
 //VARIABLES
-let myChart= document.getElementById("myChart").getContext('2d');
-let myBarChart= document.getElementById("myBarChart").getContext('2d');
-let myDoughnutChart= document.getElementById("myDoughnutChart").getContext('2d');
-let hour = document.getElementById('h');
-let day = document.getElementById('d');
-let week = document.getElementById('w');
-let month = document.getElementById('m');
+const myChart = document.getElementById('myChart').getContext('2d');
+const myBarChart = document.getElementById('myBarChart').getContext('2d');
+const myDoughnutChart = document.getElementById('myDoughnutChart').getContext('2d');
+const hour = document.getElementById('h');
+const day = document.getElementById('d');
+const week = document.getElementById('w');
+const month = document.getElementById('m');
 
+const deleteButton = document.getElementById('btn');
+const alert = document.getElementById('alert');
+
+// Alert Bar 
+deleteButton.addEventListener('click', () => {
+ alert.style.display = 'none';
+});
+
+
+//Bell notification
+
+//Global chart defaults
+Chart.defaults.global.responsive = true;
+Chart.defaults.scale.ticks.beginAtZero = false;
+Chart.defaults.global.legend.display = false;
 //LINE CHART
 let chart = new Chart(myChart, {
     type: 'line',
@@ -25,19 +40,8 @@ let chart = new Chart(myChart, {
     ]
     },
     options: {
-        legend: {
-            display:false
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:false
-                }
-            }]
-        }
     }
 });
-
 
 hour.addEventListener('click', () => {
     new Chart(myChart, {
@@ -56,19 +60,8 @@ hour.addEventListener('click', () => {
         ]
         },
         options: {
-            legend: {
-                display:false
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:false
-                    }
-                }]
-            }
         }
     });
-    
 });
 
 day.addEventListener('click', () => {
@@ -88,19 +81,8 @@ day.addEventListener('click', () => {
         ]
         },
         options: {
-            legend: {
-                display:false
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:false
-                    }
-                }]
-            }
         }
-    });
-    
+    });  
 });
 
 week.addEventListener('click', () => {
@@ -120,19 +102,8 @@ week.addEventListener('click', () => {
         ]
         },
         options: {
-            legend: {
-                display:false
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:false
-                    }
-                }]
-            }
         }
     });
-    
 });
 
 month.addEventListener('click', () => {
@@ -152,19 +123,8 @@ month.addEventListener('click', () => {
         ]
         },
         options: {
-            legend: {
-                display:false
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:false
-                    }
-                }]
-            }
         }
     });
-    
 });
 
 
@@ -182,16 +142,6 @@ var barChart = new Chart(myBarChart, {
     ]
     },
     options: {
-        legend: {
-            display:false
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:false
-                }
-            }]
-        }
     }
 });
 
@@ -204,19 +154,15 @@ var doughnutChart = new Chart(myDoughnutChart, {
         labels: ["Phones", "Tablets", "Desktop"],
         datasets: [
             {
-            data: [20, 30, 50],
-            backgroundColor: [ '#e2e3f6'],
-            borderColor: ['#7477bf'],
+            data: [15, 25, 60],
+            backgroundColor: ['#74b1bf', '#81c98f', '#7377bf'],
         }
     ]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:false
-                }
-            }]
-        }
+        legend: {
+            display: true,
+            position: 'right'
+        },
     }
 });

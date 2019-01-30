@@ -1,7 +1,6 @@
 
-//Forms
+
 .search-boarder {
- padding: 1em 0.6em 1em 10em;
  background-color: #fbfbfb;
 }
 
@@ -32,7 +31,12 @@ margin-top: 0.5em;
  background-color: #fbfbfb;
 }
 
-
+.dashboard-flex {
+display: flex;
+flex-direction: column-reverse;
+justify-content: space-between;
+align-items: center;
+}
 
 .switch-candy {
 display: flex;
@@ -91,4 +95,18 @@ grid-area: btn-save;
 
 .btn-cancel {
 grid-area: btn-cancel;
+}
+
+
+@media (min-width: 724px) {
+    .dashboard-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .search-boarder {
+    padding: 1em 0.6em 1em 10em;
+    background-color: #fbfbfb;
+    }
 }
