@@ -46,28 +46,28 @@
 
             <div class="grid-2">
                 <h3>TRAFFIC</h3>
-                <ul class="btn-chart">
-                    <li id="h">Hourly</li>
-                    <li id="d">Daily</li>
-                    <li id="w">Weekly</li>
-                    <li id="m">Monthly</li>
+                <ul class="btn-chart" id="ul">
+                    <li class="li" id="hour">Hourly</li>
+                    <li class="li" id="day">Daily</li>
+                    <li class="li" id="week">Weekly</li>
+                    <li class="li" id="month">Monthly</li>
                 </ul>
                 <div class="chart-1">
-                    <canvas id="myChart"></canvas>
+                    <canvas id="lineChart"></canvas>
                 </div>
             </div>
 
             <div class="grid-3">
                 <h3>DAILY TRAFFIC</h3>
                 <div class="chart-2">
-                    <canvas id="myBarChart"></canvas>
+                    <canvas id="barChart"></canvas>
                 </div>
             </div>
 
             <div class="grid-4">
                 <h3>MOBILE USERS</h3>
                 <div class="chart-3">
-                    <canvas id="myDoughnutChart"></canvas>
+                    <canvas id="doughnutChart"></canvas>
                 </div>
             </div>
 
@@ -138,8 +138,8 @@
                 <h3>MESSAGE USER</h3>
                 <form class="message-form" action="index.html" method="POST">
                     <input type="search" id="search-bottom" placeholder="Search for User">
-                    <textarea id="textarea" name="message" placeholder="Message User"></textarea>
-                    <button class="btn-send" type="submit" name="send">SEND</button>
+                    <textarea id="textarea" name="textarea" placeholder="Message User"></textarea>
+                    <button class="btn-send" id="send" type="button" name="send">SEND</button>
                 </form>
             </div>
 
@@ -167,8 +167,8 @@
                     <select id="timezone" name="state">
                         <option value="" disabled selected>Select Timezone</option>
                     </select>
-                    <button class="btn-save" type="submit" name="save">SAVE</button>
-                    <button class="btn-cancel" type="submit" name="cancel">CANCEL</button>
+                    <button class="btn-save" id="save" type="button" name="save">SAVE</button>
+                    <button class="btn-cancel" type="button" name="cancel">CANCEL</button>
                 </form>
             </div>
 

@@ -18,14 +18,17 @@ border: none;
  justify-content: end;
 }
 
-li {
+.li {
 list-style-type: none;
-background-color: #81c98f;
-color: #fff;
-border-radius: 1.75em;
-padding: 0.4em;
 text-align: center;
 margin-right: 5px;
+border-radius: 1.75em;
+padding: 0.4em;
+}
+
+.liSelected {
+background-color: #81c98f;
+color: #fff;
 }
 
 .btn-send, .btn-save {

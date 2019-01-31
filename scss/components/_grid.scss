@@ -102,7 +102,7 @@ GRID CONTAINER LAYOUT
  =================*/
   @media (min-width: 768px) {
     .container {
-       grid-template-columns: 1fr minmax(auto, 100%);
+       grid-template-columns: 80px minmax(auto, 100%);
        grid-template-rows: 65px;
        grid-auto-rows: auto;
        grid-template-areas: 
