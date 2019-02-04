@@ -15,20 +15,28 @@ const alertBar = document.getElementById('alert');
 const message = document.getElementById('textarea');
 const user = document.getElementById('search-bottom');
 
+const liButtons = document.querySelectorAll(".li");
+
 // Alert Bar, hides when clicked 
 deleteButton.addEventListener('click', () => {
  alertBar.style.display = 'none';
 });
 
-//Bell notification
+//Bell pop up notification
+const bell = document.getElementById('bell');
+const popUp = document.getElementsByClassName('popuptext');
 
-
+const notif = document.getElementsByClassName("notification-menu");
+bell.addEventListener('click', () => {
+    for(let i = 0; i < notif.length; i +=1) {
+        let toggle = notif[i].style.display = 'block';
+        toggle.toggle();
+    }
+});
 
 // Alert on Send button
-/*
-When user press to submit the form, it displays a confirmation that the message was sent. 
-Error messages are displayed if a user isn’t selected or message field is empty.
-*/
+/*When user press to submit the form, it displays a confirmation that the message was sent. 
+Error messages are displayed if a user isn’t selected or message field is empty.*/
 sendButton.addEventListener('click', () => {    
  if (user.value == '') {
     alert('Please select a User');
@@ -41,32 +49,30 @@ sendButton.addEventListener('click', () => {
  }
 });
 
-
-
 //Chart Buttons
-/*Get all the relevant buttons into an array
-  Loop through the buttons
-  When the page loads add class to weekChart 
-  Set up a click event handler for the button
-  Loop though all the buttons and reset the colors back to default
-  Add the class to the one button that got clicked
-*/
-let buttons = Array.prototype.slice.call(document.querySelectorAll(".li"));
-buttons.forEach(function(btn){
+/*Loop through the buttons
+When the page loads add class to weekChart 
+Set up a click event handler for the button
+Loop though all the buttons and reset the colors back to default
+Add the class to the one button that got clicked*/
+liButtons.forEach(function(btn){
   weekChart.classList.add('liSelected');
   btn.addEventListener("click", function(){
-    buttons.forEach(function(btn){ btn.classList.remove("liSelected"); });
+    liButtons.forEach(function(btn){ 
+        btn.classList.remove("liSelected");
+    });
     this.classList.add("liSelected");
   });
 });
 
-
-
-
 //Global chart defaults
 Chart.defaults.global.responsive = true;
+Chart.defaults.global.maintainAspectRatio = false;
 Chart.defaults.scale.ticks.beginAtZero = false;
 Chart.defaults.global.legend.display = false;
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 10;
+Chart.defaults.global.defaultFontColor = '#9e9e9e';
 
 //LINE CHARTS
 let NewLineChart = new Chart(lineChart, {
@@ -75,17 +81,20 @@ let NewLineChart = new Chart(lineChart, {
         labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
         datasets: [
             {
+            // label:'Visitors',
             data: [750, 1250, 1000, 1500, 2000, 1500, 1250, 1750, 2250, 1750, 2250],
-            backgroundColor: [ '#e2e3f6'],
-            borderColor: ['#7477bf'],
-            borderWidth: 1,
+            backgroundColor: '#e2e3f6',
+            borderColor: '#7477bf',
+            borderWidth: 0.5,
             pointBorderWidth:2,
-            pointRadius: 7
+            pointBackgroundColor: '#fff',
+            pointHoverBackgroundColor:'#e7e8f9',
+            pointRadius: 4,
+            lineTension: 0,
         }
     ]
     },
 });
-
 hourChart.addEventListener('click', () => {
     new Chart(lineChart, {
         type: 'line',
@@ -93,18 +102,21 @@ hourChart.addEventListener('click', () => {
             labels: ["9am", "10am", "11pm", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
             datasets: [
                 {
-                data: [5, 30, 15, 20, 45, 17, 10, 45, 25, 38, 12],
-                backgroundColor: [ '#e2e3f6'],
-                borderColor: ['#7477bf'],
-                borderWidth: 1,
+                // label:'Visitors',
+                data: [5, 30, 15, 35, 20, 45, 20, 15, 35, 15, 20],
+                backgroundColor: '#e2e3f6',
+                borderColor: '#7477bf',
+                borderWidth: 0.5,
                 pointBorderWidth:2,
-                pointRadius: 7
+                pointBackgroundColor: '#fff',
+                pointHoverBackgroundColor:'#e7e8f9',
+                pointRadius: 4,
+                lineTension: 0,
             }
         ]
         },
     });
 });
-
 dayChart.addEventListener('click', () => {
     new Chart(lineChart, {
         type: 'line',
@@ -112,20 +124,21 @@ dayChart.addEventListener('click', () => {
             labels: ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"],
             datasets: [
                 {
-                data: [120, 320, 100, 120, 450, 380, 450, 180, 300, 320, 400],
-                backgroundColor: [ 'r#e2e3f6'],
-                borderColor: ['#7477bf'],
-                borderWidth: 1,
+                // label:'Visitors',
+                data: [150, 300, 280, 100, 200, 450, 300, 220, 400, 320, 280],
+                backgroundColor: '#e2e3f6',
+                borderColor: '#7477bf',
+                borderWidth: 0.5,
                 pointBorderWidth:2,
-                pointRadius: 7
+                pointBackgroundColor: '#fff',
+                pointHoverBackgroundColor:'#e7e8f9',
+                pointRadius: 4,
+                lineTension: 0,
             }
         ]
         },
-        options: {
-        }
     });  
 });
-
 weekChart.addEventListener('click', () => {
   new Chart(lineChart, {
         type: 'line',
@@ -133,18 +146,21 @@ weekChart.addEventListener('click', () => {
             labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
             datasets: [
                 {
+                // label:'Visitors',
                 data: [750, 1250, 1000, 1500, 2000, 1500, 1250, 1750, 2250, 1750, 2250],
-                backgroundColor: [ '#e2e3f6'],
-                borderColor: ['#7477bf'],
-                borderWidth: 1,
+                backgroundColor: '#e2e3f6',
+                borderColor: '#7477bf',
+                borderWidth: 0.5,
                 pointBorderWidth:2,
-                pointRadius: 7
+                pointBackgroundColor: '#fff',
+                pointHoverBackgroundColor:'#e7e8f9',
+                pointRadius: 4,
+                lineTension: 0,
             }
         ]
         },
     });
 });
-
 monthChart.addEventListener('click', () => {
     new Chart(lineChart, {
         type: 'line',
@@ -152,18 +168,21 @@ monthChart.addEventListener('click', () => {
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [
                 {
+                // label:'Visitors',
                 data: [2000, 3500, 6000, 4000, 3800, 1500, 2000, 3000, 5000, 5500, 5800, 4000,],
-                backgroundColor: [ '#e2e3f6'],
-                borderColor: ['#7477bf'],
-                borderWidth: 1,
+                backgroundColor: '#e2e3f6',
+                borderColor: '#7477bf',
+                borderWidth: 0.5,
                 pointBorderWidth:2,
-                pointRadius: 7
+                pointBackgroundColor: '#fff',
+                pointHoverBackgroundColor:'#e7e8f9',
+                pointRadius: 4,
+                lineTension: 0,
             }
         ]
         },
     });
 });
-
 
 //BAR CHART
 let NewBarChart = new Chart(barChart, {
@@ -172,15 +191,13 @@ let NewBarChart = new Chart(barChart, {
         labels: ["S", "M", "T", "W", "T", "F", "S"],
         datasets: [
             {
+            // label:'visitors',
             data: [75, 100, 175, 125, 225, 200, 100],
-            backgroundColor: [ '#e2e3f6'],
-            borderColor: ['#7477bf'],
+            backgroundColor: '#7377bf',
         }
     ]
     },
 });
-
-
 
 //DONUT CHART
 let NewDoughnutChart = new Chart(doughnutChart, {

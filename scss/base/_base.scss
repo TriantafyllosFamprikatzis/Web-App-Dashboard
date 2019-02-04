@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
 
 * {
 box-sizing: border-box;
 }
 
 body {
-  background-color: lightsteelblue;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #ceddf1;
+  // font-family: 'Montserrat', sans-serif;
+  font-family:  'Dosis', sans-serif;
   }
   
 h2 {

@@ -1,0 +1,72 @@
+//CHARTS
+.chart-1, .chart-2, .chart-3 {
+  position: relative;
+  width: 100% !important;
+  height: auto !important;
+  // max-width: 800px;
+}
+
+
+  // height: 20vh;
+  // width: 80vw;
+
+// .col-1 {
+//   width: calc(100% / 3);
+// }
+
+// .col-2 {
+//  width: calc(100% / 3 * 2);
+// }
+
+// .col-3 {
+//   width: calc(100% / 3 * 3);
+//  }
+
+// @media (min-width: 768px){
+//   .chart-1, .chart-2, .chart-3 {
+//     position: relative;
+//     width: 100% !important;
+//     max-width: 1200px;
+//     height: auto !important;
+//   }
+// }
+
+//SOCIAL ICONS
+.widgets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.social-info {  
+margin: 0 1em 1.8em 1em;
+border: 1.2px solid #d1d1d1;
+background-color: #fbfbfb;
+border-radius: 0.5em;
+padding: 0 2em 0 .4em;
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: 27px 1fr;
+grid-template-areas: 
+"icon label"
+"icon stats";
+}
+
+
+.social-icons {
+grid-area: icon;
+width: 80px;
+height: 100px;
+margin-right: 20px;
+}
+
+.widget-label {
+grid-area: label;
+color: #797dc1;
+}
+
+.widget-stats {
+grid-area: stats;
+font-size: 50px;
+margin: 10px 0;
+}
