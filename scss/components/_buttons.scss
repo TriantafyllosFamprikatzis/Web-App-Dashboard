@@ -1,60 +1,62 @@
-
 .btn-delete-flex {
-display: flex;
-justify-content: space-between;
-background-color: #7377bf;
-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7377bf;
+  border-radius: 0.3em;
 }
 
 .btn-delete {
-background-color: #7377bf;
-color: #fff;
-border: none;
-border-radius: 0.3em;
+  background-color: #7377bf;
+  color: #fff;
+  border: none;
+  margin: 0 4px 1px 0;
 }
 
 .alert-text {
-margin: 0.5em 0 0.5em 0.5em;
+  margin: 0.5em 0 0.5em 0.5em;
+  color: #fff;
 }
 
 .btn-chart {
-display: flex;
-flex-direction: row;
-justify-content: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .li {
-list-style-type: none;
-text-align: center;
-margin-right: 5px;
-border-radius: 1.75em;
-padding: 0.4em;
+  list-style-type: none;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 1.75em;
+  padding: 0.4em;
 }
 
 .liSelected {
-background-color: #81c98f;
-color: #fff;
+  background-color: #81c98f;
+  color: #fff;
+  font-weight: bold;
 }
 
-.btn-send, .btn-save {
-padding: 1rem;
-background-color: #7377bf;
-color: #fff;
-margin-top: 1.5em;
-border-radius: 0.3em;
+.btn-send {
+  padding: 0.840em;
+  background-color: #7377bf;
+  color: #fff;
+  margin-top: 1.5em;
+  border-radius: 0.3em;
 }
 
 .btn-save {
-margin-right: 1em;
+  margin-right: 1em;
+  background-color: #7377bf;
+  color: #fff;
+  margin-top: 1.5em;
+  border-radius: 0.3em;
 }
 
 .btn-cancel {
-padding: 1rem;
-background-color: #b2b2b2;
-color: #fff;
-margin-top: 1.5em;
-margin-left: 1em;
-border-radius: 0.3em;
+  background-color: #b2b2b2;
+  color: #fff;
+  margin-top: 1.5em;
+  margin-left: 1em;
+  border-radius: 0.3em;
 }
-
-

@@ -1,18 +1,25 @@
-// @import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #ceddf1;
-  // font-family: 'Montserrat', sans-serif;
-  font-family:  'Dosis', sans-serif;
-  }
-  
+  background-color: #fbfbfb;
+  font-family: "Ubuntu", sans-serif;
+}
+
 h2 {
-  font-size: 1em;
-  color: white;
-  }
-    
+  font-size: 1.4em;
+}
+
+h3,
+h2,
+p,
+li {
+  color: #828282;
+}
+
+h3, li, button, input, select, textarea, p, a{
+ font-size: 0.813em;
+}

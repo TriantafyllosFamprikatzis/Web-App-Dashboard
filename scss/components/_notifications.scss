@@ -1,64 +1,63 @@
-
-//NEW MEMBERS 
+//NEW MEMBERS
 .members-grid {
-padding: 0.8em 0 0.8em 0;
-display: grid;
-grid-template-columns: 50px 2fr 1fr;
-grid-template-rows: 1.4em;
-grid-template-areas: 
-"image name date"
-"image mail date";
+  padding: 1em 0 1em 0;
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr;
+  grid-template-rows: 1.4em;
+  grid-template-areas:
+    "image name date"
+    "image mail date";
 }
 
 //RECENT ACTIVITY
 .activity-grid {
-padding: 1em 0 1em 0;
-display: grid;
-grid-template-columns: 50px 10fr 1fr;
-grid-template-rows: 1.4em;
-grid-template-areas: 
-"image comment sign"
-"image time sign";
+  padding: 1em 0 1em 0;
+  display: grid;
+  grid-template-columns: 50px 10fr 1fr;
+  grid-template-rows: 2.5em;
+  grid-template-areas:
+    "image comment sign"
+    "image time sign";
 }
 
 .activity-grid:not(:last-child),
 .members-grid:not(:last-child) {
-border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
 }
 
 .member-img {
- grid-area: image;
- width: 100%;
- border-radius: 50%;
- padding-right: 7px;
+  grid-area: image;
+  width: 85%;
+  border-radius: 50%;
+  padding-right: 7px;
 }
 .member-name {
- grid-area: name;
- margin: 0;
+  grid-area: name;
+  margin: 0;
 }
 .member-mail {
- grid-area: mail;
+  grid-area: mail;
+  color: #797dc1;
 }
 .member-date {
- grid-area: date;
- text-align: end;
+  grid-area: date;
+  text-align: end;
 }
 .member-comment {
- grid-area: comment;
- margin: 0;
+  grid-area: comment;
+  margin: 0;
 }
 .member-time {
- grid-area: time;
- margin: 0;
+  grid-area: time;
+  margin: 0;
 }
 .sign {
-grid-area: sign;
-font-size: 35px;
-color: #797dc1;
-margin: 0;
-text-align: right;
+  grid-area: sign;
+  font-size: 22px;
+  color: #797dc1;
+  margin: 0;
+  text-align: right;
 }
-
 
 //POP UP
 // .popup {
@@ -107,22 +106,14 @@ text-align: right;
   padding: 2px 0;
 }
 .notification-menu h3 {
-  font-size: 15px;
+  // font-size: 15px;
   margin: 0 0 5px 0;
   display: inline;
 }
 .notification-menu p {
   margin-bottom: 0;
-  font-size: 14px;
+  // font-size: 14px;
 }
-
-
-
-
-
-
-
-
 
 .popup .popuptext::before {
   content: "";
@@ -137,18 +128,26 @@ text-align: right;
 
 .popup .show {
   visibility: visible;
-  -webkit-animation: fadeIn .5s;
-  animation: fadeIn .5s
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
 }
 
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 //POP UP CONTENT
@@ -156,32 +155,38 @@ text-align: right;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 20px;
-  grid-template-areas: 
-  "image name button"
-  "image comment button";
+  grid-template-areas:
+    "image name button"
+    "image comment button";
 }
 
 .img {
   grid-area: image;
-  width: 45px;
+  width: 40px;
   border-radius: 50%;
 }
 .name {
   grid-area: name;
-  font-size: 13px;
+  // font-size: 13px;
   margin: 0;
   text-align: left;
 }
 .comment {
   grid-area: comment;
-  font-size: 13px;
+  // font-size: 13px;
   margin: 0;
 }
 
 .btn-notif {
-grid-area: button;
-background-color: #fff;
-color: #000;
-border: none;
-padding: 0 0 20px 30px;
+  grid-area: button;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0 0 20px 30px;
+}
+
+@media (min-width: 1024px) {
+  .activity-grid {
+    grid-template-rows: 1.6em;
+  }
 }

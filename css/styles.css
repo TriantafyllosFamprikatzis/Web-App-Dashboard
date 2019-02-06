@@ -1,34 +1,45 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #ceddf1;
-  font-family: "Dosis", sans-serif;
+  background-color: #fbfbfb;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h2 {
-  font-size: 1em;
-  color: white;
+  font-size: 1.4em;
+}
+
+h3,
+h2,
+p,
+li {
+  color: #828282;
+}
+
+h3, li, button, input, select, textarea, p, a {
+  font-size: 0.813em;
 }
 
 .btn-delete-flex {
   display: flex;
   justify-content: space-between;
   background-color: #7377bf;
-  color: #fff;
+  border-radius: 0.3em;
 }
 
 .btn-delete {
   background-color: #7377bf;
   color: #fff;
   border: none;
-  border-radius: 0.3em;
+  margin: 0 4px 1px 0;
 }
 
 .alert-text {
   margin: 0.5em 0 0.5em 0.5em;
+  color: #fff;
 }
 
 .btn-chart {
@@ -48,10 +59,11 @@ h2 {
 .liSelected {
   background-color: #81c98f;
   color: #fff;
+  font-weight: bold;
 }
 
-.btn-send, .btn-save {
-  padding: 1rem;
+.btn-send {
+  padding: 0.84em;
   background-color: #7377bf;
   color: #fff;
   margin-top: 1.5em;
@@ -60,10 +72,13 @@ h2 {
 
 .btn-save {
   margin-right: 1em;
+  background-color: #7377bf;
+  color: #fff;
+  margin-top: 1.5em;
+  border-radius: 0.3em;
 }
 
 .btn-cancel {
-  padding: 1rem;
   background-color: #b2b2b2;
   color: #fff;
   margin-top: 1.5em;
@@ -71,29 +86,24 @@ h2 {
   border-radius: 0.3em;
 }
 
-.search-border {
-  background-color: #fbfbfb;
-}
-
 #search-top {
-  padding: 0.5em 10em 0.5em 0.5em;
+  padding: 0.5em 6em 0.5em 0.5em;
   border: 1.2px solid #d1d1d1;
-  background-color: #fff;
-  text-align: inherit;
+  background-color: #fbfbfb;
   border-radius: 0.3em;
+  margin-top: 1.2em;
 }
 
 #search-bottom {
   padding: 0.5em 0 0.5em 0.5em;
   border: 1.2px solid #d1d1d1;
   background-color: #fbfbfb;
-  margin-bottom: 1em;
   border-radius: 0.3em;
 }
 
 #textarea {
-  margin-top: 0.5em;
-  padding: 0.5em 2.5em 2em 0.5em;
+  margin-top: 1.5em;
+  padding: 0.5em 2.5em 3.2em 0.5em;
   border: 1.2px solid #d1d1d1;
   background-color: #fbfbfb;
   border-radius: 0.3em;
@@ -104,14 +114,13 @@ h2 {
   border: 1.2px solid #d1d1d1;
   background-color: #fbfbfb;
   border-radius: 0.3em;
-  margin-top: 1.6em;
+  margin-top: 1.5em;
 }
 
 .dashboard-flex {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  align-items: center;
 }
 
 .switch-candy {
@@ -131,6 +140,7 @@ h2 {
 .settings-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 40px 65px 60px;
   grid-template-areas: "text-1  switch-1" "text-2  switch-2" "timezone timezone" "btn-save btn-cancel";
 }
 
@@ -180,27 +190,29 @@ h2 {
 
 @media (min-width: 724px) {
   .dashboard-flex {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
   }
 
-  .search-boarder {
-    padding: 1em 0.6em 1em 10em;
-    background-color: #fbfbfb;
+  .search-border {
+    padding: 2em 0 0 27em;
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 1024px) {
+  #search-top {
+    padding: 0.5em 10em 0.5em 0.5em;
+    margin-top: 0;
   }
 }
 /*===================
 GRID CONTAINER LAYOUT
 ====================*/
 .container {
-  max-width: 100%;
-  background-color: #fff;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(auto, 100%);
-  grid-template-rows: 80px minmax(80px, auto);
+  grid-template-rows: 65px minmax(65px, auto);
   grid-template-areas: "header" "nav" "main";
 }
 
@@ -227,7 +239,8 @@ main {
 GRID MAIN LAYOUT*
 ====================*/
 .grid-main {
-  padding: 20px;
+  padding: 0 1em 2em 1em;
+  background-color: #fff;
   display: grid;
   grid-template-columns: minmax(auto, 100%);
   grid-template-areas: "alert" "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
@@ -246,6 +259,7 @@ GRID MAIN LAYOUT*
   border-top: 1.2px solid #d1d1d1;
   border-right: 1.2px solid #d1d1d1;
   border-bottom: 1.2px solid #d1d1d1;
+  padding-right: 0.5em;
 }
 
 .grid-4 {
@@ -253,6 +267,7 @@ GRID MAIN LAYOUT*
   border-top: 1.2px solid #d1d1d1;
   border-right: 1.2px solid #d1d1d1;
   border-bottom: 1.2px solid #d1d1d1;
+  padding-left: 0.5em;
 }
 
 .grid-5 {
@@ -262,27 +277,22 @@ GRID MAIN LAYOUT*
 .grid-6 {
   grid-area: new-members;
   border-top: 1.2px solid #d1d1d1;
-  border-right: 1.2px solid #d1d1d1;
   border-bottom: 1.2px solid #d1d1d1;
-  padding-right: 30px;
+  padding-right: 1em;
 }
 
 .grid-7 {
   grid-area: recent-activity;
-  padding-left: 30px;
   border-top: 1.2px solid #d1d1d1;
   border-bottom: 1.2px solid #d1d1d1;
 }
 
 .grid-8 {
   grid-area: message-user;
-  border-right: 1.2px solid #d1d1d1;
-  padding: 1em 2em 1em 0;
 }
 
 .grid-9 {
   grid-area: settings;
-  padding: 1em 1em 0 2em;
 }
 
 /*================
@@ -290,20 +300,36 @@ MEDIA QUERIES
 =================*/
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: minmax(80px, max-content);
+    grid-template-columns: minmax(65px, max-content);
     grid-template-rows: 65px;
     grid-auto-rows: auto;
     grid-template-areas: "header header" "nav main" "nav main";
   }
 }
 @media (min-width: 1024px) {
-  .container {
-    width: 55%;
-  }
-
   .grid-main {
+    width: 55%;
+    margin: 0 auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "alert alert" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
+  }
+
+  .grid-6 {
+    border-right: 1.2px solid #d1d1d1;
+    padding-right: 2em;
+  }
+
+  .grid-7 {
+    padding-left: 2em;
+  }
+
+  .grid-8 {
+    border-right: 1.2px solid #d1d1d1;
+    padding: 1em 2em 1em 0;
+  }
+
+  .grid-9 {
+    padding: 1em 1em 0 2em;
   }
 }
 .header-nav {
@@ -315,30 +341,32 @@ MEDIA QUERIES
 .logo {
   width: 160px;
   margin-right: auto;
+  margin-bottom: 10px;
 }
 
 .bell {
-  width: 5em;
-  height: 1.9em;
-  margin: 15px 10px;
+  width: 4em;
+  height: 1.4em;
+  margin: 20px 6px;
   border-right: 1.2px solid #d1d1d1;
 }
 
 .profile-pic {
   border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 35px;
+  height: 35px;
   margin: 10px 10px;
 }
 
 .profile-name {
   margin-right: 1em;
-  margin-top: 1.2em;
+  margin-top: 13px;
+  color: #fff;
 }
 
 .nav-icons {
-  width: 1.8em;
-  margin: 25px 10px 20px;
+  width: 1.6em;
+  margin: 19px 10px 20px;
 }
 
 .side-nav {
@@ -352,9 +380,26 @@ MEDIA QUERIES
     flex-direction: column;
     justify-content: center;
   }
+
+  .bell {
+    width: 5em;
+    margin: 15px 10px;
+  }
+
+  .profile-name {
+    margin-top: 1.2em;
+  }
+
+  .logo {
+    margin-bottom: 2px;
+  }
+
+  .nav-icons {
+    width: 1.8em;
+  }
 }
 .members-grid {
-  padding: 0.8em 0 0.8em 0;
+  padding: 1em 0 1em 0;
   display: grid;
   grid-template-columns: 50px 2fr 1fr;
   grid-template-rows: 1.4em;
@@ -365,7 +410,7 @@ MEDIA QUERIES
   padding: 1em 0 1em 0;
   display: grid;
   grid-template-columns: 50px 10fr 1fr;
-  grid-template-rows: 1.4em;
+  grid-template-rows: 2.5em;
   grid-template-areas: "image comment sign" "image time sign";
 }
 
@@ -376,7 +421,7 @@ MEDIA QUERIES
 
 .member-img {
   grid-area: image;
-  width: 100%;
+  width: 85%;
   border-radius: 50%;
   padding-right: 7px;
 }
@@ -388,6 +433,7 @@ MEDIA QUERIES
 
 .member-mail {
   grid-area: mail;
+  color: #797dc1;
 }
 
 .member-date {
@@ -407,7 +453,7 @@ MEDIA QUERIES
 
 .sign {
   grid-area: sign;
-  font-size: 35px;
+  font-size: 22px;
   color: #797dc1;
   margin: 0;
   text-align: right;
@@ -442,14 +488,12 @@ MEDIA QUERIES
 }
 
 .notification-menu h3 {
-  font-size: 15px;
   margin: 0 0 5px 0;
   display: inline;
 }
 
 .notification-menu p {
   margin-bottom: 0;
-  font-size: 14px;
 }
 
 .popup .popuptext::before {
@@ -494,20 +538,18 @@ MEDIA QUERIES
 
 .img {
   grid-area: image;
-  width: 45px;
+  width: 40px;
   border-radius: 50%;
 }
 
 .name {
   grid-area: name;
-  font-size: 13px;
   margin: 0;
   text-align: left;
 }
 
 .comment {
   grid-area: comment;
-  font-size: 13px;
   margin: 0;
 }
 
@@ -519,7 +561,14 @@ MEDIA QUERIES
   padding: 0 0 20px 30px;
 }
 
-.chart-1, .chart-2, .chart-3 {
+@media (min-width: 1024px) {
+  .activity-grid {
+    grid-template-rows: 1.6em;
+  }
+}
+.chart-1,
+.chart-2,
+.chart-3 {
   position: relative;
   width: 100% !important;
   height: auto !important;
@@ -527,7 +576,7 @@ MEDIA QUERIES
 
 .widgets {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -557,8 +606,14 @@ MEDIA QUERIES
 
 .widget-stats {
   grid-area: stats;
-  font-size: 50px;
+  font-size: 40px;
   margin: 10px 0;
+}
+
+@media (min-width: 1024px) {
+  .widgets {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

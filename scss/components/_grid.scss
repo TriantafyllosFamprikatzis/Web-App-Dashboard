@@ -2,20 +2,18 @@
 GRID CONTAINER LAYOUT
 ====================*/
 
-.container { 
-max-width: 100%;
-background-color: #fff;
-margin: 0 auto;
-display: grid;
-grid-template-columns: minmax(auto, 100%);
-grid-template-rows: 80px minmax(80px, auto);
-grid-template-areas:
-  "header"
-  "nav"
-  "main";
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(auto, 100%);
+  grid-template-rows: 65px minmax(65px, auto);
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
 }
-  
-  header {
+
+header {
   padding-top: 1em;
   padding-bottom: 1em;
   grid-area: header;
@@ -23,26 +21,27 @@ grid-template-areas:
   display: flex;
   flex-direction: row;
   align-items: center;
-  }
-  
-  nav {
-   grid-area: nav;
-   background-color: #4d4c72; 
-  }
-  
-  main {
+}
+
+nav {
+  grid-area: nav;
+  background-color: #4d4c72;
+}
+
+main {
   grid-area: main;
-  }
-  
-  /*==================
-  GRID MAIN LAYOUT*
-  ====================*/
-  
-  .grid-main {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: minmax(auto, 100%);
-    grid-template-areas: 
+}
+
+/*==================
+GRID MAIN LAYOUT*
+====================*/
+
+.grid-main {
+  padding: 0 1em 2em 1em;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: minmax(auto, 100%);
+  grid-template-areas:
     "alert"
     "traffic"
     "daily-traffic"
@@ -52,80 +51,90 @@ grid-template-areas:
     "recent-activity"
     "message-user"
     "settings";
-  }
-  
-  .grid-1 {
-    grid-area: alert;
-  }
-  .grid-2 {
-    grid-area: traffic;
-  }
-  .grid-3 {
+}
+
+.grid-1 {
+  grid-area: alert;
+}
+.grid-2 {
+  grid-area: traffic;
+}
+.grid-3 {
   grid-area: daily-traffic;
   border-top: 1.2px solid #d1d1d1;
   border-right: 1.2px solid #d1d1d1;
   border-bottom: 1.2px solid #d1d1d1;
-  }
-  .grid-4 {
+  padding-right: 0.5em
+}
+.grid-4 {
   grid-area: mobile-users;
   border-top: 1.2px solid #d1d1d1;
   border-right: 1.2px solid #d1d1d1;
   border-bottom: 1.2px solid #d1d1d1;
+  padding-left: 0.5em;
+}
+.grid-5 {
+  grid-area: social-stats;
+}
+.grid-6 {
+  grid-area: new-members;
+  border-top: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
+  padding-right: 1em;
+}
+.grid-7 {
+  grid-area: recent-activity;
+  border-top: 1.2px solid #d1d1d1;
+  border-bottom: 1.2px solid #d1d1d1;
+}
+.grid-8 {
+  grid-area: message-user;
+}
+.grid-9 {
+  grid-area: settings;
+}
+
+/*================
+MEDIA QUERIES
+=================*/
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: minmax(65px, max-content);
+    grid-template-rows: 65px;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "nav main";
   }
-  .grid-5 {
-    grid-area: social-stats;
+}
+
+@media (min-width: 1024px) {
+  .grid-main {
+    width: 55%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "alert alert"
+      "traffic traffic"
+      "daily-traffic mobile-users"
+      "social-stats social-stats"
+      "new-members recent-activity"
+      "message-user settings";
   }
+
   .grid-6 {
-    grid-area: new-members; 
-    border-top: 1.2px solid #d1d1d1;
     border-right: 1.2px solid #d1d1d1;
-    border-bottom: 1.2px solid #d1d1d1;
-    padding-right: 30px;
+    padding-right: 2em;
   }
   .grid-7 {
-    grid-area: recent-activity;
-    padding-left: 30px;
-    border-top: 1.2px solid #d1d1d1;
-    border-bottom: 1.2px solid #d1d1d1;
+    padding-left: 2em;
   }
   .grid-8 {
-    grid-area: message-user;
     border-right: 1.2px solid #d1d1d1;
     padding: 1em 2em 1em 0;
   }
   .grid-9 {
-    grid-area: settings;
     padding: 1em 1em 0 2em;
   }
-
- /*================
- MEDIA QUERIES
- =================*/
-  @media (min-width: 768px) {
-    .container {
-       grid-template-columns: minmax(80px, max-content);
-       grid-template-rows: 65px;
-       grid-auto-rows: auto;
-       grid-template-areas: 
-        "header header"
-        "nav main"
-        "nav main";
-     }
-     } 
-
-    @media (min-width: 1024px) {
-      .container {
-       width: 55%;
-      }
-      
-      .grid-main {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "alert alert"
-        "traffic traffic"
-        "daily-traffic mobile-users"
-        "social-stats social-stats"
-        "new-members recent-activity"
-        "message-user settings";
-      }
-    }
+}

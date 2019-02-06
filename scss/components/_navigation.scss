@@ -1,37 +1,38 @@
-    
 .header-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-    
+
 .logo {
   width: 160px;
   margin-right: auto;
+  margin-bottom: 10px;
 }
-    
+
 .bell {
-  width: 5em;
-  height: 1.9em;
-  margin: 15px 10px;
+  width: 4em;
+  height: 1.4em;
+  margin: 20px 6px;
   border-right: 1.2px solid #d1d1d1;
 }
-    
+
 .profile-pic {
   border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 35px;
+  height: 35px;
   margin: 10px 10px;
 }
 
 .profile-name {
-  margin-right:1em;
-  margin-top: 1.2em
+  margin-right: 1em;
+  margin-top: 13px;
+  color: #fff;
 }
-        
+
 .nav-icons {
-  width: 1.8em;
-  margin:  25px 10px 20px;
+  width: 1.6em;
+  margin: 19px 10px 20px;
 }
 
 .side-nav {
@@ -41,8 +42,21 @@
 }
 
 @media (min-width: 768px) {
-   .side-nav {
+  .side-nav {
     flex-direction: column;
     justify-content: center;
   }
-   } 
+  .bell {
+    width: 5em;
+    margin: 15px 10px;
+  }
+  .profile-name {
+    margin-top: 1.2em;
+  }
+  .logo{
+    margin-bottom: 2px;
+  }
+  .nav-icons {
+    width: 1.8em;
+  }
+}
