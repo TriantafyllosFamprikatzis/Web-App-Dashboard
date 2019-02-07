@@ -6,7 +6,7 @@ GRID CONTAINER LAYOUT
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(auto, 100%);
-  grid-template-rows: 65px minmax(65px, auto);
+  grid-template-rows: 6.5rem minmax(6.5rem, auto);
   grid-template-areas:
     "header"
     "nav"
@@ -14,8 +14,8 @@ GRID CONTAINER LAYOUT
 }
 
 header {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
   grid-area: header;
   background-color: #7477bf;
   display: flex;
@@ -37,7 +37,7 @@ GRID MAIN LAYOUT*
 ====================*/
 
 .grid-main {
-  padding: 0 1em 2em 1em;
+  padding: 0 1.6rem 3.2rem 1.6rem;
   background-color: #fff;
   display: grid;
   grid-template-columns: minmax(auto, 100%);
@@ -61,31 +61,25 @@ GRID MAIN LAYOUT*
 }
 .grid-3 {
   grid-area: daily-traffic;
-  border-top: 1.2px solid #d1d1d1;
-  border-right: 1.2px solid #d1d1d1;
-  border-bottom: 1.2px solid #d1d1d1;
-  padding-right: 0.5em
+  border-top: 0.12rem solid #d1d1d1;
 }
 .grid-4 {
   grid-area: mobile-users;
-  border-top: 1.2px solid #d1d1d1;
-  border-right: 1.2px solid #d1d1d1;
-  border-bottom: 1.2px solid #d1d1d1;
-  padding-left: 0.5em;
+  border-top: 0.12rem solid #d1d1d1;
+  border-bottom: 0.12rem solid #d1d1d1;
 }
 .grid-5 {
   grid-area: social-stats;
 }
 .grid-6 {
   grid-area: new-members;
-  border-top: 1.2px solid #d1d1d1;
-  border-bottom: 1.2px solid #d1d1d1;
-  padding-right: 1em;
+  border-top: 0.12rem solid #d1d1d1;
+  border-bottom: 0.12rem solid #d1d1d1;
 }
 .grid-7 {
   grid-area: recent-activity;
-  border-top: 1.2px solid #d1d1d1;
-  border-bottom: 1.2px solid #d1d1d1;
+  border-top: 0.12rem solid #d1d1d1;
+  border-bottom: 0.12rem solid #d1d1d1;
 }
 .grid-8 {
   grid-area: message-user;
@@ -94,18 +88,25 @@ GRID MAIN LAYOUT*
   grid-area: settings;
 }
 
+.grid-1, .grid-2, .grid-3,
+.grid-4, .grid-5, .grid-6,
+.grid-7, .grid-8, .grid-9 {
+  padding: 2.5rem 0 2.5rem 0;
+}
+
 /*================
 MEDIA QUERIES
 =================*/
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: minmax(65px, max-content);
-    grid-template-rows: 65px;
-    grid-auto-rows: auto;
+    grid-template-columns: 6.5rem minmax(50%, auto);
     grid-template-areas:
       "header header"
       "nav main"
       "nav main";
+  }
+  .grid-5 {
+    padding: 0 3em 0 3em;
   }
 }
 
@@ -122,19 +123,26 @@ MEDIA QUERIES
       "new-members recent-activity"
       "message-user settings";
   }
-
+  .grid-3 {
+    border-right: 0.12rem solid #d1d1d1;
+    border-bottom: 0.12rem solid #d1d1d1;
+    padding: 1.5rem 0.8rem 2.5rem 0;
+  }
+  .grid-4 {
+    padding: 1.5rem 0 2.5rem 0.8rem;
+  }
   .grid-6 {
-    border-right: 1.2px solid #d1d1d1;
-    padding-right: 2em;
+    border-right: 0.12rem solid #d1d1d1;
+    padding-right: 3.2rem;
   }
   .grid-7 {
-    padding-left: 2em;
+    padding-left: 3.2rem;
   }
   .grid-8 {
-    border-right: 1.2px solid #d1d1d1;
-    padding: 1em 2em 1em 0;
+    border-right: 0.12rem solid #d1d1d1;
+    padding: 1.6rem 3.2rem 1.6rem 0;
   }
   .grid-9 {
-    padding: 1em 1em 0 2em;
+    padding: 1.6rem 1.6rem 0 3.2rem;
   }
 }

@@ -1,43 +1,50 @@
 
 #search-top {
-  padding: 0.5em 6em 0.5em 0.5em;
-  border: 1.2px solid #d1d1d1;
+  padding: 0.8rem 12.6rem 0.8rem 0.8rem;
+  border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
-  border-radius: 0.3em;
-  margin-top: 1.2em;
+  border-radius: 0.4rem;
+  margin-top: 1.9rem;
 }
 
 #search-bottom {
-  padding: 0.5em 0 0.5em 0.5em;
-  border: 1.2px solid #d1d1d1;
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
-  border-radius: 0.3em;
+  border-radius: 0.4rem;
 }
 
 #textarea {
-  margin-top: 1.5em;
-  padding: 0.5em 2.5em 3.2em 0.5em;
-  border: 1.2px solid #d1d1d1;
+  margin-top: 2.4rem;  
+  padding: 0.8rem 4rem 5.1rem 0.8rem;
+  border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
-  border-radius: 0.3em;
+  border-radius: 0.4rem;
 }
 
 #timezone {
-  padding: 0.5em 0 0.5em 0.5em;
-  border: 1.2px solid #d1d1d1;
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
-  border-radius: 0.3em;
-  margin-top: 1.5em;
+  border-radius: 0.4rem;
+  margin-top: 2.4rem;
+}
+
+#search-top:focus, #search-bottom:focus,
+#textarea:focus, #timezone:focus {
+  border: 0.2rem solid #7377bf;
+  transition: all 0.4s;
+}
+
+.search-border {
+ display: flex;
+ justify-content: space-around;
+ margin-bottom: 3rem;
 }
 
 .dashboard-flex {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: space-between;
-}
-
-.switch-candy {
-  display: flex;
   justify-content: space-between;
 }
 
@@ -53,7 +60,7 @@
 .settings-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px 40px 65px 60px;
+  grid-template-rows: 5rem 5rem 6.7rem 7rem;
   grid-template-areas:
     "text-1  switch-1"
     "text-2  switch-2"
@@ -63,25 +70,26 @@
 
 .switch-1-text {
   grid-area: text-1;
-  margin-top: 0.3em;
+  margin-top: 0.4rem;
 }
 
 .switch-2-text {
   grid-area: text-2;
-  margin-top: 1em;
+  margin-top: 1.6rem;
 }
 
 .switch-1 {
   grid-area: switch-1;
   display: flex;
   justify-content: end;
+  margin-top: 0.5rem;
 }
 
 .switch-2 {
   grid-area: switch-2;
-  margin-top: 0.6em;
   display: flex;
   justify-content: end;
+  margin-top: 1.2rem;
 }
 
 #timezone {
@@ -98,11 +106,17 @@
 
 .switch-ios.switch-light input:checked ~ span {
   border-color: #7377bf;
-  box-shadow: inset 0 0 0 30px #7377bf;
+  box-shadow: inset 0 0 0 3rem #7377bf;
 }
 
 .switch-ios.switch-light input:checked ~ span a {
   border-color: #7377bf;
+}
+
+.switch-ios.switch-light a {
+  width: 3.8rem;
+  height: 3.8rem; 
+  outline: none !important;
 }
 
 @media (min-width: 724px) {
@@ -111,13 +125,12 @@
     align-items: center;
   }
   .search-border {
-    padding: 2em 0 0 27em;
-    margin-bottom: 2em;
+    margin: 3rem 0 3.2rem 0;
   }
 }
 @media (min-width: 1024px) {
   #search-top {
-    padding: 0.5em 10em 0.5em 0.5em;
+    padding: 0.8rem 16rem 0.8rem 0.8rem;
     margin-top: 0;
   }
 }
