@@ -14,7 +14,7 @@ GRID CONTAINER LAYOUT
 }
 
 header {
-  padding-top: 1.6rem;
+  padding-top: 2.6rem;
   padding-bottom: 1.6rem;
   grid-area: header;
   background-color: #7477bf;
@@ -107,6 +107,9 @@ MEDIA QUERIES
   }
   .grid-5 {
     padding: 0 3em 0 3em;
+  }
+  header {
+    padding-top: 1.6rem;
   }
 }
 

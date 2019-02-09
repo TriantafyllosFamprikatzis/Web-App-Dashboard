@@ -239,7 +239,7 @@ GRID CONTAINER LAYOUT
 }
 
 header {
-  padding-top: 1.6rem;
+  padding-top: 2.6rem;
   padding-bottom: 1.6rem;
   grid-area: header;
   background-color: #7477bf;
@@ -329,6 +329,10 @@ MEDIA QUERIES
   .grid-5 {
     padding: 0 3em 0 3em;
   }
+
+  header {
+    padding-top: 1.6rem;
+  }
 }
 @media (min-width: 1024px) {
   .grid-main {
@@ -370,31 +374,36 @@ MEDIA QUERIES
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-bottom: 1rem;
 }
 
 .logo {
-  width: 16rem;
+  width: 13rem;
   margin-right: auto;
   margin-bottom: 1rem;
 }
 
 .bell {
-  width: 6.4rem;
+  width: 2.4rem;
   height: 2.2rem;
-  margin: 2rem 0.6rem;
-  border-right: 0.12rem solid #d1d1d1;
+  margin: 2.6rem 0.6rem 2.6rem 5rem;
+}
+
+.border-notif {
+  border-right: 0.2rem dotted #d1d1d1;
+  margin: 1.8rem 1.1rem;
 }
 
 .profile-pic {
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
 }
 
 .profile-name {
   margin-right: 1.6rem;
-  margin-top: 1.3rem;
+  margin-top: 2.3rem;
   color: #fff;
 }
 
@@ -415,17 +424,12 @@ MEDIA QUERIES
     justify-content: center;
   }
 
-  .bell {
-    width: 8rem;
-    margin: 1.5rem 1rem;
-  }
-
-  .profile-name {
-    margin-top: 1.9rem;
+  .header-nav {
+    margin-bottom: 0;
   }
 
   .logo {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0;
   }
 
   .nav-icons {
@@ -495,20 +499,19 @@ MEDIA QUERIES
 
 .notification {
   position: relative;
-  text-align: right;
 }
 
 .notification-menu {
   position: absolute;
-  top: 5rem;
-  left: -15rem;
+  top: 6rem;
+  left: -9rem;
   background-color: #e5e5e5;
   border: #989898;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   list-style: none;
-  width: 25rem;
+  width: 29rem;
   display: none;
-  text-align: left;
+  z-index: 1;
 }
 
 .notification-menu li {
@@ -530,43 +533,37 @@ MEDIA QUERIES
   margin-bottom: 0;
 }
 
-.popup .popuptext::before {
+.notification-menu::before {
   content: "";
   position: absolute;
-  top: -24%;
-  left: 49%;
+  top: -27.9px;
+  left: 142px;
   margin-left: -0.5rem;
-  border-width: 1rem;
+  border-width: 1.4rem;
   border-style: solid;
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent #e5e5e5 transparent;
 }
 
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 0.5s;
-  animation: fadeIn 0.5s;
+.removed-item {
+  animation: removed-item-animation 3s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  /*transform origin is moved to the bottom left corner*/
+  transform-origin: 0% 100%;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
+@keyframes removed-item-animation {
+  0% {
     opacity: 1;
+    transform: rotateZ(0);
   }
-}
-@keyframes fadeIn {
-  from {
+  100% {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
+    transform: translateY(600px) rotateZ(90deg);
   }
 }
 .popuptext {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 2rem;
+  grid-template-columns: 1fr 3fr 2rem;
+  grid-template-rows: 1.5rem 2rem 1rem;
   grid-template-areas: "image name button" "image comment button";
 }
 
@@ -592,7 +589,9 @@ MEDIA QUERIES
   background-color: #fff;
   color: #000;
   border: none;
-  padding: 0 0 2rem 3rem;
+  margin: 0 0 2rem 1em;
+  padding: 0;
+  outline: none;
 }
 
 @media (min-width: 1024px) {

@@ -15,7 +15,7 @@ const alertBar = document.getElementById('alert');
 const message = document.getElementById('textarea');
 const user = document.getElementById('search-bottom');
 
-const liButtons = document.querySelectorAll(".li");
+const chartButtons = document.querySelectorAll(".li");
 
 // Alert Bar, hides when clicked 
 deleteButton.addEventListener('click', () => {
@@ -24,15 +24,34 @@ deleteButton.addEventListener('click', () => {
 
 //Bell pop up notification
 const bell = document.getElementById('bell');
-const popUp = document.getElementsByClassName('popuptext');
-
-const notif = document.getElementsByClassName("notification-menu");
 bell.addEventListener('click', () => {
-    for(let i = 0; i < notif.length; i +=1) {
-        let toggle = notif[i].style.display = 'block';
-        toggle.toggle();
+    if(popUpMenu.style.display === 'none') {
+      popUpMenu.style.display = 'block';
+    } else  {
+        popUpMenu.style.display = 'none';
     }
 });
+
+
+
+
+// Popup user text delete button
+const popUpMenu = document.getElementById('notif-menu');    
+popUpMenu.addEventListener ('click', (e) => {
+if (e.target.tagName === 'BUTTON') {
+    e.target.parentNode.className = 'removed-item';
+    setTimeout( () =>{
+        e.target.parentNode.style.display = 'none';
+    }, 3000); 
+ }
+});
+
+
+
+
+
+
+
 
 // Alert on Send button
 /*When user press to submit the form, it displays a confirmation that the message was sent. 
@@ -55,10 +74,10 @@ When the page loads add class to weekChart
 Set up a click event handler for the button
 Loop though all the buttons and reset the colors back to default
 Add the class to the one button that got clicked*/
-liButtons.forEach(function(btn){
+chartButtons.forEach(function(btn){
   weekChart.classList.add('liSelected');
   btn.addEventListener("click", function(){
-    liButtons.forEach(function(btn){ 
+    chartButtons.forEach(function(btn){ 
         btn.classList.remove("liSelected");
     });
     this.classList.add("liSelected");

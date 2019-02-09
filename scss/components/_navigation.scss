@@ -2,31 +2,36 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-bottom: 1rem;
 }
 
 .logo {
-  width: 16rem;
+  width: 13rem;
   margin-right: auto;
   margin-bottom: 1rem;
 }
 
 .bell {
-  width: 6.4rem;
+  width: 2.4rem;
   height: 2.2rem;
-  margin: 2rem 0.6rem;
-  border-right: 0.12rem solid #d1d1d1;
+  margin: 2.6rem 0.6rem 2.6rem 5rem;
+}
+
+.border-notif {
+  border-right: 0.2rem dotted #d1d1d1;
+  margin: 1.8rem 1.1rem;
 }
 
 .profile-pic {
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
 }
 
 .profile-name {
   margin-right: 1.6rem;
-  margin-top: 1.3rem;
+  margin-top: 2.3rem;
   color: #fff;
 }
 
@@ -46,15 +51,11 @@
     flex-direction: column;
     justify-content: center;
   }
-  .bell {
-    width: 8rem;
-    margin: 1.5rem 1rem;
+  .header-nav {
+    margin-bottom: 0;
   }
-  .profile-name {
-    margin-top: 1.9rem;
-  }
-  .logo{
-    margin-bottom: 0.2rem;
+  .logo {
+    margin-bottom: 0;
   }
   .nav-icons {
     width: 2.8rem;
