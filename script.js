@@ -32,26 +32,27 @@ bell.addEventListener('click', () => {
     }
 });
 
+//When user deletes all notifications a message li appears
+function checkIfNotificationsEmpty() {
+    const alertBell = document.getElementById('alert-on-bell');
+    const liList = document.getElementById('notif-menu').getElementsByTagName('li');
+    if ( liList.length === 3) {
+        setTimeout(() =>{
+            alertBell.style.display = 'block';
+        }, 751);
+    }
+}
 
-
-
-// Popup user text delete button
+// User can delete notifications
 const popUpMenu = document.getElementById('notif-menu');    
 popUpMenu.addEventListener ('click', (e) => {
 if (e.target.tagName === 'BUTTON') {
-    e.target.parentNode.className = 'removed-item';
+    e.target.parentNode.classList.add('removed-item');
     setTimeout( () =>{
-        e.target.parentNode.style.display = 'none';
-    }, 3000); 
- }
+        e.target.parentNode.remove(e);
+    }, 750); 
+ } checkIfNotificationsEmpty();
 });
-
-
-
-
-
-
-
 
 // Alert on Send button
 /*When user press to submit the form, it displays a confirmation that the message was sent. 

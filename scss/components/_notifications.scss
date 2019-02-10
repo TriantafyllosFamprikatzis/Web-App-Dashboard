@@ -65,14 +65,13 @@
 }
 .notification-menu {
   position: absolute;
-  top: 6rem;
+  top: 6.2rem;
   left: -9rem;
-  background-color: #e5e5e5;
-  border: #989898;
+  background-color: #eeeeee;
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem 1rem 0 1rem;
   list-style: none;
   width: 29rem;
-  display: none;
   z-index: 1;
 }
 .notification-menu li {
@@ -121,48 +120,6 @@
 // }
 
 
-
-
-.removed-item {
-    animation: removed-item-animation 3s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
-    /*transform origin is moved to the bottom left corner*/
-    transform-origin: 0% 100%;
-}
-@keyframes removed-item-animation {
-    0% {
-        opacity: 1;
-        transform: rotateZ(0);
-}
-    100% {
-        opacity: 0;
-        transform: translateY(600px) rotateZ(90deg);
-    }
-}
-
-
-
-// li.removed-item {
-//   animation: removed-item-animation .6s ease-out forwards;
-//   transform-origin: 50% 50%;
-// }
-
-// @keyframes removed-item-animation {
-// 0% {
-//   opacity: 1;
-//   transform: scale(1);
-// }
-
-// 100% {
-//   opacity: 0;
-//   transform: scale(4);
-// }
-// }
-
-
-
-
-
-
 // POP UP CONTENT BOX
 .popuptext {
   display: grid;
@@ -196,6 +153,30 @@
   margin: 0 0 2rem 1em;
   padding: 0;
   outline: none;
+}
+
+.headerli {
+  background-color: #eeeeee !important;
+}
+.popupalert {
+  text-align: center;
+}
+
+//CONTENT DELETE TRANSITION
+li.removed-item {
+  animation: removed-item-animation .6s cubic-bezier(.55,-0.04,.91,.94) forwards;
+}
+
+@keyframes removed-item-animation {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+
+  to {
+      opacity: 0;
+      transform: scale(0);
+  }
 }
 
 @media (min-width: 1024px) {

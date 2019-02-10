@@ -40,6 +40,7 @@ h3, li, button, input, select, textarea, p, a {
 }
 
 .btn-delete {
+  cursor: pointer;
   background-color: #7377bf;
   color: #fff;
   border: none;
@@ -52,6 +53,7 @@ h3, li, button, input, select, textarea, p, a {
 }
 
 .btn-chart {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -72,27 +74,44 @@ h3, li, button, input, select, textarea, p, a {
 }
 
 .btn-send {
+  cursor: pointer;
   padding: 1.3rem;
   background-color: #7377bf;
   color: #fff;
   margin-top: 2.4rem;
   border-radius: 0.4rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn-save {
+  cursor: pointer;
   margin-right: 1.6rem;
   background-color: #7377bf;
   color: #fff;
   margin-top: 2.4rem;
   border-radius: 0.4rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn-cancel {
+  cursor: pointer;
   background-color: #b2b2b2;
   color: #fff;
   margin-top: 2.4rem;
   margin-left: 1.6rem;
   border-radius: 0.4rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-send:hover,
+.btn-save:hover {
+  transform: scale(1.1);
+  background-color: #4d4c72;
+}
+
+.btn-cancel:hover {
+  transform: scale(1.1);
+  background-color: #9a9898;
 }
 
 #search-top {
@@ -112,7 +131,7 @@ h3, li, button, input, select, textarea, p, a {
 
 #textarea {
   margin-top: 2.4rem;
-  padding: 0.8rem 4rem 5.1rem 0.8rem;
+  padding: 0.8rem 4rem 5.9rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
   border-radius: 0.4rem;
@@ -144,10 +163,6 @@ h3, li, button, input, select, textarea, p, a {
   justify-content: space-between;
 }
 
-.btn-ios {
-  width: 40% !important;
-}
-
 .message-form {
   display: flex;
   flex-direction: column;
@@ -156,13 +171,13 @@ h3, li, button, input, select, textarea, p, a {
 .settings-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 5rem 5rem 6.7rem 7rem;
+  grid-template-rows: 5.5rem 5.5rem 6.7rem 7rem;
   grid-template-areas: "text-1  switch-1" "text-2  switch-2" "timezone timezone" "btn-save btn-cancel";
 }
 
 .switch-1-text {
   grid-area: text-1;
-  margin-top: 0.4rem;
+  margin-top: 1.6rem;
 }
 
 .switch-2-text {
@@ -172,16 +187,10 @@ h3, li, button, input, select, textarea, p, a {
 
 .switch-1 {
   grid-area: switch-1;
-  display: flex;
-  justify-content: end;
-  margin-top: 0.5rem;
 }
 
 .switch-2 {
   grid-area: switch-2;
-  display: flex;
-  justify-content: end;
-  margin-top: 1.2rem;
 }
 
 #timezone {
@@ -196,19 +205,58 @@ h3, li, button, input, select, textarea, p, a {
   grid-area: btn-cancel;
 }
 
-.switch-ios.switch-light input:checked ~ span {
-  border-color: #7377bf;
-  box-shadow: inset 0 0 0 3rem #7377bf;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 1rem 0 0 auto;
 }
 
-.switch-ios.switch-light input:checked ~ span a {
-  border-color: #7377bf;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.switch-ios.switch-light a {
-  width: 3.8rem;
-  height: 3.8rem;
-  outline: none !important;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: #ccc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: #7377bf;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #773377;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 @media (min-width: 724px) {
@@ -503,14 +551,13 @@ MEDIA QUERIES
 
 .notification-menu {
   position: absolute;
-  top: 6rem;
+  top: 6.2rem;
   left: -9rem;
-  background-color: #e5e5e5;
-  border: #989898;
+  background-color: #eeeeee;
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem 1rem 0 1rem;
   list-style: none;
   width: 29rem;
-  display: none;
   z-index: 1;
 }
 
@@ -544,22 +591,6 @@ MEDIA QUERIES
   border-color: transparent transparent #e5e5e5 transparent;
 }
 
-.removed-item {
-  animation: removed-item-animation 3s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
-  /*transform origin is moved to the bottom left corner*/
-  transform-origin: 0% 100%;
-}
-
-@keyframes removed-item-animation {
-  0% {
-    opacity: 1;
-    transform: rotateZ(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(600px) rotateZ(90deg);
-  }
-}
 .popuptext {
   display: grid;
   grid-template-columns: 1fr 3fr 2rem;
@@ -594,6 +625,28 @@ MEDIA QUERIES
   outline: none;
 }
 
+.headerli {
+  background-color: #eeeeee !important;
+}
+
+.popupalert {
+  text-align: center;
+}
+
+li.removed-item {
+  animation: removed-item-animation 0.6s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+}
+
+@keyframes removed-item-animation {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
 @media (min-width: 1024px) {
   .activity-grid {
     grid-template-rows: 2.5rem;

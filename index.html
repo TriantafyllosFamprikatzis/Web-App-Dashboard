@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YourApp Dashboard</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -18,6 +17,7 @@
                 <div class="notification">
                     <img class="bell" id="bell" src="icons/icon-bell.svg" alt="bell">
                     <ul class="notification-menu" id="notif-menu" style="display: none;">
+                        <li class="headerli"><strong>Notifications</strong></li>
                         <li class="popuptext">
                             <img class="img" src="images/member-1.jpg">
                             <h3 class="name">Victoria Chambers</h3>
@@ -42,8 +42,8 @@
                             <p class="comment">Are you going to the game next week?</p>
                             <button class="btn-notif" type="button" name="delete">X</button>
                         </li>
-                        <li class="popuptext noComments">
-                            <h3 class="name">No more comments to show</h3>
+                        <li class="popuptext popupalert" id="alert-on-bell" style="display: none;">
+                            <h3>No more comments to show</h3>
                         </li>
                     </ul>
                 </div>
@@ -163,25 +163,25 @@
                 <div class="members-grid">
                     <img class="member-img" src="images/member-1.jpg">
                     <h3 class="member-name">Victoria Chambers</h3>
-                    <a class="member-mail" href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+                    <a class="member-mail">victoria.chambers80@example.com</a>
                     <p class="member-date">11/01/19</p>
                 </div>
                 <div class="members-grid">
                     <img class="member-img" src="images/member-2.jpg">
                     <h3 class="member-name">Dale Byrd</h3>
-                    <a class="member-mail" href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+                    <a class="member-mail">dale.byrd52@example.com</a>
                     <p class="member-date">10/01/19</p>
                 </div>
                 <div class="members-grid">
                     <img class="member-img" src="images/member-3.jpg">
                     <h3 class="member-name">Dawn Wood</h3>
-                    <a class="member-mail" href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+                    <a class="member-mail">dawn.wood16@example.com</a>
                     <p class="member-date">10/01/19</p>
                 </div>
                 <div class="members-grid">
                     <img class="member-img" src="images/member-4.jpg">
                     <h3 class="member-name">Dan Oliver</h3>
-                    <a class="member-mail" href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+                    <a class="member-mail">dan.oliver82@example.com</a>
                     <p class="member-date">10/01/19</p>
                 </div>
 
@@ -229,23 +229,15 @@
                 <h3>SETTINGS</h3>
                 <form class="settings-form" action="index.html" method="POST">
                     <p class="switch-1-text"> Send Email Notifications</p>
-                    <label class="switch-ios switch-light switch-candy switch-1" onclick="">
-                        <input type="checkbox">
-                        <span class="btn-ios">
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                        </span>
-                    </label>
+                    <label class="switch switch-1">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                      </label>
                     <p class="switch-2-text"> Set Profile to Public</p>
-                    <label class="switch-ios switch-light switch-candy switch-2" onclick="">
-                        <input type="checkbox">
-                        <span class="btn-ios">
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                        </span>
-                    </label>
+                    <label class="switch switch-2">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                      </label>
                     <select id="timezone" name="state">
                         <option value="" disabled selected>Select Timezone</option>
                     </select>

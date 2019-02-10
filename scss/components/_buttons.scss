@@ -6,6 +6,7 @@
 }
 
 .btn-delete {
+  cursor: pointer;
   background-color: #7377bf;
   color: #fff;
   border: none;
@@ -18,6 +19,7 @@
 }
 
 .btn-chart {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -38,25 +40,41 @@
 }
 
 .btn-send {
+  cursor: pointer;
   padding: 1.3rem;
   background-color: #7377bf;
   color: #fff;
   margin-top: 2.4rem;
   border-radius: 0.4rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn-save {
+  cursor: pointer;
   margin-right: 1.6rem;
   background-color: #7377bf;
   color: #fff;
   margin-top: 2.4rem;
   border-radius: 0.4rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn-cancel {
+  cursor: pointer;
   background-color: #b2b2b2;
   color: #fff;
   margin-top: 2.4rem;
   margin-left: 1.6rem;
   border-radius: 0.4rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-send:hover,
+.btn-save:hover {
+  transform: scale(1.1);
+  background-color: #595eb8;
+}
+.btn-cancel:hover {
+  transform: scale(1.1);
+  background-color: #9a9898;
 }
