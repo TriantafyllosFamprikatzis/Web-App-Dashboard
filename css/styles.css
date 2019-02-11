@@ -1,3 +1,34 @@
+@charset "UTF-8";
+/*
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 * {
   box-sizing: border-box;
@@ -32,6 +63,9 @@ h3, li, button, input, select, textarea, p, a {
     font-size: 1.3rem;
   }
 }
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
 .btn-delete-flex {
   display: flex;
   justify-content: space-between;
@@ -81,6 +115,7 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
+  outline: none;
 }
 
 .btn-save {
@@ -91,6 +126,7 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
+  outline: none;
 }
 
 .btn-cancel {
@@ -101,20 +137,24 @@ h3, li, button, input, select, textarea, p, a {
   margin-left: 1.6rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
+  outline: none;
 }
 
 .btn-send:hover,
 .btn-save:hover {
-  transform: scale(1.1);
-  background-color: #4d4c72;
+  transform: scale(1.03);
+  background-color: #595eb8;
 }
 
 .btn-cancel:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   background-color: #9a9898;
 }
 
-#search-top {
+/*------------------------------------*\
+  #FORMS
+\*------------------------------------*/
+.search-top {
   padding: 0.8rem 12.6rem 0.8rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
@@ -122,14 +162,14 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 1.9rem;
 }
 
-#search-bottom {
+.search-bottom {
   padding: 0.8rem 0 0.8rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
   border-radius: 0.4rem;
 }
 
-#textarea {
+.textarea {
   margin-top: 2.4rem;
   padding: 0.8rem 4rem 5.9rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
@@ -137,7 +177,7 @@ h3, li, button, input, select, textarea, p, a {
   border-radius: 0.4rem;
 }
 
-#timezone {
+.timezone {
   padding: 0.8rem 0 0.8rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
@@ -145,8 +185,8 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
 }
 
-#search-top:focus, #search-bottom:focus,
-#textarea:focus, #timezone:focus {
+.search-top:focus, .search-bottom:focus,
+.textarea:focus, .timezone:focus {
   border: 0.2rem solid #7377bf;
   transition: all 0.4s;
 }
@@ -193,7 +233,7 @@ h3, li, button, input, select, textarea, p, a {
   grid-area: switch-2;
 }
 
-#timezone {
+.timezone {
   grid-area: timezone;
 }
 
@@ -249,10 +289,6 @@ input:checked + .slider {
   background-color: #7377bf;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #773377;
-}
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -270,14 +306,14 @@ input:checked + .slider:before {
   }
 }
 @media (min-width: 1024px) {
-  #search-top {
+  .search-top {
     padding: 0.8rem 16rem 0.8rem 0.8rem;
     margin-top: 0;
   }
 }
-/*===================
-GRID CONTAINER LAYOUT
-====================*/
+/*------------------------------------*\
+  #GRID
+\*------------------------------------*/
 .container {
   margin: 0 auto;
   display: grid;
@@ -299,6 +335,9 @@ header {
 nav {
   grid-area: nav;
   background-color: #4d4c72;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 main {
@@ -418,6 +457,9 @@ MEDIA QUERIES
     padding: 1.6rem 1.6rem 0 3.2rem;
   }
 }
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
 .header-nav {
   display: flex;
   flex-direction: row;
@@ -470,6 +512,8 @@ MEDIA QUERIES
   .side-nav {
     flex-direction: column;
     justify-content: center;
+    position: sticky;
+    top: 3rem;
   }
 
   .header-nav {
@@ -484,6 +528,9 @@ MEDIA QUERIES
     width: 2.8rem;
   }
 }
+/*------------------------------------*\
+  #NOTIFICATIONS
+\*------------------------------------*/
 .members-grid {
   padding: 1.6rem 0 1.6rem 0;
   display: grid;
@@ -591,6 +638,22 @@ MEDIA QUERIES
   border-color: transparent transparent #e5e5e5 transparent;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .popuptext {
   display: grid;
   grid-template-columns: 1fr 3fr 2rem;
@@ -625,7 +688,7 @@ MEDIA QUERIES
   outline: none;
 }
 
-.headerli {
+.header-li {
   background-color: #eeeeee !important;
 }
 
@@ -633,8 +696,8 @@ MEDIA QUERIES
   text-align: center;
 }
 
-li.removed-item {
-  animation: removed-item-animation 0.6s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+.removed-item {
+  animation: removed-item-animation 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
 }
 
 @keyframes removed-item-animation {
@@ -652,6 +715,9 @@ li.removed-item {
     grid-template-rows: 2.5rem;
   }
 }
+/*------------------------------------*\
+  #WIDGETS
+\*------------------------------------*/
 .chart-1,
 .chart-2,
 .chart-3 {

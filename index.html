@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="top">
         <header>
             <img class="logo" src="icons/logo.png">
             <div class="header-nav">
                 <div class="notification">
-                    <img class="bell" id="bell" src="icons/icon-bell.svg" alt="bell">
+                    <img class="bell" id="js-bell" src="icons/icon-bell.svg" alt="bell">
                     <ul class="notification-menu" id="notif-menu" style="display: none;">
-                        <li class="headerli"><strong>Notifications</strong></li>
+                        <li class="header-li"><strong>Notifications</strong></li>
                         <li class="popuptext">
                             <img class="img" src="images/member-1.jpg">
                             <h3 class="name">Victoria Chambers</h3>
@@ -42,22 +42,22 @@
                             <p class="comment">Are you going to the game next week?</p>
                             <button class="btn-notif" type="button" name="delete">X</button>
                         </li>
-                        <li class="popuptext popupalert" id="alert-on-bell" style="display: none;">
+                        <li class="popuptext popupalert" id="alert-bell" style="display: none;">
                             <h3>No more comments to show</h3>
                         </li>
                     </ul>
                 </div>
                 <span class="border-notif"></span>
-                <img class="profile-pic" src="images/josh.jpg" alt="main user">
+                <img class="profile-pic" src="images/josh.jpg" alt="User Avatar">
                 <h3 class="profile-name">Josh Sullivan</h3>
             </div>
         </header>
         <nav>
             <div class="side-nav">
-                <img class="nav-icons" src="icons/icon-dashboard.svg" alt="dashboard">
-                <img class="nav-icons" src="icons/icon-members.svg" alt="members">
-                <img class="nav-icons" src="icons/icon-visits.svg" alt="visits">
-                <img class="nav-icons" src="icons/icon-settings.svg" alt="settings">
+                <a href="#top"><img class="nav-icons" src="icons/icon-dashboard.svg" alt="dashboard"></a>
+                <a href="#traffic"><img class="nav-icons" src="icons/icon-visits.svg" alt="visits"></a>
+                <a href="#activity"><img class="nav-icons" src="icons/icon-members.svg" alt="members"></a>
+                <a href="#settings"><img class="nav-icons" src="icons/icon-settings.svg" alt="settings"></a>
             </div>
         </nav>
         <main class="grid-main">
@@ -66,17 +66,17 @@
                 <div class="dashboard-flex">
                     <h2 class="dashboard">Dashboard</h2>
                     <form class="search-border" action="index.html" method="POST">
-                        <input type="search" id="search-top" placeholder="Search">
+                        <input type="search" class="search-top" placeholder="Search">
                     </form>
                 </div>
-                <div class="btn-delete-flex" id="alert">
-                    <p class="alert-text"><strong>Alert! </strong>Please hide me.</p>
-                    <button class="btn-delete" id="btn" type="button" name="delete"><strong>x</strong></button>
+                <div class="btn-delete-flex" id="js-alert">
+                    <p class="alert-text"><strong>Alert! </strong>You can hide me.</p>
+                    <button class="btn-delete" id="js-btn" type="button" name="delete"><strong>x</strong></button>
                 </div>
 
             </div>
 
-            <div class="grid-2">
+            <div class="grid-2" id="traffic">
                 <h3>TRAFFIC</h3>
                 <ul class="btn-chart">
                     <li class="li" id="hour">Hourly</li>
@@ -102,7 +102,7 @@
                     <canvas id="doughnutChart"></canvas>
                 </div>
             </div>
-
+        
             <div class="grid-5">
                 <h3>SOCIAL STATS</h3>
                 <div class="widgets">
@@ -158,28 +158,28 @@
                 </div>
             </div>
 
-            <div class="grid-6">
+            <div class="grid-6" id="activity">
                 <h3>NEW MEMBERS</h3>
                 <div class="members-grid">
-                    <img class="member-img" src="images/member-1.jpg">
+                    <img class="member-img" src="images/member-1.jpg" alt="Member Avatar">
                     <h3 class="member-name">Victoria Chambers</h3>
                     <a class="member-mail">victoria.chambers80@example.com</a>
                     <p class="member-date">11/01/19</p>
                 </div>
                 <div class="members-grid">
-                    <img class="member-img" src="images/member-2.jpg">
+                    <img class="member-img" src="images/member-2.jpg" alt="Member Avatar">
                     <h3 class="member-name">Dale Byrd</h3>
                     <a class="member-mail">dale.byrd52@example.com</a>
                     <p class="member-date">10/01/19</p>
                 </div>
                 <div class="members-grid">
-                    <img class="member-img" src="images/member-3.jpg">
+                    <img class="member-img" src="images/member-3.jpg" alt="Member Avatar">
                     <h3 class="member-name">Dawn Wood</h3>
                     <a class="member-mail">dawn.wood16@example.com</a>
                     <p class="member-date">10/01/19</p>
                 </div>
                 <div class="members-grid">
-                    <img class="member-img" src="images/member-4.jpg">
+                    <img class="member-img" src="images/member-4.jpg" alt="Member Avatar">
                     <h3 class="member-name">Dan Oliver</h3>
                     <a class="member-mail">dan.oliver82@example.com</a>
                     <p class="member-date">10/01/19</p>
@@ -190,25 +190,25 @@
             <div class="grid-7">
                 <h3>RECENT ACTIVITY</h3>
                 <div class="activity-grid">
-                    <img class="member-img" src="images/member-1.jpg">
+                    <img class="member-img" src="images/member-1.jpg" alt="Member Avatar">
                     <p class="member-comment">Victoria Chambers commended on YourApp's SEO Tips</p>
                     <h3 class="member-time">4 hours ago</h3>
                     <p class="sign">&gt;</p>
                 </div>
                 <div class="activity-grid">
-                    <img class="member-img" src="images/member-2.jpg">
+                    <img class="member-img" src="images/member-2.jpg" alt="Member Avatar">
                     <p class="member-comment">Dale Byrd like the post Facebook's Changes for 2019</p>
                     <h3 class="member-time">5 hours ago</h3>
                     <p class="sign">&gt;</p>
                 </div>
                 <div class="activity-grid">
-                    <img class="member-img" src="images/member-3.jpg">
+                    <img class="member-img" src="images/member-3.jpg" alt="Member Avatar">
                     <p class="member-comment">Dawn Wood commended on Facebook's Changes for 2019</p>
                     <h3 class="member-time">5 hours ago</h3>
                     <p class="sign">&gt;</p>
                 </div>
                 <div class="activity-grid">
-                    <img class="member-img" src="images/member-4.jpg">
+                    <img class="member-img" src="images/member-4.jpg" alt="Member Avatar">
                     <p class="member-comment">Dan Oliver posted YourApp's SEO Tips</p>
                     <h3 class="member-time">1 day ago</h3>
                     <p class="sign">&gt;</p>
@@ -219,13 +219,13 @@
             <div class="grid-8">
                 <h3>MESSAGE USER</h3>
                 <form class="message-form" action="index.html" method="POST">
-                    <input type="search" id="search-bottom" placeholder="Search for User">
-                    <textarea id="textarea" name="textarea" placeholder="Message User"></textarea>
-                    <button class="btn-send" id="send" type="button" name="send">SEND</button>
+                    <input type="search" class="search-bottom" id="js-search-bottom" placeholder="Search for User">
+                    <textarea class="textarea" id="js-textarea" name="textarea" placeholder="Message User"></textarea>
+                    <button class="btn-send" id="js-send" type="button" name="send">SEND</button>
                 </form>
             </div>
 
-            <div class="grid-9">
+            <div class="grid-9" id="settings">
                 <h3>SETTINGS</h3>
                 <form class="settings-form" action="index.html" method="POST">
                     <p class="switch-1-text"> Send Email Notifications</p>
@@ -238,10 +238,10 @@
                         <input type="checkbox" checked>
                         <span class="slider round"></span>
                       </label>
-                    <select id="timezone" name="state">
+                    <select class="timezone" name="state">
                         <option value="" disabled selected>Select Timezone</option>
                     </select>
-                    <button class="btn-save" id="save" type="button" name="save">SAVE</button>
+                    <button class="btn-save" id="js-save" type="button" name="save">SAVE</button>
                     <button class="btn-cancel" type="button" name="cancel">CANCEL</button>
                 </form>
             </div>

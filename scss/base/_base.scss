@@ -1,3 +1,34 @@
+/*
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+ 
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 
 * {
@@ -24,13 +55,13 @@ li {
   color: #828282;
 }
 
-h3, li, button, input, select, textarea, p, a{
+h3, li, button, input, select, textarea, p, a {
  font-size: 1.1rem;
 }
 
 
 @media (min-width:768px){
-  h3, li, button, input, select, textarea, p, a{
+  h3, li, button, input, select, textarea, p, a {
     font-size: 1.3rem;
    }
 }

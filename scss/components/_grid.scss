@@ -1,6 +1,6 @@
-/*===================
-GRID CONTAINER LAYOUT
-====================*/
+/*------------------------------------*\
+  #GRID
+\*------------------------------------*/
 
 .container {
   margin: 0 auto;
@@ -26,6 +26,9 @@ header {
 nav {
   grid-area: nav;
   background-color: #4d4c72;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 main {

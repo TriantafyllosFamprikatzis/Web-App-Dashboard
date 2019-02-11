@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #NOTIFICATIONS
+\*------------------------------------*/
+
 //NEW MEMBERS
 .members-grid {
   padding: 1.6rem 0 1.6rem 0;
@@ -100,24 +104,22 @@
   border-style: solid;
   border-color: transparent transparent #e5e5e5 transparent;
 }
-
-// @-webkit-keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 
 // POP UP CONTENT BOX
@@ -155,7 +157,7 @@
   outline: none;
 }
 
-.headerli {
+.header-li {
   background-color: #eeeeee !important;
 }
 .popupalert {
@@ -163,8 +165,8 @@
 }
 
 //CONTENT DELETE TRANSITION
-li.removed-item {
-  animation: removed-item-animation .6s cubic-bezier(.55,-0.04,.91,.94) forwards;
+.removed-item {
+  animation: removed-item-animation .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
 }
 
 @keyframes removed-item-animation {

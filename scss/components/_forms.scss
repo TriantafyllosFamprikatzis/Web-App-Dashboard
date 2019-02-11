@@ -1,5 +1,7 @@
-
-#search-top {
+/*------------------------------------*\
+  #FORMS
+\*------------------------------------*/
+.search-top {
   padding: 0.8rem 12.6rem 0.8rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
@@ -7,14 +9,14 @@
   margin-top: 1.9rem;
 }
 
-#search-bottom {
+.search-bottom {
   padding: 0.8rem 0 0.8rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
   border-radius: 0.4rem;
 }
 
-#textarea {
+.textarea {
   margin-top: 2.4rem;  
   padding: 0.8rem 4rem 5.9rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
@@ -22,7 +24,7 @@
   border-radius: 0.4rem;
 }
 
-#timezone {
+.timezone {
   padding: 0.8rem 0 0.8rem 0.8rem;
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
@@ -30,8 +32,8 @@
   margin-top: 2.4rem;
 }
 
-#search-top:focus, #search-bottom:focus,
-#textarea:focus, #timezone:focus {
+.search-top:focus, .search-bottom:focus,
+.textarea:focus, .timezone:focus {
   border: 0.2rem solid #7377bf;
   transition: all 0.4s;
 }
@@ -77,7 +79,7 @@
 .switch-2 {
   grid-area: switch-2;
 }
-#timezone {
+.timezone {
   grid-area: timezone;
 }
 .btn-save {
@@ -87,15 +89,12 @@
   grid-area: btn-cancel;
 }
 
-
 //iOS switches
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-  // width: 3.8rem;
-  // height: 3.8rem; 
   margin: 1rem 0 0 auto;
 }
 
@@ -135,16 +134,11 @@ input:checked + .slider {
   background-color: #7377bf;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #773377;
-}
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
 
 @media (min-width: 724px) {
   .dashboard-flex {
@@ -156,7 +150,7 @@ input:checked + .slider:before {
   }
 }
 @media (min-width: 1024px) {
-  #search-top {
+  .search-top {
     padding: 0.8rem 16rem 0.8rem 0.8rem;
     margin-top: 0;
   }
