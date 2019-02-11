@@ -52,7 +52,7 @@ const settingsLink = document.querySelector("a[href='#settings']")
 settingsLink.addEventListener("click", function(e) {
     target = document.getElementById("settings");
     if (window.scrollTo) {
-        // e.preventDefault();
+        e.preventDefault();
         window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
     }
 })
