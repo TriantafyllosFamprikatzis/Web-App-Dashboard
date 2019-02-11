@@ -42,6 +42,12 @@
 .nav-icons {
   width: 2.5rem;
   margin: 1.9rem 1rem 2rem;
+  opacity: 0.5;
+  transition: 0.2s all;
+}
+.nav-selected, .nav-icons:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .side-nav {
@@ -54,6 +60,7 @@
   .side-nav {
     flex-direction: column;
     justify-content: center;
+    position: -webkit-sticky;
     position: sticky;
     top: 3rem;
   }
@@ -67,3 +74,4 @@
     width: 2.8rem;
   }
 }
+

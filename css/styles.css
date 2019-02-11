@@ -78,11 +78,11 @@ h3, li, button, input, select, textarea, p, a {
   background-color: #7377bf;
   color: #fff;
   border: none;
-  margin: 0 0.4rem 0.1rem 0;
+  margin-right: 0.4rem;
 }
 
 .alert-text {
-  margin: 0.8rem 0 0.8rem 0.8rem;
+  margin: 1rem 0 1rem 0.8rem;
   color: #fff;
 }
 
@@ -335,6 +335,7 @@ header {
 nav {
   grid-area: nav;
   background-color: #4d4c72;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -500,6 +501,13 @@ MEDIA QUERIES
 .nav-icons {
   width: 2.5rem;
   margin: 1.9rem 1rem 2rem;
+  opacity: 0.5;
+  transition: 0.2s all;
+}
+
+.nav-selected, .nav-icons:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .side-nav {
@@ -512,6 +520,7 @@ MEDIA QUERIES
   .side-nav {
     flex-direction: column;
     justify-content: center;
+    position: -webkit-sticky;
     position: sticky;
     top: 3rem;
   }
@@ -605,7 +614,7 @@ MEDIA QUERIES
   padding: 1rem 1rem 0 1rem;
   list-style: none;
   width: 29rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .notification-menu li {

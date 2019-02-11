@@ -26,6 +26,7 @@ header {
 nav {
   grid-area: nav;
   background-color: #4d4c72;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;

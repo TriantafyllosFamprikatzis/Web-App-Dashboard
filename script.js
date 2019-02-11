@@ -9,7 +9,7 @@ const hourChart = document.getElementById('hour');
 const dayChart = document.getElementById('day');
 const weekChart = document.getElementById('week');
 const monthChart = document.getElementById('month');
-const chartButtons = document.querySelectorAll(".li");
+const chartButtons = document.querySelectorAll('.li');
 
 //For Alert on sent
 const sendButton = document.getElementById('js-send');
@@ -22,40 +22,51 @@ const user = document.getElementById('js-search-bottom');
 //NAV SCROLL BUTTONS
 //Nav scroll when clicked for top page
 const topLink = document.querySelector("a[href='#top']")
-topLink.addEventListener("click", function(e) {
-    target = document.getElementById("top");
+topLink.addEventListener('click', (e) => {
+    target = document.getElementById('top');
     if (window.scrollTo) {
         e.preventDefault();
-        window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+        window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop});
     }
 })
 //Nav scroll when clicked for traffic
 const trafficLink = document.querySelector("a[href='#traffic']")
-trafficLink.addEventListener("click", function(e) {
-    target = document.getElementById("traffic");
+trafficLink.addEventListener('click', (e) => {
+    target = document.getElementById('traffic');
     if (window.scrollTo) {
         e.preventDefault();
-        window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+        window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop});
     }
 })
 //Nav scroll when clicked for activity
 const activityLink = document.querySelector("a[href='#activity']")
-activityLink.addEventListener("click", function(e) {
-    target = document.getElementById("activity");
+activityLink.addEventListener('click', (e) => {
+    target = document.getElementById('activity');
     if (window.scrollTo) {
         e.preventDefault();
-        window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+        window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop});
     }
 })
 //Nav scroll when clicked for settings
 const settingsLink = document.querySelector("a[href='#settings']")
-settingsLink.addEventListener("click", function(e) {
-    target = document.getElementById("settings");
+settingsLink.addEventListener('click', (e) => {
+    target = document.getElementById('settings');
     if (window.scrollTo) {
         e.preventDefault();
-        window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+        window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop});
     }
 })
+//Nav buttons change opacity by adding a class
+const navBar = document.getElementById('js-nav');
+const navBtn = navBar.getElementsByClassName('nav-icons');
+for (let i = 0; i < navBtn.length; i++) {
+  navBtn[i].addEventListener('click', function() {
+  let current = document.getElementsByClassName('nav-selected');
+  current[0].className = current[0].className.replace(' nav-selected', '');
+  this.classList.add('nav-selected');
+  });
+}
+
 
 
 
@@ -125,11 +136,11 @@ Loop though all the buttons and reset the colors back to default
 Add the class to the one button that got clicked*/
 chartButtons.forEach(function(btn){
   weekChart.classList.add('liSelected');
-  btn.addEventListener("click", function(){
+  btn.addEventListener('click', function(){
     chartButtons.forEach(function(btn){ 
-        btn.classList.remove("liSelected");
+        btn.classList.remove('liSelected');
     });
-    this.classList.add("liSelected");
+    this.classList.add('liSelected');
   });
 });
 
