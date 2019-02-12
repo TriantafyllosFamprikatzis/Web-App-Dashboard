@@ -59,6 +59,14 @@ h3, li, button, input, select, textarea, p, a {
  font-size: 1.1rem;
 }
 
+//Prevent default blue outline when selected
+.btn-send:focus, .btn-cancel:focus, .btn-delete:focus,
+.btn-save:focus, .btn-notif:focus, .nav-icons:focus, 
+.btn-chart:focus,.search-top:focus, .search-bottom:focus,
+ .textarea:focus, .timezone:focus
+.switch {
+  outline: none !important;
+}
 
 @media (min-width:768px){
   h3, li, button, input, select, textarea, p, a {

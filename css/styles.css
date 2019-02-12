@@ -58,6 +58,13 @@ h3, li, button, input, select, textarea, p, a {
   font-size: 1.1rem;
 }
 
+.btn-send:focus, .btn-cancel:focus, .btn-delete:focus,
+.btn-save:focus, .btn-notif:focus, .nav-icons:focus,
+.btn-chart:focus, .search-top:focus, .search-bottom:focus,
+.textarea:focus, .timezone:focus .switch {
+  outline: none !important;
+}
+
 @media (min-width: 768px) {
   h3, li, button, input, select, textarea, p, a {
     font-size: 1.3rem;
@@ -115,7 +122,6 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
-  outline: none;
 }
 
 .btn-save {
@@ -126,7 +132,6 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
-  outline: none;
 }
 
 .btn-cancel {
@@ -137,7 +142,6 @@ h3, li, button, input, select, textarea, p, a {
   margin-left: 1.6rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
-  outline: none;
 }
 
 .btn-send:hover,
@@ -535,6 +539,7 @@ MEDIA QUERIES
 
   .nav-icons {
     width: 2.8rem;
+    margin: 1.9rem 0.5rem 2rem 1.8rem;
   }
 }
 /*------------------------------------*\
@@ -694,11 +699,10 @@ MEDIA QUERIES
   border: none;
   margin: 0 0 2rem 1em;
   padding: 0;
-  outline: none;
 }
 
-.header-li {
-  background-color: #eeeeee !important;
+#header-li {
+  background-color: #eeeeee;
 }
 
 .popupalert {
