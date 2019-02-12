@@ -37,9 +37,6 @@
 :hover, :active, :focus, :visited {
   outline: none !important;
   outline: 0px !important;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-tap-highlight-color: transparent;
 }
 
 html {
