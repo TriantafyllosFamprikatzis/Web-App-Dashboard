@@ -35,14 +35,11 @@
   box-sizing: border-box;
 }
 
+//Prevent default blue outline when selected
 :hover, :active, :focus, :visited {
   outline: none !important;
   outline: 0px !important;
-  border-width: 0px;
   -webkit-appearance:none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
   -webkit-tap-highlight-color: transparent;
 }
@@ -70,23 +67,6 @@ li {
 h3, li, button, input, select, textarea, p, a {
  font-size: 1.1rem;
 }
-
-//Prevent default blue outline when selected
-// .btn-send:focus, .btn-cancel:focus, .btn-delete:focus,
-// .btn-save:focus, .btn-notif:focus, .nav-icons:focus, 
-// .btn-chart:focus,.search-top:focus, .search-bottom:focus,
-//  .textarea:focus, .timezone:focus
-// .switch {
-//   outline: none !important;
-//   outline: 0px !important;
-//   border-width: 0px;
-//   -webkit-appearance:none;
-//   box-shadow: none;
-//   -moz-box-shadow: none;
-//   -webkit-box-shadow: none;
-//   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
-//   -webkit-tap-highlight-color: transparent;
-// }
 
 @media (min-width:768px){
   h3, li, button, input, select, textarea, p, a {
