@@ -102,7 +102,7 @@ function checkIfNotificationsEmpty() {
     if (liList.length === 3) {
         setTimeout(() => {
             alertBell.style.display = 'block';
-        }, 450);
+        }, 451);
     }
 }
 // User can delete notifications

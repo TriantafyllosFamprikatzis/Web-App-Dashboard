@@ -1,26 +1,17 @@
-@charset "UTF-8";
 /*
  * CONTENTS
  *BASE
- * Base...............Global settings.
- * Mixins...............Useful mixins.
- * Normalize.css........A level playing field.
- * Box-sizing...........Better default `box-sizing`
- * Headings.............H1–H6 styles.
- * Wrappers.............Wrapping and constraining elements.
+ * Base.....................Global settings.
  * COMPONENTS
- * Buttons..............Button elements.
- * Forms
- * Grid
- * Navigation
- * Notifications
- * Widgets
- * Page-head............The main page header.
- * Page-foot............The main page footer.
- * Buttons..............Button elements.
+ * Buttons..................Button elements.
+ * Forms......................Form elements.
+ * Grid...............The main body content.
+ * Navigation.............Top and side bars.
+ * Notifications......Notification elements.
+ * Widgets..........Charts, social elements.
  * UTILITIES
- * Mixins...............Useful mixins.
- * Variables............Useful mixins.
+ * Mixins.....................Useful mixins.
+ * Variables..................Useful mixins.
  */
 /*------------------------------------*\
   #BASE
@@ -28,11 +19,6 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 * {
   box-sizing: border-box;
-}
-
-:hover, :active, :focus, :visited {
-  outline: none !important;
-  outline: 0px !important;
 }
 
 html {
@@ -141,12 +127,10 @@ h3, li, button, input, select, textarea, p, a {
 
 .btn-send:hover,
 .btn-save:hover {
-  transform: scale(1.03);
   background-color: #595eb8;
 }
 
 .btn-cancel:hover {
-  transform: scale(1.03);
   background-color: #9a9898;
 }
 
