@@ -63,6 +63,14 @@ h3, li, button, input, select, textarea, p, a {
 .btn-chart:focus, .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus .switch {
   outline: none !important;
+  outline: 0px !important;
+  border-width: 0px;
+  -webkit-appearance: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -86,6 +94,7 @@ h3, li, button, input, select, textarea, p, a {
   color: #fff;
   border: none;
   margin-right: 0.4rem;
+  padding: 1rem;
 }
 
 .alert-text {
@@ -157,7 +166,8 @@ h3, li, button, input, select, textarea, p, a {
 
 @media (min-width: 1024px) {
   .btn-delete {
-    padding: 1rem;
+    padding: 0;
+    margin-right: 1.4rem;
   }
 }
 /*------------------------------------*\

@@ -66,6 +66,14 @@ h3, li, button, input, select, textarea, p, a {
  .textarea:focus, .timezone:focus
 .switch {
   outline: none !important;
+  outline: 0px !important;
+  border-width: 0px;
+  -webkit-appearance:none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width:768px){
