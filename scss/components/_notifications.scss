@@ -152,8 +152,8 @@
   background-color: #fff;
   color: #000;
   border: none;
-  margin: 0 0 2rem 1em;
-  padding: 0;
+  margin: 0;
+  padding: 0 0.5rem 2rem 1rem;
 }
 
 #header-li {
@@ -183,5 +183,9 @@
 @media (min-width: 1024px) {
   .activity-grid {
     grid-template-rows: 2.5rem;
+  }
+  .btn-notif {
+    margin: 0 0 2rem 1em;
+    padding: 0;
   }
 }

@@ -81,3 +81,9 @@
   transform: scale(1.03);
   background-color: #9a9898;
 }
+
+@media (min-width:1024px) {
+  .btn-delete {
+    padding: 1rem;
+  }
+}
