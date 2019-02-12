@@ -37,10 +37,8 @@
 
 //Prevent default blue outline when selected
 :hover, :active, :focus, :visited {
-  outline: none !important;
-  outline: 0px !important;
-  // -webkit-appearance:none;
-  // -webkit-tap-highlight-color: transparent;
+  outline: none;
+  outline: 0px;
 }
 
 html {
