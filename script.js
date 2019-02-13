@@ -41,6 +41,7 @@ settingsLink.addEventListener('click', (e) => {
         window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop });
     }
 });
+
 //Nav buttons change opacity by adding a class
 for (let i = 0; i < navBtn.length; i += 1) {
     navBtn[i].addEventListener('click', function () {
@@ -65,6 +66,7 @@ deleteButton.addEventListener('click', () => {
     const alertBar = document.getElementById('js-alert');
     alertBar.style.display = 'none';
 });
+
 // Alert on Send button
 /*When user press to submit the form, it displays a confirmation that the message was sent. 
 Error messages are displayed if a user isn’t selected or message field is empty.*/
@@ -80,14 +82,95 @@ sendButton.addEventListener('click', () => {
     }
 });
 
+
 /*-------------------------------*\
  NOTIFICATION BOX
 \*-------------------------------*/
 //Notification variables
+const list1 = document.getElementById('li-1');
+const list2 = document.getElementById('li-2');
+const list3 = document.getElementById('li-3');
+const list4 = document.getElementById('li-4');
+const badge1 = document.getElementById('badge-1');
+const badge2 = document.getElementById('badge-2');
+const badge3 = document.getElementById('badge-3');
+const badge4 = document.getElementById('badge-4');
 const bell = document.getElementById('js-bell');
 const popUpMenu = document.getElementById('notif-menu');
+const jsBadge = document.getElementsByClassName('js-badge');
+const alertBell = document.getElementById('alert-bell');
 
-//Bell pop up notification
+//When the page loads starts to add notifications one by one
+//Even if an element is deleted in the meantime the badge will be updated respectively
+function addNotifications() {
+    const li = document.getElementsByClassName('popuptext');
+    for (let i = 0; i < li.length; i += 1) {
+        li[i].style.display = 'none';
+    }
+    setTimeout(() => {
+        list1.style.display = 'grid';
+        list1.classList.add('js-badge');
+        addBadge();
+    }, 600);
+    setTimeout(() => {
+        list2.style.display = 'grid';
+        list2.classList.add('js-badge');
+        addBadge();
+    }, 5000);
+    setTimeout(() => {
+        list3.style.display = 'grid';
+        list3.classList.add('js-badge');
+        addBadge();
+    }, 10000);
+    setTimeout(() => {
+        list4.style.display = 'grid';
+        list4.classList.add('js-badge');
+        addBadge();
+    }, 20000);
+} addNotifications();
+
+//Bell badge
+//It checks how many elements exist in notification list and adds a badge
+function addBadge() {
+    if (jsBadge.length === 0) {
+        alertBell.style.display = 'block';
+    } else {
+        alertBell.style.display = 'none';
+    }
+    if (jsBadge.length === 1) {
+        badge1.style.display = 'block';
+    } else {
+        badge1.style.display = 'none';
+    }
+    if (jsBadge.length === 2) {
+        badge2.style.display = 'block';
+    } else {
+        badge2.style.display = 'none';
+    }
+    if (jsBadge.length === 3) {
+        badge3.style.display = 'block';
+    } else {
+        badge3.style.display = 'none';
+    }
+    if (jsBadge.length === 4) {
+        badge4.style.display = 'block';
+    } else {
+        badge4.style.display = 'none';
+    } 
+}
+
+// User can delete notifications
+popUpMenu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        e.target.parentNode.classList.add('removed-item');
+        setTimeout(() => {
+            e.target.parentNode.remove(e);
+            addBadge();
+        }, 450);
+    }
+});
+
+//Bell shows Notification content on click
 bell.addEventListener('click', () => {
     if (popUpMenu.style.display === 'none') {
         popUpMenu.style.display = 'block';
@@ -95,26 +178,6 @@ bell.addEventListener('click', () => {
         popUpMenu.style.display = 'none';
     }
 });
-//When user deletes all notifications a message li appears
-function checkIfNotificationsEmpty() {
-    const alertBell = document.getElementById('alert-bell');
-    const liList = document.getElementById('notif-menu').getElementsByTagName('li');
-    if (liList.length === 3) {
-        setTimeout(() => {
-            alertBell.style.display = 'block';
-        }, 451);
-    }
-}
-// User can delete notifications
-popUpMenu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON') {
-        e.target.parentNode.classList.add('removed-item');
-        setTimeout(() => {
-            e.target.parentNode.remove(e);
-        }, 450);
-    } checkIfNotificationsEmpty();
-});
-
 
 
 /*-------------------------------*\
@@ -141,6 +204,7 @@ chartButtons.forEach(function (btn) {
         this.classList.add('liSelected');
     });
 });
+
 //Global chart defaults
 Chart.defaults.global.responsive = true;
 Chart.defaults.global.maintainAspectRatio = false;
