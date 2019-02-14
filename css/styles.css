@@ -69,6 +69,28 @@ h3, li, button, input, select, textarea, p, a {
   padding: 1rem;
 }
 
+.alert-remove {
+  animation: removed-item-animation 0.8s cubic-bezier(0.65, -0.02, 0.72, 0.29);
+}
+
+@keyframes removed-item-animation {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-800px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+}
 .alert-text {
   margin: 1rem 0 1rem 0.8rem;
   color: #fff;
@@ -176,8 +198,10 @@ h3, li, button, input, select, textarea, p, a {
 
 .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus {
-  border: 0.2rem solid #7377bf;
+  border: 0.2rem solid #81c98f;
   transition: all 0.4s;
+  outline: none;
+  outline: 0px;
 }
 
 .search-border {
@@ -275,7 +299,7 @@ h3, li, button, input, select, textarea, p, a {
 }
 
 input:checked + .slider {
-  background-color: #7377bf;
+  background-color: #81c98f;
 }
 
 input:checked + .slider:before {
@@ -391,7 +415,7 @@ GRID MAIN LAYOUT*
 .grid-1, .grid-2, .grid-3,
 .grid-4, .grid-5, .grid-6,
 .grid-7, .grid-8, .grid-9 {
-  padding: 2.5rem 0 2.5rem 0;
+  padding: 7rem 0 2.5rem 0;
 }
 
 /*================
@@ -405,6 +429,12 @@ MEDIA QUERIES
 
   .grid-5 {
     padding: 0 3em 0 3em;
+  }
+
+  .grid-1, .grid-2, .grid-3,
+.grid-4, .grid-5, .grid-6,
+.grid-7, .grid-8, .grid-9 {
+    padding: 2.5rem 0 2.5rem 0;
   }
 
   header {
@@ -469,6 +499,30 @@ MEDIA QUERIES
   margin: 2.6rem 0.6rem 2.6rem 5rem;
 }
 
+.bell-ring {
+  animation: bell 1s 1s both infinite;
+}
+
+@keyframes bell {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(40deg);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .border-notif {
   border-right: 0.2rem dotted #d1d1d1;
   margin: 1.8rem 1.1rem;
@@ -598,9 +652,10 @@ MEDIA QUERIES
   border-radius: 50%;
   background: #81c98f;
   color: #fff;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   text-align: center;
+  font-size: 1.4rem;
 }
 
 .notification {

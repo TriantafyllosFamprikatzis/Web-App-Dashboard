@@ -20,6 +20,17 @@
   height: 2.2rem;
   margin: 2.6rem 0.6rem 2.6rem 5rem;
 }
+.bell-ring {
+  animation: bell 1s 1s both infinite;
+}
+@keyframes bell {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(40deg); }
+  20% { transform: rotate(0); }
+  80% { transform: rotate(0); }
+  90% { transform: rotate(-40deg); }
+  100% { transform: rotate(0); }
+}
 
 .border-notif {
   border-right: 0.2rem dotted #d1d1d1;

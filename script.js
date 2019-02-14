@@ -42,7 +42,7 @@ settingsLink.addEventListener('click', (e) => {
     }
 });
 
-//Nav buttons change opacity by adding a class
+// Nav buttons change opacity by adding a class
 for (let i = 0; i < navBtn.length; i += 1) {
     navBtn[i].addEventListener('click', function () {
         let current = document.getElementsByClassName('nav-selected');
@@ -61,10 +61,13 @@ const sendButton = document.getElementById('js-send');
 const user = document.getElementById('js-search-bottom');
 const message = document.getElementById('js-textarea');
 
-//Hides when clicked 
+//Hides when clicked with animation
 deleteButton.addEventListener('click', () => {
     const alertBar = document.getElementById('js-alert');
-    alertBar.style.display = 'none';
+    alertBar.classList.add('alert-remove');
+    setTimeout(() =>{
+       alertBar.style.display = 'none';
+    }, 700);
 });
 
 // Alert on Send button
@@ -116,26 +119,29 @@ function addNotifications() {
         list2.style.display = 'grid';
         list2.classList.add('js-badge');
         addBadge();
-    }, 5000);
+    }, 2000);
     setTimeout(() => {
         list3.style.display = 'grid';
         list3.classList.add('js-badge');
         addBadge();
-    }, 10000);
+    }, 6000);
     setTimeout(() => {
         list4.style.display = 'grid';
         list4.classList.add('js-badge');
         addBadge();
-    }, 20000);
+    }, 10000);
 } addNotifications();
 
 //Bell badge
-//It checks how many elements exist in notification list and adds a badge
+//It checks how many elements exist in notification list,
+//adds a badge and animation to the bell
 function addBadge() {
     if (jsBadge.length === 0) {
         alertBell.style.display = 'block';
+        bell.classList.remove('bell-ring');
     } else {
         alertBell.style.display = 'none';
+        bell.classList.add('bell-ring');
     }
     if (jsBadge.length === 1) {
         badge1.style.display = 'block';

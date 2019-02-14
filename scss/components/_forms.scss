@@ -34,8 +34,10 @@
 
 .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus {
-  border: 0.2rem solid #7377bf;
+  border: 0.2rem solid #81c98f;
   transition: all 0.4s;
+  outline: none;
+  outline: 0px;
 }
 
 .search-border {
@@ -131,7 +133,7 @@
 }
 
 input:checked + .slider {
-  background-color: #7377bf;
+  background-color: #81c98f;
 }
 
 input:checked + .slider:before {
