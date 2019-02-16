@@ -52,6 +52,78 @@ for (let i = 0; i < navBtn.length; i += 1) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+//add an event listener to the traffic section
+// const buttonTraffic = document.getElementById('btn-traffic');
+// const trafficSection = document.getElementById('traffic');
+// const settingsSection = document.getElementById('settings');
+// // trafficSection.addEventListener('scroll', (e) =>{
+// //     e.preventDefault();
+// //     buttonTraffic.classList.add('nav-selected');
+// // });
+
+
+
+// // window.addEventListener('scroll', myFunction);
+
+// // document.getElementById("traffic").onscroll = function() {myFunction()};
+
+
+// // function myFunction() {
+// //     buttonTraffic.classList.add('nav-selected');
+// // }
+
+
+// // if (trafficSection.offsetTop = true) {
+// //     buttonTraffic.classList.add('nav-selected');
+// // }
+// function btnReveal() {
+// if (window.pageYOffset = trafficSection.offsetTop) {
+//     buttonTraffic.classList.add('nav-selected');
+// } else {
+//     buttonTraffic.classList.remove('nav-selected');
+// }
+//  }
+// window.addEventListener('scroll', btnReveal);
+
+
+
+// //or
+// // window.scrollY = trafficSection.getBoundingClientRect()
+
+// // window.scrollY = trafficSection.offsetTop
+
+// // var position = document.getElementById('traffic').scrollTop;
+
+
+// //this works best when on scroll it shows the current possition of the scoll
+// window.pageYOffset
+//  //or
+// window.pageYOffset - trafficSection.offsetTop
+
+
+
+
+// $(window).scroll(function() {
+//     var $h1 = $("h1");
+//     var window_offset = $h1.offset().top - $(window).scrollTop();
+//   });
+
+
+  
+
+
+
+
 /*-------------------------------*\
  ALERT BAR
 \*-------------------------------*/

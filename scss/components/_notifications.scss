@@ -65,16 +65,22 @@
 
 //Bell badges
 .badge {
+  display: none;
   position: absolute;
-  top: 17px;
-  right: 6px;
+  top: 2px;
+  right: 2px;
   border-radius: 50%;
   background: #81c98f;
   color: #fff;
-  width:16px;
-  height: 16px;
+  width:17.5px;
+  height: 17.5px;
   text-align: center;
-  font-size: 1.4rem;
+  box-shadow:0 0 1px #333;
+  font-size: 13px;
+}
+.badge-num {
+  vertical-align: middle;
+  margin-right: 0.1rem;
 }
 
 // POP UP MENU

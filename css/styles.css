@@ -508,7 +508,7 @@ MEDIA QUERIES
     transform: rotate(0);
   }
   10% {
-    transform: rotate(40deg);
+    transform: rotate(30deg);
   }
   20% {
     transform: rotate(0);
@@ -517,7 +517,7 @@ MEDIA QUERIES
     transform: rotate(0);
   }
   90% {
-    transform: rotate(-40deg);
+    transform: rotate(-30deg);
   }
   100% {
     transform: rotate(0);
@@ -646,16 +646,23 @@ MEDIA QUERIES
 }
 
 .badge {
+  display: none;
   position: absolute;
-  top: 17px;
-  right: 6px;
+  top: 2px;
+  right: 2px;
   border-radius: 50%;
   background: #81c98f;
   color: #fff;
-  width: 16px;
-  height: 16px;
+  width: 17.5px;
+  height: 17.5px;
   text-align: center;
-  font-size: 1.4rem;
+  box-shadow: 0 0 1px #333;
+  font-size: 13px;
+}
+
+.badge-num {
+  vertical-align: middle;
+  margin-right: 0.1rem;
 }
 
 .notification {

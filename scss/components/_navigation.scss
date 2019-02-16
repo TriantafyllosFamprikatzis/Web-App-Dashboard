@@ -25,10 +25,10 @@
 }
 @keyframes bell {
   0% { transform: rotate(0); }
-  10% { transform: rotate(40deg); }
+  10% { transform: rotate(30deg); }
   20% { transform: rotate(0); }
   80% { transform: rotate(0); }
-  90% { transform: rotate(-40deg); }
+  90% { transform: rotate(-30deg); }
   100% { transform: rotate(0); }
 }
 
