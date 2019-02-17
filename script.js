@@ -114,12 +114,12 @@ function addNotifications() {
         list1.style.display = 'grid';
         list1.classList.add('js-badge');
         addBadge();
-    }, 600);
+    }, 1500);
     setTimeout(() => {
         list2.style.display = 'grid';
         list2.classList.add('js-badge');
         addBadge();
-    }, 2000);
+    }, 3000);
     setTimeout(() => {
         list3.style.display = 'grid';
         list3.classList.add('js-badge');
@@ -129,7 +129,7 @@ function addNotifications() {
         list4.style.display = 'grid';
         list4.classList.add('js-badge');
         addBadge();
-    }, 10000);
+    }, 12000);
 } addNotifications();
 
 //Bell badge
@@ -287,6 +287,41 @@ function autocomplete(inp, arr) {
     });
   }
   autocomplete(document.getElementById('js-search-bottom'), people);
+
+
+/*-------------------------------*\
+ LOCAL STORAGE
+\*-------------------------------*/
+
+function save() {
+    let checkbox1 = document.getElementById('checkbox1');
+    localStorage.setItem('checkbox1', checkbox1.checked);
+
+    let checkbox2 = document.getElementById('checkbox2');
+    localStorage.setItem('checkbox2', checkbox2.checked);
+
+    // let timezone = document.getElementById('js-timezone');
+    // localStorage.setItem('timezone', timezone.value);
+
+    alert('Your settings are saved');
+}
+
+function load() {    
+    let checked1 = JSON.parse(localStorage.getItem('checkbox1'));
+    document.getElementById("checkbox1").checked = checked1;
+
+    let checked2 = JSON.parse(localStorage.getItem('checkbox2'));
+    document.getElementById("checkbox2").checked = checked2;
+
+    // let checked3 = JSON.parse(localStorage.getItem('timezone'));
+    // document.getElementById("js-timezone").value = checked3;
+}
+
+function wis() {
+    location.reload();
+    localStorage.clear();
+}
+load();
 
 
 /*-------------------------------*\

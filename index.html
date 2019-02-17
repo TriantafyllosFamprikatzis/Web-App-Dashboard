@@ -236,19 +236,23 @@
                 <form class="settings-form" action="index.html" method="POST">
                     <p class="switch-1-text"> Send Email Notifications</p>
                     <label class="switch switch-1">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="checkbox1">
                         <span class="slider round"></span>
                       </label>
                     <p class="switch-2-text"> Set Profile to Public</p>
                     <label class="switch switch-2">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="checkbox2" checked>
                         <span class="slider round"></span>
                       </label>
-                    <select class="timezone" name="state">
+                    <select class="timezone" name="state" id="js-timezone">
                         <option value="" disabled selected>Select Timezone</option>
+                        <option value="option1">Northern Hemisphere</option>
+                        <option value="option2">Southern Hemisphere</option>
+                        <option value="option3">Eastern Hemisphere</option>
+                        <option value="option4">Western Hemisphere</option>
                     </select>
-                    <button class="btn-save" id="js-save" type="button" name="save">SAVE</button>
-                    <button class="btn-cancel" type="button" name="cancel">CANCEL</button>
+                    <button class="btn-save" id="js-save" type="button" value="save" onclick="save()">SAVE</button>
+                    <button class="btn-cancel" type="button"  onclick="wis()">CANCEL</button>
                 </form>
             </div>
 

@@ -198,7 +198,7 @@ h3, li, button, input, select, textarea, p, a {
 
 .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus {
-  border: 0.2rem solid #81c98f;
+  border: 0.2rem solid #7377bf;
   transition: all 0.4s;
   outline: none;
   outline: 0px;
