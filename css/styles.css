@@ -651,17 +651,18 @@ MEDIA QUERIES
   top: 2px;
   right: 2px;
   border-radius: 50%;
+  border: 0.1rem solid white;
   background: #81c98f;
   color: #fff;
   width: 17.5px;
   height: 17.5px;
   text-align: center;
-  box-shadow: 0 0 1px #333;
+  box-shadow: 0 0 0.1rem #333;
   font-size: 13px;
 }
 
 .badge-num {
-  vertical-align: middle;
+  vertical-align: baseline;
   margin-right: 0.1rem;
 }
 
@@ -674,7 +675,7 @@ MEDIA QUERIES
   top: 6.2rem;
   left: -9rem;
   background-color: #eeeeee;
-  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0.6rem 0.9rem 0 rgba(0, 0, 0, 0.2), 0 0.8rem 2rem 0 rgba(0, 0, 0, 0.19);
   padding: 1rem 1rem 0 1rem;
   list-style: none;
   width: 29rem;
@@ -782,6 +783,37 @@ MEDIA QUERIES
     transform: scale(0);
   }
 }
+.autocomplete {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 0.1rem solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 1.3rem;
+}
+
+.autocomplete-items div {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 0.1rem solid #d4d4d4;
+}
+
+.autocomplete-items div:hover,
+.autocomplete-active {
+  background-color: #81c98f !important;
+  color: #fff;
+}
+
 @media (min-width: 1024px) {
   .activity-grid {
     grid-template-rows: 2.5rem;

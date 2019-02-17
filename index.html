@@ -222,8 +222,10 @@
 
             <div class="grid-8">
                 <h3>MESSAGE USER</h3>
-                <form class="message-form" action="index.html" method="POST">
+                <form autocomplete="off" class="message-form" action="index.html" method="POST">
+                <div class="autocomplete">
                     <input type="search" class="search-bottom" id="js-search-bottom" placeholder="Search for User">
+                </div>
                     <textarea class="textarea" id="js-textarea" name="textarea" placeholder="Message User"></textarea>
                     <button class="btn-send" id="js-send" type="button" name="send">SEND</button>
                 </form>
