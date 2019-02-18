@@ -17,7 +17,7 @@
   padding: 1rem;
 }
 .alert-remove {
-  animation: removed-item-animation .8s cubic-bezier(.65,-0.02,.72,.29);
+  animation: removed-item-animation .5s cubic-bezier(.65,-0.02,.72,.29);
 }
 @keyframes removed-item-animation {
  0% {

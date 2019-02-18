@@ -67,7 +67,7 @@ deleteButton.addEventListener('click', () => {
     alertBar.classList.add('alert-remove');
     setTimeout(() =>{
        alertBar.style.display = 'none';
-    }, 700);
+    }, 500);
 });
 
 // Alert on Send button
@@ -289,91 +289,59 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('js-search-bottom'), people);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------------*\
  LOCAL STORAGE
 \*-------------------------------*/
 
 function save() {
-    let checkbox1 = document.getElementById('checkbox1');
+    const checkbox1 = document.getElementById('checkbox1');
     localStorage.setItem('checkbox1', checkbox1.checked);
 
-    let checkbox2 = document.getElementById('checkbox2');
+    const checkbox2 = document.getElementById('checkbox2');
     localStorage.setItem('checkbox2', checkbox2.checked);
 
-    // let timezone = document.getElementById('js-timezone');
-    // localStorage.setItem('timezone', timezone.value);
+    const option1 = document.getElementById('option1');
+    localStorage.setItem('option1', option1.selected);
 
-    // let select = document.getElementById("js-timezone");
-    // localStorage.setItem('select', select.options[select.selectedIndex].value);
+    const option2 = document.getElementById('option2');
+    localStorage.setItem('option2', option2.selected);
 
+    const option3 = document.getElementById('option3');
+    localStorage.setItem('option3', option3.selected);
+
+    const option4 = document.getElementById('option4');
+    localStorage.setItem('option4', option4.selected);
+    
     alert('Your settings are saved');
 }
+
 function load() {    
-    let checked1 = JSON.parse(localStorage.getItem('checkbox1'));
-    document.getElementById("checkbox1").checked = checked1;
+    const checked1 = JSON.parse(localStorage.getItem('checkbox1'));
+    document.getElementById('checkbox1').checked = checked1;
 
-    let checked2 = JSON.parse(localStorage.getItem('checkbox2'));
-    document.getElementById("checkbox2").checked = checked2;
+    const checked2 = JSON.parse(localStorage.getItem('checkbox2'));
+    document.getElementById('checkbox2').checked = checked2;
 
-    // let checked3 = JSON.parse(localStorage.getItem('timezone'));
-    // document.getElementById("js-timezone").value = checked3;
+    const checked3 = JSON.parse(localStorage.getItem('option1'));
+    document.getElementById('option1').selected = checked3;
 
-    // let selected = JSON.parse(localStorage.getItem('select'));
-    // document.getElementById('js-timezone').value = selected; 
-   
+    const checked4 = JSON.parse(localStorage.getItem('option2'));
+    document.getElementById('option2').selected = checked4;
+
+    const checked5 = JSON.parse(localStorage.getItem('option3'));
+    document.getElementById('option3').selected = checked5;
+
+    const checked6 = JSON.parse(localStorage.getItem('option4'));
+    document.getElementById('option4').selected = checked6;
 }
-function wis() {
+
+function cancel() {
     location.reload();
     localStorage.clear();
+    document.getElementById('js-timezone').value = '';
 }
+
 load();
-
-
-
-
- 
- 
-
-
-
-// var select = document.querySelector(".testSelect");
-// var selectOption = select.options[select.selectedIndex];
-// var lastSelected = localStorage.getItem('select');
-
-// if(lastSelected) {
-//     select.value = lastSelected; 
-// }
-
-// select.onchange = function () {
-//    lastSelected = select.options[select.selectedIndex].value;
-//    console.log(lastSelected);
-//    localStorage.setItem('select', lastSelected);
-// }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------*\

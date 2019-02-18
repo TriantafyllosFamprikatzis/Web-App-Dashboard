@@ -82,7 +82,7 @@ h3, li, button, input, select, textarea, p, a {
 }
 
 .alert-remove {
-  animation: removed-item-animation 0.8s cubic-bezier(0.65, -0.02, 0.72, 0.29);
+  animation: removed-item-animation 0.5s cubic-bezier(0.65, -0.02, 0.72, 0.29);
 }
 
 @keyframes removed-item-animation {
@@ -273,8 +273,8 @@ h3, li, button, input, select, textarea, p, a {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 58px;
+  height: 28px;
   margin: 1rem 0 0 auto;
 }
 
@@ -300,10 +300,10 @@ h3, li, button, input, select, textarea, p, a {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   border-radius: 50%;
   background-color: white;
   -webkit-transition: 0.2s;
