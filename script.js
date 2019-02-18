@@ -289,6 +289,20 @@ function autocomplete(inp, arr) {
   autocomplete(document.getElementById('js-search-bottom'), people);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------------*\
  LOCAL STORAGE
 \*-------------------------------*/
@@ -303,9 +317,11 @@ function save() {
     // let timezone = document.getElementById('js-timezone');
     // localStorage.setItem('timezone', timezone.value);
 
+    // let select = document.getElementById("js-timezone");
+    // localStorage.setItem('select', select.options[select.selectedIndex].value);
+
     alert('Your settings are saved');
 }
-
 function load() {    
     let checked1 = JSON.parse(localStorage.getItem('checkbox1'));
     document.getElementById("checkbox1").checked = checked1;
@@ -315,13 +331,49 @@ function load() {
 
     // let checked3 = JSON.parse(localStorage.getItem('timezone'));
     // document.getElementById("js-timezone").value = checked3;
-}
 
+    // let selected = JSON.parse(localStorage.getItem('select'));
+    // document.getElementById('js-timezone').value = selected; 
+   
+}
 function wis() {
     location.reload();
     localStorage.clear();
 }
 load();
+
+
+
+
+ 
+ 
+
+
+
+// var select = document.querySelector(".testSelect");
+// var selectOption = select.options[select.selectedIndex];
+// var lastSelected = localStorage.getItem('select');
+
+// if(lastSelected) {
+//     select.value = lastSelected; 
+// }
+
+// select.onchange = function () {
+//    lastSelected = select.options[select.selectedIndex].value;
+//    console.log(lastSelected);
+//    localStorage.setItem('select', lastSelected);
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*-------------------------------*\
