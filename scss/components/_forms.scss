@@ -2,42 +2,36 @@
   #FORMS
 \*------------------------------------*/
 .search-top {
-  padding: 0.8rem 12.6rem 0.8rem 0.8rem;
-  border: 0.2rem solid #f3f2f2;
-  background-color: #fbfbfb;
-  border-radius: 0.4rem;
-  margin-top: 1.9rem;
+  padding: 0.8rem 7.8rem 0.8rem 0.8rem; 
+  text-align: left;
 }
 
 .search-bottom {
   padding: 0.8rem 0 0.8rem 0.8rem;
-  border: 0.2rem solid #f3f2f2;
-  background-color: #fbfbfb;
-  border-radius: 0.4rem;
 }
 
 .textarea {
   margin-top: 2.4rem;  
   padding: 0.8rem 4rem 5.9rem 0.8rem;
-  border: 0.2rem solid #f3f2f2;
-  background-color: #fbfbfb;
-  border-radius: 0.4rem;
 }
 
 .timezone {
   padding: 0.8rem 0 0.8rem 0.8rem;
+  margin-top: 2.4rem;
+}
+
+.search-top, .search-bottom,
+.textarea, .timezone {
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
+  color: #817f7f;
   border-radius: 0.4rem;
-  margin-top: 2.4rem;
 }
 
 .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus {
   border: 0.2rem solid #7377bf;
   transition: all 0.4s;
-  outline: none;
-  outline: 0px;
 }
 
 .search-border {
@@ -115,7 +109,6 @@
   bottom: 0;
   border-radius: 34px;
   background-color: #ccc;
-  -webkit-transition: .2s;
   transition: .2s;
 }
 
@@ -128,7 +121,6 @@
   bottom: 2px;
   border-radius: 50%;
   background-color: white;
-  -webkit-transition: .2s;
   transition: .2s;
 }
 
@@ -139,6 +131,8 @@ input:checked + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
+  -moz-transform: translateX(26px);
+  -o-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -153,7 +147,7 @@ input:checked + .slider:before {
 }
 @media (min-width: 1024px) {
   .search-top {
-    padding: 0.8rem 16rem 0.8rem 0.8rem;
-    margin-top: 0;
+    margin-top: 1.9rem;
+    margin-bottom: 1rem;
   }
 }

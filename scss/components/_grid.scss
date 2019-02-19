@@ -54,7 +54,8 @@ GRID MAIN LAYOUT*
     "new-members"
     "recent-activity"
     "message-user"
-    "settings";
+    "settings"
+    "footer";
 }
 
 .grid-1 {
@@ -69,21 +70,15 @@ GRID MAIN LAYOUT*
 }
 .grid-4 {
   grid-area: mobile-users;
-  border-top: 0.12rem solid #d1d1d1;
-  border-bottom: 0.12rem solid #d1d1d1;
 }
 .grid-5 {
   grid-area: social-stats;
 }
 .grid-6 {
   grid-area: new-members;
-  border-top: 0.12rem solid #d1d1d1;
-  border-bottom: 0.12rem solid #d1d1d1;
 }
 .grid-7 {
   grid-area: recent-activity;
-  border-top: 0.12rem solid #d1d1d1;
-  border-bottom: 0.12rem solid #d1d1d1;
 }
 .grid-8 {
   grid-area: message-user;
@@ -91,11 +86,21 @@ GRID MAIN LAYOUT*
 .grid-9 {
   grid-area: settings;
 }
+.grid-10 {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 4rem;
+}
 
 .grid-1, .grid-2, .grid-3,
 .grid-4, .grid-5, .grid-6,
 .grid-7, .grid-8, .grid-9 {
   padding: 7rem 0 2.5rem 0;
+}
+
+.grid-4, .grid-6, .grid-7 {
+  border-top: 0.12rem solid #d1d1d1;
+  border-bottom: 0.12rem solid #d1d1d1;
 }
 
 /*================
@@ -133,7 +138,8 @@ MEDIA QUERIES
       "daily-traffic mobile-users"
       "social-stats social-stats"
       "new-members recent-activity"
-      "message-user settings";
+      "message-user settings"
+      "footer footer";
   }
   .grid-3 {
     border-right: 0.12rem solid #d1d1d1;

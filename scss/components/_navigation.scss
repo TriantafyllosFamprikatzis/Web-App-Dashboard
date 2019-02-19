@@ -21,7 +21,27 @@
   margin: 2.6rem 0.6rem 2.6rem 5rem;
 }
 .bell-ring {
+  -webkit-animation: bell 1s 1s both infinite;
+  -ms-animation: bell 1s 1s both infinite;
+  -moz-animation: bell 1s 1s both infinite;
+  -o-animation: bell 1s 1s both infinite;  
   animation: bell 1s 1s both infinite;
+}
+@-webkit-keyframes bell {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(30deg); }
+  20% { transform: rotate(0); }
+  80% { transform: rotate(0); }
+  90% { transform: rotate(-30deg); }
+  100% { transform: rotate(0); }
+}
+@-moz-keyframes bell {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(30deg); }
+  20% { transform: rotate(0); }
+  80% { transform: rotate(0); }
+  90% { transform: rotate(-30deg); }
+  100% { transform: rotate(0); }
 }
 @keyframes bell {
   0% { transform: rotate(0); }
@@ -58,6 +78,10 @@
 }
 .nav-selected, .nav-icons:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 

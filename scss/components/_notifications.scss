@@ -123,23 +123,7 @@
   margin-left: -0.5rem;
   border-width: 1.4rem;
   border-style: solid;
-  border-color: transparent transparent #e5e5e5 transparent;
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  border-color: transparent transparent #eeeeee transparent;
 }
 
 
@@ -186,17 +170,29 @@
 
 //CONTENT DELETE TRANSITION
 .removed-item {
+  -ms-animation: removed-item-animation .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
+  -webkit-animation: removed-item-animation .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
+  -moz-animation: removed-item-animation .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
+  -o-animation: removed-item-animation .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
   animation: removed-item-animation .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
 }
 
 @keyframes removed-item-animation {
   from {
       opacity: 1;
-      transform: scale(1);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1); 
+      -moz-transform: scale(1); 
+      -o-transform: scale(1);
+      transform: scale(1); 
   }
 
   to {
       opacity: 0;
+      -webkit-transform: scale(0); 
+      -ms-transform: scale(0); 
+      -moz-transform: scale(0); 
+      -o-transform: scale(0); 
       transform: scale(0);
   }
 }
