@@ -12,7 +12,11 @@
 
 .textarea {
   margin-top: 2.4rem;  
-  padding: 0.8rem 4rem 5.9rem 0.8rem;
+  padding: 0.8rem 4rem 7.8rem 0.8rem;
+}
+//prefix for firefox padding issue
+@-moz-document url-prefix() {
+  .textarea {padding-bottom: 6rem;}
 }
 
 .timezone {

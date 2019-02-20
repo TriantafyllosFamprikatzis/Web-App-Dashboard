@@ -68,7 +68,7 @@
 .btn-chart {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .li {
@@ -86,7 +86,7 @@
 }
 
 .btn-send {
-  padding: 1.3rem;
+  padding: 1.4rem;
   background-color: #7377bf;
   color: #fff;
   margin-top: 2.4rem;
