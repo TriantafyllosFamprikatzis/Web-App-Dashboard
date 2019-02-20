@@ -379,14 +379,14 @@ Chart.defaults.global.defaultFontSize = 10;
 Chart.defaults.global.defaultFontColor = '#9e9e9e';
 
 //LINE CHARTS
-new Chart(lineChart, {
+let myChart = new Chart(lineChart, {
     type: 'line',
     data: {
-        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+        labels: ["9-15", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
         datasets: [
             {
                 // label:'Visitors',
-                data: [750, 1250, 1000, 1500, 2000, 1500, 1250, 1750, 2250, 1750, 2250],
+                data: [750, 1250, 1000, 1500, 2000, 1500, 1250, 1750, 2250, 1750, 2250, 2000],
                 backgroundColor: '#e2e3f6',
                 borderColor: '#7477bf',
                 borderWidth: 0.5,
@@ -400,92 +400,25 @@ new Chart(lineChart, {
     },
 });
 hourChart.addEventListener('click', () => {
-    new Chart(lineChart, {
-        type: 'line',
-        data: {
-            labels: ["9am", "10am", "11pm", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
-            datasets: [
-                {
-                    // label:'Visitors',
-                    data: [5, 30, 15, 35, 20, 45, 20, 15, 35, 15, 20],
-                    backgroundColor: '#e2e3f6',
-                    borderColor: '#7477bf',
-                    borderWidth: 0.5,
-                    pointBorderWidth: 2,
-                    pointBackgroundColor: '#fff',
-                    pointHoverBackgroundColor: '#e7e8f9',
-                    pointRadius: 4,
-                    lineTension: 0,
-                }
-            ]
-        },
-    });
+   myChart.data.labels = ["9am", "10am", "11pm", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"];
+    myChart.config.data.datasets[0].data = [5, 30, 15, 35, 20, 45, 20, 15, 35, 15, 20, 24];
+    myChart.update();
 });
+
 dayChart.addEventListener('click', () => {
-    new Chart(lineChart, {
-        type: 'line',
-        data: {
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"],
-            datasets: [
-                {
-                    // label:'Visitors',
-                    data: [150, 300, 280, 100, 200, 450, 300, 220, 400, 320, 280],
-                    backgroundColor: '#e2e3f6',
-                    borderColor: '#7477bf',
-                    borderWidth: 0.5,
-                    pointBorderWidth: 2,
-                    pointBackgroundColor: '#fff',
-                    pointHoverBackgroundColor: '#e7e8f9',
-                    pointRadius: 4,
-                    lineTension: 0,
-                }
-            ]
-        },
-    });
+    myChart.data.labels = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thur"];
+    myChart.config.data.datasets[0].data = [150, 300, 280, 100, 200, 450, 300, 220, 400, 320, 280, 220];
+    myChart.update();
 });
 weekChart.addEventListener('click', () => {
-    new Chart(lineChart, {
-        type: 'line',
-        data: {
-            labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
-            datasets: [
-                {
-                    // label:'Visitors',
-                    data: [750, 1250, 1000, 1500, 2000, 1500, 1250, 1750, 2250, 1750, 2250],
-                    backgroundColor: '#e2e3f6',
-                    borderColor: '#7477bf',
-                    borderWidth: 0.5,
-                    pointBorderWidth: 2,
-                    pointBackgroundColor: '#fff',
-                    pointHoverBackgroundColor: '#e7e8f9',
-                    pointRadius: 4,
-                    lineTension: 0,
-                }
-            ]
-        },
-    });
+    myChart.data.labels = ["9-15", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"];
+    myChart.config.data.datasets[0].data = [750, 1250, 1000, 1500, 2000, 1500, 1250, 1750, 2250, 1750, 2250, 2000];
+    myChart.update();
 });
 monthChart.addEventListener('click', () => {
-    new Chart(lineChart, {
-        type: 'line',
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            datasets: [
-                {
-                    // label:'Visitors',
-                    data: [2000, 3500, 6000, 4000, 3800, 1500, 2000, 3000, 5000, 5500, 5800, 4000,],
-                    backgroundColor: '#e2e3f6',
-                    borderColor: '#7477bf',
-                    borderWidth: 0.5,
-                    pointBorderWidth: 2,
-                    pointBackgroundColor: '#fff',
-                    pointHoverBackgroundColor: '#e7e8f9',
-                    pointRadius: 4,
-                    lineTension: 0,
-                }
-            ]
-        },
-    });
+    myChart.data.labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    myChart.config.data.datasets[0].data = [2000, 3500, 6000, 4000, 3800, 1500, 2000, 3000, 5000, 5500, 5800, 5300];
+    myChart.update();
 });
 
 //BAR CHART
