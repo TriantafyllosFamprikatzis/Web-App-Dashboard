@@ -722,6 +722,9 @@ nav {
   grid-area: nav;
   background-color: #4d4c72;
   position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -821,9 +824,11 @@ MEDIA QUERIES
 }
 @media (min-width: 1024px) {
   .grid-main {
-    width: 70%;
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 450px 450px;
     grid-template-areas: "alert alert" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings" "footer footer";
   }
 
@@ -1025,7 +1030,7 @@ MEDIA QUERIES
   padding: 1.6rem 0 1.6rem 0;
   display: grid;
   grid-template-columns: 5rem 10fr 1fr;
-  grid-template-rows: 4rem;
+  grid-template-rows: 2.5rem;
   grid-template-areas: "image comment sign" "image time sign";
 }
 
@@ -1239,11 +1244,6 @@ MEDIA QUERIES
   color: #fff;
 }
 
-@media (min-width: 1024px) {
-  .activity-grid {
-    grid-template-rows: 2.5rem;
-  }
-}
 /*------------------------------------*\
   #WIDGETS
 \*------------------------------------*/
@@ -1251,8 +1251,8 @@ MEDIA QUERIES
 .chart-2,
 .chart-3 {
   position: relative;
-  width: 100% !important;
-  height: auto !important;
+  max-width: 100% !important;
+  max-height: auto !important;
 }
 
 .widgets {

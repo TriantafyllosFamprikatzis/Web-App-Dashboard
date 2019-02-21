@@ -18,7 +18,7 @@
   padding: 1.6rem 0 1.6rem 0;
   display: grid;
   grid-template-columns: 5rem 10fr 1fr;
-  grid-template-rows: 4rem;
+  grid-template-rows: 2.5rem;
   grid-template-areas:
     "image comment sign"
     "image time sign";
@@ -225,11 +225,5 @@
 .autocomplete-active {
   background-color: #81c98f !important; 
   color: #fff; 
-}
-
-@media (min-width: 1024px) {
-  .activity-grid {
-    grid-template-rows: 2.5rem;
-  }
 }
 

@@ -27,6 +27,9 @@ nav {
   grid-area: nav;
   background-color: #4d4c72;
   position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -129,9 +132,11 @@ MEDIA QUERIES
 
 @media (min-width: 1024px) {
   .grid-main {
-    width: 70%;
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 450px 450px;
     grid-template-areas:
       "alert alert"
       "traffic traffic"

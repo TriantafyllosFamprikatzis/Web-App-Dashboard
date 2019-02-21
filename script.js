@@ -42,7 +42,7 @@ settingsLink.addEventListener('click', (e) => {
     }
 });
 
-// Nav buttons change opacity by adding a class
+// Nav buttons change opacity when clicked
 for (let i = 0; i < navBtn.length; i += 1) {
     navBtn[i].addEventListener('click', function () {
         let current = document.getElementsByClassName('nav-selected');
@@ -357,14 +357,17 @@ const weekChart = document.getElementById('week');
 const monthChart = document.getElementById('month');
 const chartButtons = document.querySelectorAll('.li');
 
-//Chart Buttons
-//Buttons change color when selected
+//Chart Buttons, change color when selected
+// Loop through the buttons, add class only on week chart
 chartButtons.forEach(function (btn) {
     weekChart.classList.add('liSelected');
+    // Set up a click event handler for the button
     btn.addEventListener('click', function () {
+        // Loop though all the buttons and reset the colors back to default
         chartButtons.forEach(function (btn) {
             btn.classList.remove('liSelected');
         });
+        // Add the class to the one button that got clicked
         this.classList.add('liSelected');
     });
 });
@@ -431,6 +434,7 @@ new Chart(barChart, {
                 // label:'visitors',
                 data: [75, 100, 175, 125, 225, 200, 100],
                 backgroundColor: '#7377bf',
+                hoverBackgroundColor: '#6368c0',
             }
         ]
     },
@@ -445,6 +449,7 @@ new Chart(doughnutChart, {
             {
                 data: [15, 25, 60],
                 backgroundColor: ['#74b1bf', '#81c98f', '#7377bf'],
+                hoverBackgroundColor: ['#56aabd', '#67c97a', '#6368c0'], 
             }
         ]
     },

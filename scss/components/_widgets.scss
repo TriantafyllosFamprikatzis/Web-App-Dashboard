@@ -7,11 +7,9 @@
 .chart-2,
 .chart-3 {
   position: relative;
-  width: 100% !important;
-  height: auto !important;
+  max-width: 100% !important;
+  max-height: auto !important;
   // max-width: 800px;
-  //fix mouse over triggering events
-  // pointer-events: none;
 }
 
 // height: 20vh;
@@ -88,4 +86,10 @@
   .widgets {
     flex-direction: row;
   }
+//   .chart-1,
+// .chart-2,
+// .chart-3 {
+//   max-width: 40% !important;
+//   height: auto;
+//  }
 }
