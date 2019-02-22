@@ -5,6 +5,10 @@
   width: 350px;
   padding: 0.8rem;
   text-align: left;
+  @include large {
+    margin-top: 1.9rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .search-bottom {
@@ -28,32 +32,35 @@
 .search-top, .search-bottom,
 .textarea, .timezone {
   border: 0.2rem solid #f3f2f2;
-  background-color: #fbfbfb;
+  background-color: $light-white;
   color: #817f7f;
   border-radius: 0.4rem;
 }
 
 .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus {
-  border: 0.2rem solid #7377bf;
+  border: 0.2rem solid $purple;
   transition: all 0.4s;
 }
 
 .search-border {
- display: flex;
- justify-content: space-around;
+@include flex($just:space-around);
  margin-bottom: 3rem;
+ @include medium {
+  margin: 3rem 0 3.2rem 0;
+ }
 }
 
 .dashboard-flex {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
+  @include flex($dir:column-reverse, $just:space-between);
+  @include medium {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .message-form {
-  display: flex;
-  flex-direction: column;
+  @include flex($dir:column);
 }
 
 .settings-form {
@@ -113,7 +120,7 @@
   right: 0;
   bottom: 0;
   border-radius: 34px;
-  background-color: #ccc;
+  background-color: $light-grey;
   transition: .2s;
 }
 
@@ -130,7 +137,7 @@
 }
 
 input:checked + .slider {
-  background-color: #81c98f;
+  background-color: $green;
 }
 
 input:checked + .slider:before {
@@ -139,20 +146,4 @@ input:checked + .slider:before {
   -moz-transform: translateX(26px);
   -o-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-@media (min-width: 724px) {
-  .dashboard-flex {
-    flex-direction: row;
-    align-items: center;
-  }
-  .search-border {
-    margin: 3rem 0 3.2rem 0;
-  }
-}
-@media (min-width: 1024px) {
-  .search-top {
-    margin-top: 1.9rem;
-    margin-bottom: 1rem;
-  }
 }

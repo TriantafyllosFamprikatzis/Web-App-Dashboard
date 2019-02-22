@@ -196,10 +196,10 @@ document.getElementById('search-top').onkeypress = function(e) {
     if (key == 13) {
       e.preventDefault();
     }
-  }
+  };
 
 //Auto Complete Form
-const people = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver']
+const people = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/

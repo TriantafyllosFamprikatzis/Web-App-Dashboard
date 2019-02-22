@@ -3,16 +3,20 @@
 \*------------------------------------*/
 
 .header-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  @include flex($dir:row, $just:flex-end);
   margin-bottom: 1rem;
+  @include medium {
+    margin-bottom: 0;
+  }
 }
 
 .logo {
   width: 13rem;
   margin-right: auto;
   margin-bottom: 1rem;
+  @include medium {
+    margin-bottom: 0;
+  }
 }
 
 .bell {
@@ -29,7 +33,7 @@
 }
 
 .border-notif {
-  border-right: 0.2rem dotted #d1d1d1;
+  border-right: 0.2rem dotted $light-grey;
   margin: 1.8rem 1.1rem;
 }
 
@@ -43,7 +47,7 @@
 .profile-name {
   margin-right: 1.6rem;
   margin-top: 2.3rem;
-  color: #fff;
+  color: white;
 }
 
 .nav-icons {
@@ -51,6 +55,10 @@
   margin: 1.9rem 1rem 2rem;
   opacity: 0.5;
   transition: 0.2s all;
+  @include medium {
+    width: 2.8rem;
+    margin: 1.9rem 0.5rem 2rem 1.8rem;
+  }
 }
 .nav-selected, .nav-icons:hover {
   opacity: 1;
@@ -62,13 +70,8 @@
 }
 
 .side-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-@media (min-width: 768px) {
-  .side-nav {
+  @include flex($dir:row, $just:space-around);
+  @include medium {
     flex-direction: column;
     justify-content: center;
     position: -webkit-sticky;
@@ -78,15 +81,4 @@
     position: sticky;
     top: 3rem;
   }
-  .header-nav {
-    margin-bottom: 0;
-  }
-  .logo {
-    margin-bottom: 0;
-  }
-  .nav-icons {
-    width: 2.8rem;
-    margin: 1.9rem 0.5rem 2rem 1.8rem;
-  }
 }
-

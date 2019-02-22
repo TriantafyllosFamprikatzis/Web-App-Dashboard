@@ -26,7 +26,7 @@
 
 .activity-grid:not(:last-child),
 .members-grid:not(:last-child) {
-  border-bottom: 0.1rem solid #d1d1d1;
+  border-bottom: 0.1rem solid $light-grey;
 }
 
 .member-img {
@@ -41,7 +41,7 @@
 }
 .member-mail {
   grid-area: mail;
-  color: #797dc1;
+  color: $purple;
 }
 .member-date {
   grid-area: date;
@@ -58,7 +58,7 @@
 .sign {
   grid-area: sign;
   font-size: 2.2rem;
-  color: #797dc1;
+  color: $purple;
   margin: 0;
   text-align: right;
 }
@@ -71,8 +71,8 @@
   right: 2px;
   border-radius: 50%;
   border: 0.1rem solid white;
-  background: #81c98f;
-  color: #fff;
+  background: $green;
+  color: white;
   width:17.5px;
   height: 17.5px;
   text-align: center;
@@ -92,7 +92,7 @@
   position: absolute;
   top: 6.2rem;
   left: -9rem;
-  background-color: #eeeeee;
+  background-color: $pal-grey;
   box-shadow: 0 0.6rem 0.9rem 0 rgba(0, 0, 0, 0.2), 0 0.8rem 2rem 0 rgba(0, 0, 0, 0.19);
   padding: 1rem 1rem 0 1rem;
   list-style: none;
@@ -100,7 +100,7 @@
   z-index: 2;
 }
 .notification-menu li {
-  background-color: #fff;
+  background-color: white;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -123,9 +123,8 @@
   margin-left: -0.5rem;
   border-width: 1.4rem;
   border-style: solid;
-  border-color: transparent transparent #eeeeee transparent;
+  border-color: transparent transparent $pal-grey transparent;
 }
-
 
 // POP UP CONTENT BOX
 .popuptext {
@@ -155,14 +154,14 @@
 .btn-notif {
   grid-area: button;
   cursor: pointer;
-  background-color: #fff;
+  background-color: white;
   color: #000;
   border: none;
   padding: 0.2rem;
 }
 
 #header-li {
-  background-color: #eeeeee;
+  background-color: $pal-grey;
 }
 .popupalert {
   text-align: center;
@@ -179,14 +178,13 @@
 
 //AUTOCOMPLETE FORM
 .autocomplete {
+  @include flex($dir:column);
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .autocomplete-items {
   position: absolute;
-  border: 0.1rem solid #d4d4d4;
+  border: 0.1rem solid $light-grey;
   border-bottom: none;
   border-top: none;
   z-index: 2;
@@ -198,12 +196,12 @@
 .autocomplete-items div {
   padding: 1rem;
   cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 0.1rem solid #d4d4d4; 
+  background-color: white; 
+  border-bottom: 0.1rem solid $light-grey; 
 }
 .autocomplete-items div:hover,
 .autocomplete-active {
-  background-color: #81c98f !important; 
-  color: #fff; 
+  background-color: $green !important; 
+  color: white; 
 }
 

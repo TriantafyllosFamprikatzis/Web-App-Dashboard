@@ -1,3 +1,9 @@
+/*------------------------------------*\
+  #MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
 /*
  * CONTENTS
  *BASE
@@ -399,12 +405,12 @@ li {
 h3, li, button, input, select, textarea, p, a {
   font-size: 1.1rem;
 }
-
 @media (min-width: 768px) {
   h3, li, button, input, select, textarea, p, a {
     font-size: 1.3rem;
   }
 }
+
 /*------------------------------------*\
   #ANIMATIONS
 \*------------------------------------*/
@@ -526,16 +532,22 @@ h3, li, button, input, select, textarea, p, a {
 .btn-delete-flex {
   display: flex;
   justify-content: space-between;
-  background-color: #7377bf;
+  background-color: #7477bf;
   border-radius: 0.4rem;
 }
 
 .btn-delete {
-  background-color: #7377bf;
-  color: #fff;
+  background-color: #7477bf;
+  color: white;
   border: none;
   margin-right: 0.4rem;
   padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .btn-delete {
+    padding: 0;
+    margin-right: 1.4rem;
+  }
 }
 
 .alert-remove {
@@ -548,7 +560,7 @@ h3, li, button, input, select, textarea, p, a {
 
 .alert-text {
   margin: 1rem 0 1rem 0.8rem;
-  color: #fff;
+  color: white;
 }
 
 .btn-chart {
@@ -567,14 +579,14 @@ h3, li, button, input, select, textarea, p, a {
 
 .liSelected {
   background-color: #81c98f;
-  color: #fff;
+  color: white;
   font-weight: bold;
 }
 
 .btn-send {
   padding: 1.4rem;
-  background-color: #7377bf;
-  color: #fff;
+  background-color: #7477bf;
+  color: white;
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
@@ -582,8 +594,8 @@ h3, li, button, input, select, textarea, p, a {
 
 .btn-save {
   margin-right: 1.6rem;
-  background-color: #7377bf;
-  color: #fff;
+  background-color: #7477bf;
+  color: white;
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
@@ -591,7 +603,7 @@ h3, li, button, input, select, textarea, p, a {
 
 .btn-cancel {
   background-color: #b2b2b2;
-  color: #fff;
+  color: white;
   margin-top: 2.4rem;
   margin-left: 1.6rem;
   border-radius: 0.4rem;
@@ -612,12 +624,6 @@ h3, li, button, input, select, textarea, p, a {
   background-color: #9a9898;
 }
 
-@media (min-width: 1024px) {
-  .btn-delete {
-    padding: 0;
-    margin-right: 1.4rem;
-  }
-}
 /*------------------------------------*\
   #FORMS
 \*------------------------------------*/
@@ -625,6 +631,12 @@ h3, li, button, input, select, textarea, p, a {
   width: 350px;
   padding: 0.8rem;
   text-align: left;
+}
+@media (min-width: 1024px) {
+  .search-top {
+    margin-top: 1.9rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .search-bottom {
@@ -656,7 +668,7 @@ h3, li, button, input, select, textarea, p, a {
 
 .search-top:focus, .search-bottom:focus,
 .textarea:focus, .timezone:focus {
-  border: 0.2rem solid #7377bf;
+  border: 0.2rem solid #7477bf;
   transition: all 0.4s;
 }
 
@@ -665,11 +677,22 @@ h3, li, button, input, select, textarea, p, a {
   justify-content: space-around;
   margin-bottom: 3rem;
 }
+@media (min-width: 768px) {
+  .search-border {
+    margin: 3rem 0 3.2rem 0;
+  }
+}
 
 .dashboard-flex {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .dashboard-flex {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .message-form {
@@ -736,7 +759,7 @@ h3, li, button, input, select, textarea, p, a {
   right: 0;
   bottom: 0;
   border-radius: 34px;
-  background-color: #ccc;
+  background-color: #d1d1d1;
   transition: 0.2s;
 }
 
@@ -764,22 +787,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-@media (min-width: 724px) {
-  .dashboard-flex {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .search-border {
-    margin: 3rem 0 3.2rem 0;
-  }
-}
-@media (min-width: 1024px) {
-  .search-top {
-    margin-top: 1.9rem;
-    margin-bottom: 1rem;
-  }
-}
 /*------------------------------------*\
   #GRID
 \*------------------------------------*/
@@ -790,15 +797,26 @@ input:checked + .slider:before {
   grid-template-rows: 6.5rem minmax(6.5rem, auto);
   grid-template-areas: "header" "nav" "main";
 }
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 6.5rem minmax(50%, auto);
+    grid-template-areas: "header header" "nav main" "nav main";
+  }
+}
 
 header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding-top: 2.6rem;
   padding-bottom: 1.6rem;
   grid-area: header;
   background-color: #7477bf;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+}
+@media (min-width: 768px) {
+  header {
+    padding-top: 1.6rem;
+  }
 }
 
 nav {
@@ -822,88 +840,10 @@ GRID MAIN LAYOUT*
 ====================*/
 .grid-main {
   padding: 0 1.6rem 3.2rem 1.6rem;
-  background-color: #fff;
+  background-color: white;
   display: grid;
   grid-template-columns: minmax(auto, 100%);
   grid-template-areas: "alert" "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings" "footer";
-}
-
-.grid-1 {
-  grid-area: alert;
-}
-
-.grid-2 {
-  grid-area: traffic;
-}
-
-.grid-3 {
-  grid-area: daily-traffic;
-  border-top: 0.12rem solid #d1d1d1;
-}
-
-.grid-4 {
-  grid-area: mobile-users;
-}
-
-.grid-5 {
-  grid-area: social-stats;
-}
-
-.grid-6 {
-  grid-area: new-members;
-}
-
-.grid-7 {
-  grid-area: recent-activity;
-}
-
-.grid-8 {
-  grid-area: message-user;
-}
-
-.grid-9 {
-  grid-area: settings;
-}
-
-.grid-10 {
-  grid-area: footer;
-  text-align: center;
-  margin-top: 7.5rem;
-}
-
-.grid-1, .grid-2, .grid-3,
-.grid-4, .grid-5, .grid-6,
-.grid-7, .grid-8, .grid-9 {
-  padding: 7rem 0 2.5rem 0;
-}
-
-.grid-4, .grid-6, .grid-7 {
-  border-top: 0.12rem solid #d1d1d1;
-  border-bottom: 0.12rem solid #d1d1d1;
-}
-
-/*================
-MEDIA QUERIES
-=================*/
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: 6.5rem minmax(50%, auto);
-    grid-template-areas: "header header" "nav main" "nav main";
-  }
-
-  .grid-5 {
-    padding: 0 3em 0 3em;
-  }
-
-  .grid-1, .grid-2, .grid-3,
-.grid-4, .grid-5, .grid-6,
-.grid-7, .grid-8, .grid-9 {
-    padding: 2.5rem 0 2.5rem 0;
-  }
-
-  header {
-    padding-top: 1.6rem;
-  }
 }
 @media (min-width: 1024px) {
   .grid-main {
@@ -914,35 +854,149 @@ MEDIA QUERIES
     grid-template-columns: 450px 450px;
     grid-template-areas: "alert alert" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings" "footer footer";
   }
+}
 
+.grid-1 {
+  grid-area: alert;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-1 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+
+.grid-2 {
+  grid-area: traffic;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-2 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+
+.grid-3 {
+  grid-area: daily-traffic;
+  padding: 7rem 0 2.5rem 0;
+  border-top: 0.12rem solid #d1d1d1;
+}
+@media (min-width: 768px) {
+  .grid-3 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grid-3 {
     border-right: 0.12rem solid #d1d1d1;
     border-bottom: 0.12rem solid #d1d1d1;
     padding: 1.5rem 0.8rem 2.5rem 0;
   }
+}
 
+.grid-4 {
+  grid-area: mobile-users;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-4 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grid-4 {
     padding: 1.5rem 0 2.5rem 0.8rem;
   }
+}
 
+.grid-5 {
+  grid-area: social-stats;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-5 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .grid-5 {
+    padding: 0 3em 0 3em;
+  }
+}
+
+.grid-6 {
+  grid-area: new-members;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-6 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grid-6 {
     border-right: 0.12rem solid #d1d1d1;
     padding-right: 3.2rem;
   }
+}
 
+.grid-7 {
+  grid-area: recent-activity;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-7 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grid-7 {
     padding-left: 3.2rem;
   }
+}
 
+.grid-8 {
+  grid-area: message-user;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-8 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grid-8 {
     border-right: 0.12rem solid #d1d1d1;
     padding: 1.6rem 3.2rem 1.6rem 0;
   }
+}
 
+.grid-9 {
+  grid-area: settings;
+  padding: 7rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .grid-9 {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grid-9 {
     padding: 1.6rem 1.6rem 0 3.2rem;
   }
 }
+
+.grid-10 {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 7.5rem;
+}
+
+.grid-4, .grid-6, .grid-7 {
+  border-top: 0.12rem solid #d1d1d1;
+  border-bottom: 0.12rem solid #d1d1d1;
+}
+
 /*------------------------------------*\
   #NAVIGATION
 \*------------------------------------*/
@@ -952,11 +1006,21 @@ MEDIA QUERIES
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .header-nav {
+    margin-bottom: 0;
+  }
+}
 
 .logo {
   width: 13rem;
   margin-right: auto;
   margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .logo {
+    margin-bottom: 0;
+  }
 }
 
 .bell {
@@ -988,7 +1052,7 @@ MEDIA QUERIES
 .profile-name {
   margin-right: 1.6rem;
   margin-top: 2.3rem;
-  color: #fff;
+  color: white;
 }
 
 .nav-icons {
@@ -996,6 +1060,12 @@ MEDIA QUERIES
   margin: 1.9rem 1rem 2rem;
   opacity: 0.5;
   transition: 0.2s all;
+}
+@media (min-width: 768px) {
+  .nav-icons {
+    width: 2.8rem;
+    margin: 1.9rem 0.5rem 2rem 1.8rem;
+  }
 }
 
 .nav-selected, .nav-icons:hover {
@@ -1012,7 +1082,6 @@ MEDIA QUERIES
   flex-direction: row;
   justify-content: space-around;
 }
-
 @media (min-width: 768px) {
   .side-nav {
     flex-direction: column;
@@ -1024,20 +1093,8 @@ MEDIA QUERIES
     position: sticky;
     top: 3rem;
   }
-
-  .header-nav {
-    margin-bottom: 0;
-  }
-
-  .logo {
-    margin-bottom: 0;
-  }
-
-  .nav-icons {
-    width: 2.8rem;
-    margin: 1.9rem 0.5rem 2rem 1.8rem;
-  }
 }
+
 /*------------------------------------*\
   #NOTIFICATIONS
 \*------------------------------------*/
@@ -1076,7 +1133,7 @@ MEDIA QUERIES
 
 .member-mail {
   grid-area: mail;
-  color: #797dc1;
+  color: #7477bf;
 }
 
 .member-date {
@@ -1097,7 +1154,7 @@ MEDIA QUERIES
 .sign {
   grid-area: sign;
   font-size: 2.2rem;
-  color: #797dc1;
+  color: #7477bf;
   margin: 0;
   text-align: right;
 }
@@ -1110,7 +1167,7 @@ MEDIA QUERIES
   border-radius: 50%;
   border: 0.1rem solid white;
   background: #81c98f;
-  color: #fff;
+  color: white;
   width: 17.5px;
   height: 17.5px;
   text-align: center;
@@ -1140,7 +1197,7 @@ MEDIA QUERIES
 }
 
 .notification-menu li {
-  background-color: #fff;
+  background-color: white;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -1196,7 +1253,7 @@ MEDIA QUERIES
 .btn-notif {
   grid-area: button;
   cursor: pointer;
-  background-color: #fff;
+  background-color: white;
   color: #000;
   border: none;
   padding: 0.2rem;
@@ -1219,14 +1276,14 @@ MEDIA QUERIES
 }
 
 .autocomplete {
-  position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .autocomplete-items {
   position: absolute;
-  border: 0.1rem solid #d4d4d4;
+  border: 0.1rem solid #d1d1d1;
   border-bottom: none;
   border-top: none;
   z-index: 2;
@@ -1239,14 +1296,14 @@ MEDIA QUERIES
 .autocomplete-items div {
   padding: 1rem;
   cursor: pointer;
-  background-color: #fff;
-  border-bottom: 0.1rem solid #d4d4d4;
+  background-color: white;
+  border-bottom: 0.1rem solid #d1d1d1;
 }
 
 .autocomplete-items div:hover,
 .autocomplete-active {
   background-color: #81c98f !important;
-  color: #fff;
+  color: white;
 }
 
 /*------------------------------------*\
@@ -1257,13 +1314,17 @@ MEDIA QUERIES
 .chart-3 {
   position: relative;
   max-width: 100% !important;
-  max-height: auto !important;
 }
 
 .widgets {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+@media (min-width: 1024px) {
+  .widgets {
+    flex-direction: row;
+  }
 }
 
 .social-info {
@@ -1277,6 +1338,12 @@ MEDIA QUERIES
   grid-template-rows: 2.7rem 1fr;
   grid-template-areas: "icon label" "icon stats";
 }
+@media (min-width: 768px) {
+  .social-info {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". icon label ." ". icon stats .";
+  }
+}
 
 .social-icons {
   grid-area: icon;
@@ -1287,25 +1354,13 @@ MEDIA QUERIES
 
 .widget-label {
   grid-area: label;
-  color: #797dc1;
+  color: #7477bf;
 }
 
 .widget-stats {
   grid-area: stats;
   font-size: 4rem;
   margin: 2rem 0;
-}
-
-@media (min-width: 768px) {
-  .social-info {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: ". icon label ." ". icon stats .";
-  }
-}
-@media (min-width: 1024px) {
-  .widgets {
-    flex-direction: row;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
