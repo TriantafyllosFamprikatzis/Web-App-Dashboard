@@ -27,30 +27,6 @@
   -o-animation: bell 1s 1s both infinite;  
   animation: bell 1s 1s both infinite;
 }
-@-webkit-keyframes bell {
-  0% { transform: rotate(0); }
-  10% { transform: rotate(30deg); }
-  20% { transform: rotate(0); }
-  80% { transform: rotate(0); }
-  90% { transform: rotate(-30deg); }
-  100% { transform: rotate(0); }
-}
-@-moz-keyframes bell {
-  0% { transform: rotate(0); }
-  10% { transform: rotate(30deg); }
-  20% { transform: rotate(0); }
-  80% { transform: rotate(0); }
-  90% { transform: rotate(-30deg); }
-  100% { transform: rotate(0); }
-}
-@keyframes bell {
-  0% { transform: rotate(0); }
-  10% { transform: rotate(30deg); }
-  20% { transform: rotate(0); }
-  80% { transform: rotate(0); }
-  90% { transform: rotate(-30deg); }
-  100% { transform: rotate(0); }
-}
 
 .border-notif {
   border-right: 0.2rem dotted #d1d1d1;

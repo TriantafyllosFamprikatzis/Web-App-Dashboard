@@ -187,8 +187,18 @@ bell.addEventListener('click', () => {
 
 
 /*-------------------------------*\
- AUTOCOMPLETE FORM
+ FORMS
 \*-------------------------------*/
+
+//Top search input disable submit function
+document.getElementById('search-top').onkeypress = function(e) {
+    var key = e.charCode || e.keyCode || 0;     
+    if (key == 13) {
+      e.preventDefault();
+    }
+  }
+
+//Auto Complete Form
 const people = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver']
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
