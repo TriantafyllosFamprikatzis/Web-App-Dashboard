@@ -12,7 +12,7 @@
 
 //SOCIAL ICONS
 .widgets {
-  @include flex($dir:column, $just:space-around);
+  @include flex($dir: column, $just: space-around);
   @include large {
     flex-direction: row;
   }
@@ -30,10 +30,10 @@
   grid-template-areas:
     "icon label"
     "icon stats";
-    @include medium {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: ". icon label ." ". icon stats .";
-    }
+  @include medium {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". icon label ." ". icon stats .";
+  }
 }
 
 .social-icons {
@@ -53,4 +53,3 @@
   font-size: 4rem;
   margin: 2rem 0;
 }
-

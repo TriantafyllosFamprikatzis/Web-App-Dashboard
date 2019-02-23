@@ -371,7 +371,10 @@ template {
   box-sizing: border-box;
 }
 
-:hover, :active, :focus, :visited {
+:hover,
+:active,
+:focus,
+:visited {
   outline: none !important;
   outline: 0px !important;
   box-shadow: none;
@@ -402,11 +405,25 @@ li {
   color: #828282;
 }
 
-h3, li, button, input, select, textarea, p, a {
+h3,
+li,
+button,
+input,
+select,
+textarea,
+p,
+a {
   font-size: 1.1rem;
 }
 @media (min-width: 768px) {
-  h3, li, button, input, select, textarea, p, a {
+  h3,
+li,
+button,
+input,
+select,
+textarea,
+p,
+a {
     font-size: 1.3rem;
   }
 }
@@ -591,6 +608,9 @@ h3, li, button, input, select, textarea, p, a {
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
 }
+.btn-send:hover {
+  background-color: #595eb8;
+}
 
 .btn-save {
   margin-right: 1.6rem;
@@ -599,6 +619,9 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
+}
+.btn-save:hover {
+  background-color: #595eb8;
 }
 
 .btn-cancel {
@@ -609,19 +632,16 @@ h3, li, button, input, select, textarea, p, a {
   border-radius: 0.4rem;
   transition: all 0.1s ease-in-out;
 }
-
-.btn-delete, .li, .btn-send,
-.btn-save, .btn-cancel {
-  cursor: pointer;
-}
-
-.btn-send:hover,
-.btn-save:hover {
-  background-color: #595eb8;
-}
-
 .btn-cancel:hover {
   background-color: #9a9898;
+}
+
+.btn-delete,
+.li,
+.btn-send,
+.btn-save,
+.btn-cancel {
+  cursor: pointer;
 }
 
 /*------------------------------------*\
@@ -658,16 +678,20 @@ h3, li, button, input, select, textarea, p, a {
   margin-top: 2.4rem;
 }
 
-.search-top, .search-bottom,
-.textarea, .timezone {
+.search-top,
+.search-bottom,
+.textarea,
+.timezone {
   border: 0.2rem solid #f3f2f2;
   background-color: #fbfbfb;
   color: #817f7f;
   border-radius: 0.4rem;
 }
 
-.search-top:focus, .search-bottom:focus,
-.textarea:focus, .timezone:focus {
+.search-top:focus,
+.search-bottom:focus,
+.textarea:focus,
+.timezone:focus {
   border: 0.2rem solid #7477bf;
   transition: all 0.4s;
 }
@@ -762,7 +786,6 @@ h3, li, button, input, select, textarea, p, a {
   background-color: #d1d1d1;
   transition: 0.2s;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -992,7 +1015,9 @@ GRID MAIN LAYOUT*
   margin-top: 7.5rem;
 }
 
-.grid-4, .grid-6, .grid-7 {
+.grid-4,
+.grid-6,
+.grid-7 {
   border-top: 0.12rem solid #d1d1d1;
   border-bottom: 0.12rem solid #d1d1d1;
 }
@@ -1068,7 +1093,8 @@ GRID MAIN LAYOUT*
   }
 }
 
-.nav-selected, .nav-icons:hover {
+.nav-selected,
+.nav-icons:hover {
   opacity: 1;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -1195,6 +1221,16 @@ GRID MAIN LAYOUT*
   width: 29rem;
   z-index: 2;
 }
+.notification-menu::before {
+  content: "";
+  position: absolute;
+  top: -27.9px;
+  left: 142px;
+  margin-left: -0.5rem;
+  border-width: 1.4rem;
+  border-style: solid;
+  border-color: transparent transparent #eeeeee transparent;
+}
 
 .notification-menu li {
   background-color: white;
@@ -1213,17 +1249,6 @@ GRID MAIN LAYOUT*
 
 .notification-menu p {
   margin-bottom: 0;
-}
-
-.notification-menu::before {
-  content: "";
-  position: absolute;
-  top: -27.9px;
-  left: 142px;
-  margin-left: -0.5rem;
-  border-width: 1.4rem;
-  border-style: solid;
-  border-color: transparent transparent #eeeeee transparent;
 }
 
 .popuptext {

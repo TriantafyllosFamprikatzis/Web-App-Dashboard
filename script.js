@@ -392,7 +392,7 @@ Chart.defaults.global.defaultFontColor = '#9e9e9e';
 let myChart = new Chart(lineChart, {
     type: 'line',
     data: {
-        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+        labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
         datasets: [
             {
                 label: 'Visitors',
@@ -410,23 +410,23 @@ let myChart = new Chart(lineChart, {
     },
 });
 hourChart.addEventListener('click', () => {
-    myChart.data.labels = ["9am", "10am", "11pm", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+    myChart.data.labels = ['9am', '10am', '11pm', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
     myChart.config.data.datasets[0].data = [5, 17, 25, 15, 20, 25, 20, 15, 20, 25, 30];
     myChart.update();
 });
 
 dayChart.addEventListener('click', () => {
-    myChart.data.labels = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+    myChart.data.labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed'];
     myChart.config.data.datasets[0].data = [150, 300, 200, 120, 200, 420, 300, 220, 400, 120, 200];
     myChart.update();
 });
 weekChart.addEventListener('click', () => {
-    myChart.data.labels = ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"];
+    myChart.data.labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'];
     myChart.config.data.datasets[0].data = [350, 1250, 1000, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250];
     myChart.update();
 });
 monthChart.addEventListener('click', () => {
-    myChart.data.labels = ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"];
+    myChart.data.labels = ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'];
     myChart.config.data.datasets[0].data = [1500, 2000, 5000, 4000, 3200, 2000, 5000, 2800, 3500, 5500, 3000];
     myChart.update();
 });
@@ -435,7 +435,7 @@ monthChart.addEventListener('click', () => {
 new Chart(barChart, {
     type: 'bar',
     data: {
-        labels: ["S", "M", "T", "W", "T", "F", "S"],
+        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [
             {
                 // label:'visitors',
@@ -451,7 +451,7 @@ new Chart(barChart, {
 new Chart(doughnutChart, {
     type: 'doughnut',
     data: {
-        labels: ["Phones", "Tablets", "Desktop"],
+        labels: ['Phones', 'Tablets', 'Desktop'],
         datasets: [
             {
                 data: [15, 25, 60],

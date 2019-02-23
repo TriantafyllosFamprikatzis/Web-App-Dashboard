@@ -3,23 +3,22 @@
 \*------------------------------------*/
 
 //Flex-box
-@mixin flex(
-$disp:flex,
-$dir:null,
-$wrap:null,
-$just:null,
-$align:null){
-display:$disp;
-flex-direction:$dir;
-flex-wrap:$wrap;
-justify-content:$just;
-align-items:$align;
+@mixin flex($disp: flex, $dir: null, $wrap: null, $just: null, $align: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
 }
 
 //Media query
 @mixin medium {
-    @media(min-width:$brkpoint-md){@content;}
+  @media (min-width: $brkpoint-md) {
+    @content;
+  }
 }
 @mixin large {
-    @media(min-width:$brkpoint-lg){@content;}
+  @media (min-width: $brkpoint-lg) {
+    @content;
+  }
 }

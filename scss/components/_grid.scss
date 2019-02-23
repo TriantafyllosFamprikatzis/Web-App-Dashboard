@@ -21,7 +21,7 @@
 }
 
 header {
-  @include flex($dir:row, $align:center);
+  @include flex($dir: row, $align: center);
   padding-top: 2.6rem;
   padding-bottom: 1.6rem;
   grid-area: header;
@@ -67,21 +67,21 @@ GRID MAIN LAYOUT*
     "message-user"
     "settings"
     "footer";
-    @include large {
-      overflow: hidden;
-      max-width: 100%;
-      min-height: 100vh;
-      margin: 0 auto;
-      grid-template-columns: 450px 450px;
-      grid-template-areas:
-        "alert alert"
-        "traffic traffic"
-        "daily-traffic mobile-users"
-        "social-stats social-stats"
-        "new-members recent-activity"
-        "message-user settings"
-        "footer footer";
-    }
+  @include large {
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    grid-template-columns: 450px 450px;
+    grid-template-areas:
+      "alert alert"
+      "traffic traffic"
+      "daily-traffic mobile-users"
+      "social-stats social-stats"
+      "new-members recent-activity"
+      "message-user settings"
+      "footer footer";
+  }
 }
 
 .grid-1 {
@@ -179,7 +179,9 @@ GRID MAIN LAYOUT*
   margin-top: 7.5rem;
 }
 
-.grid-4, .grid-6, .grid-7 {
+.grid-4,
+.grid-6,
+.grid-7 {
   border-top: 0.12rem solid $light-grey;
   border-bottom: 0.12rem solid $light-grey;
 }

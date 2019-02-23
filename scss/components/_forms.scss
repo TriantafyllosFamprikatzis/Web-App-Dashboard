@@ -16,12 +16,14 @@
 }
 
 .textarea {
-  margin-top: 2.4rem;  
+  margin-top: 2.4rem;
   padding: 0.8rem 4rem 7.8rem 0.8rem;
 }
 //prefix for firefox padding issue
 @-moz-document url-prefix() {
-  .textarea {padding-bottom: 6rem;}
+  .textarea {
+    padding-bottom: 6rem;
+  }
 }
 
 .timezone {
@@ -29,30 +31,34 @@
   margin-top: 2.4rem;
 }
 
-.search-top, .search-bottom,
-.textarea, .timezone {
+.search-top,
+.search-bottom,
+.textarea,
+.timezone {
   border: 0.2rem solid #f3f2f2;
   background-color: $light-white;
   color: #817f7f;
   border-radius: 0.4rem;
 }
 
-.search-top:focus, .search-bottom:focus,
-.textarea:focus, .timezone:focus {
+.search-top:focus,
+.search-bottom:focus,
+.textarea:focus,
+.timezone:focus {
   border: 0.2rem solid $purple;
   transition: all 0.4s;
 }
 
 .search-border {
-@include flex($just:space-around);
- margin-bottom: 3rem;
- @include medium {
-  margin: 3rem 0 3.2rem 0;
- }
+  @include flex($just: space-around);
+  margin-bottom: 3rem;
+  @include medium {
+    margin: 3rem 0 3.2rem 0;
+  }
 }
 
 .dashboard-flex {
-  @include flex($dir:column-reverse, $just:space-between);
+  @include flex($dir: column-reverse, $just: space-between);
   @include medium {
     flex-direction: row;
     align-items: center;
@@ -60,7 +66,7 @@
 }
 
 .message-form {
-  @include flex($dir:column);
+  @include flex($dir: column);
 }
 
 .settings-form {
@@ -106,7 +112,7 @@
   margin: 1rem 0 0 auto;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -121,19 +127,18 @@
   bottom: 0;
   border-radius: 34px;
   background-color: $light-grey;
-  transition: .2s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 24px;
-  width: 24px;
-  left: 4px;
-  bottom: 2px;
-  border-radius: 50%;
-  background-color: white;
-  transition: .2s;
+  transition: 0.2s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 2px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.2s;
+  }
 }
 
 input:checked + .slider {

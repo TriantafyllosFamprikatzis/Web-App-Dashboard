@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .header-nav {
-  @include flex($dir:row, $just:flex-end);
+  @include flex($dir: row, $just: flex-end);
   margin-bottom: 1rem;
   @include medium {
     margin-bottom: 0;
@@ -28,7 +28,7 @@
   -webkit-animation: bell 1s 1s both infinite;
   -ms-animation: bell 1s 1s both infinite;
   -moz-animation: bell 1s 1s both infinite;
-  -o-animation: bell 1s 1s both infinite;  
+  -o-animation: bell 1s 1s both infinite;
   animation: bell 1s 1s both infinite;
 }
 
@@ -60,7 +60,8 @@
     margin: 1.9rem 0.5rem 2rem 1.8rem;
   }
 }
-.nav-selected, .nav-icons:hover {
+.nav-selected,
+.nav-icons:hover {
   opacity: 1;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -70,7 +71,7 @@
 }
 
 .side-nav {
-  @include flex($dir:row, $just:space-around);
+  @include flex($dir: row, $just: space-around);
   @include medium {
     flex-direction: column;
     justify-content: center;

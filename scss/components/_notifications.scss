@@ -73,10 +73,10 @@
   border: 0.1rem solid white;
   background: $green;
   color: white;
-  width:17.5px;
+  width: 17.5px;
   height: 17.5px;
   text-align: center;
-  box-shadow:0 0 0.1rem #333;
+  box-shadow: 0 0 0.1rem #333;
   font-size: 13px;
 }
 .badge-num {
@@ -98,6 +98,16 @@
   list-style: none;
   width: 29rem;
   z-index: 2;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -27.9px;
+    left: 142px;
+    margin-left: -0.5rem;
+    border-width: 1.4rem;
+    border-style: solid;
+    border-color: transparent transparent $pal-grey transparent;
+  }
 }
 .notification-menu li {
   background-color: white;
@@ -113,17 +123,6 @@
 }
 .notification-menu p {
   margin-bottom: 0;
-}
-
-.notification-menu::before {
-  content: "";
-  position: absolute;
-  top: -27.9px;
-  left: 142px;
-  margin-left: -0.5rem;
-  border-width: 1.4rem;
-  border-style: solid;
-  border-color: transparent transparent $pal-grey transparent;
 }
 
 // POP UP CONTENT BOX
@@ -169,16 +168,16 @@
 
 //CONTENT DELETE TRANSITION
 .removed-item {
-  -ms-animation: removed-item-alert .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
-  -webkit-animation: removed-item-alert .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
-  -moz-animation: removed-item-alert .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
-  -o-animation: removed-item-alert .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
-  animation: removed-item-alert .4s cubic-bezier(.55,-0.04,.91,.94) forwards;
+  -ms-animation: removed-item-alert 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  -webkit-animation: removed-item-alert 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  -moz-animation: removed-item-alert 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  -o-animation: removed-item-alert 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  animation: removed-item-alert 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
 }
 
 //AUTOCOMPLETE FORM
 .autocomplete {
-  @include flex($dir:column);
+  @include flex($dir: column);
   position: relative;
 }
 
@@ -196,12 +195,11 @@
 .autocomplete-items div {
   padding: 1rem;
   cursor: pointer;
-  background-color: white; 
-  border-bottom: 0.1rem solid $light-grey; 
+  background-color: white;
+  border-bottom: 0.1rem solid $light-grey;
 }
 .autocomplete-items div:hover,
 .autocomplete-active {
-  background-color: $green !important; 
-  color: white; 
+  background-color: $green !important;
+  color: white;
 }
-
