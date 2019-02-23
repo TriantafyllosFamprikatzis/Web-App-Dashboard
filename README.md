@@ -12,4 +12,4 @@ A responsive web dashboard application with charts, graphs and widgets.
 - Implement CSS **grid layout**.
 - **Search bar** & **autocomplete** functionality. 
 - **Message user** functionality with alert notifications.
-- Find and implement **prefixes** for cross browser compatibility.
+- Implement **prefixes** for cross browser compatibility.
