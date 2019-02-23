@@ -77,9 +77,9 @@ sendButton.addEventListener('click', () => {
     if (user.value == '') {
         alert('Please select a User');
     } else if (message.value == '') {
-        alert('Message is empty');
+        alert('Please type a message you would like to send ' + user.value + '.');
     } else {
-        alert('Message successfully sent!');
+        alert('Your message to ' + user.value + ' successfully sent!');
         user.value = '';
         message.value = '';
     }
