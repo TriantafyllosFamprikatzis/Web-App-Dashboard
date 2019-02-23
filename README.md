@@ -1,4 +1,4 @@
-## Web App Dashboard
+## Web-App-Dashboard
 
 A responsive web dashboard application with charts, graphs and widgets.
 
