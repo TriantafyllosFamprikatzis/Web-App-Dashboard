@@ -66,7 +66,7 @@ deleteButton.addEventListener('click', () => {
     const alertBar = document.getElementById('js-alert');
     alertBar.classList.add('alert-remove');
     setTimeout(() => {
-        alertBar.style.display = 'none';
+        alertBar.style.visibility = 'hidden';
     }, 400);
 });
 
